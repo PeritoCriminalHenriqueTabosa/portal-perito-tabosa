@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perito Henrique Tabosa — Portal Oficial | Loja, Lives, Cena de Crime e mais</title>
-<meta name="description" content="O portal oficial do Perito Henrique Tabosa: Loja CSI, Lives semanais de perícia criminal, o jogo Cena de Crime, certificados e crachás da comunidade. 17 anos de perícia real.">
+<title>Perito Henrique Tabosa — Portal Oficial | Loja, Lives, Certificados e mais</title>
+<meta name="description" content="O portal oficial do Perito Henrique Tabosa: Loja CSI, Lives semanais de perícia criminal, aulas gravadas, certificados e crachás da comunidade. 17 anos de perícia real.">
 <meta property="og:title" content="Perito Henrique Tabosa — Portal Oficial">
-<meta property="og:description" content="Loja CSI, Lives da Perícia, Cena de Crime e todos os canais oficiais num só lugar.">
+<meta property="og:description" content="Loja CSI, Lives da Perícia, aulas gravadas e todos os canais oficiais num só lugar.">
 
 <!-- Meta Pixel (mesmo ID dos demais sites) -->
 <script>
@@ -55,6 +55,7 @@ h1,h2{font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppe
 /* ---------- destinos ---------- */
 .destinos{padding:34px 0 10px}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grid>.card:last-child:nth-child(odd){grid-column:1/-1}
 @media(max-width:640px){.grid{grid-template-columns:1fr}}
 .card{position:relative;display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;transition:transform .15s,border-color .2s,box-shadow .2s;overflow:hidden}
 .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--hazard)}
@@ -126,8 +127,10 @@ const DESTINOS = [
    url:"https://lives.peritohenriquetabosa.com.br", badge:"TODA QUARTA"},
   {emoji:"🎓", titulo:"Acesso Total", desc:"Todas as aulas do Cena de Crime com o Tabosa + certificados, num plano só.",
    url:"https://pay.hotmart.com/G106657014T?off=ve0ehw8j&src=portal", badge:""},
+  /* Cena de Crime: escondido do portal em 06/10/2026 (site desatualizado). O projeto continua na Vercel:
+     https://cena-de-crime-site.vercel.app — para voltar, é só colar esse endereço na url abaixo. */
   {emoji:"🕵️", titulo:"Cena de Crime", desc:"O universo de investigação: casos, mural e o jogo com casos reais.",
-   url:"https://cena-de-crime-site.vercel.app", badge:""},
+   url:"", badge:""},
   {emoji:"📜", titulo:"Certificados", desc:"Participou da live? Emita seu certificado na noite da live (22h à meia-noite), com a palavra-chave.",
    url:"https://certificados.peritohenriquetabosa.com.br", badge:"NOITE DA LIVE"},
   {emoji:"🪪", titulo:"Crachá EU VOU!", desc:"Gere seu crachá de presença da semana — de segunda (meio-dia) até quarta às 22h.",
@@ -136,7 +139,7 @@ const DESTINOS = [
 const SOCIAIS = [
   {emoji:"📸", nome:"@peritocriminalhenriquetabosa", url:"https://www.instagram.com/peritocriminalhenriquetabosa"},
   {emoji:"🛍️", nome:"@loja_csi", url:"https://www.instagram.com/loja_csi"},
-  {emoji:"💬", nome:"WhatsApp", url:"https://wa.me/5581991016004"}
+  {emoji:"💬", nome:"WhatsApp", url:"https://wa.me/5587991016004"}
 ];
 
 document.getElementById('grid').innerHTML = DESTINOS.filter(d=>d.url).map(d=>`
