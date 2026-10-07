@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0a">
+<title>Cena de Crime 360 — Caso 01: Apartamento 1806 · Jogo de investigação</title>
+<meta name="description" content="O primeiro jogo de investigação em 360° criado por um perito criminal de verdade. Entre num apartamento real, examine a cena, peça os exames e assine o laudo. Jogue a prévia grátis.">
+<meta property="og:title" content="Cena de Crime 360 — Caso 01: Apartamento 1806">
+<meta property="og:description" content="Você é o perito. Entre no apartamento, examine a cena e assine o laudo. Prévia grátis.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://peritohenriquetabosa.com.br/img/jogo-capa.webp">
+
+<!-- Meta Pixel (mesmo ID dos outros sites) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','984093961206190');fbq('track','PageView');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800;900&family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --amarelo:#FFD400; --preto:#0a0a0a; --verm:#ff3b30;
+  --bg:#0b0c0d; --bg2:#111315; --card:#15181a; --line:#262a2d;
+  --txt:#f4f5f3; --mut:#a4aaa8; --rad:14px;
+  --hazard:repeating-linear-gradient(-45deg,var(--amarelo),var(--amarelo) 16px,var(--preto) 16px,var(--preto) 32px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:.3px;text-transform:uppercase;line-height:1.05}
+h2{font-size:clamp(1.55rem,4.2vw,2.5rem);margin:8px 0 14px}
+h1 em,h2 em{font-style:normal;color:var(--verm)}
+.tag{font-family:'Special Elite',monospace;color:var(--amarelo);font-size:.74rem;letter-spacing:3px;text-transform:uppercase}
+.lead{color:var(--mut);max-width:680px;font-size:1.02rem}
+section{padding:64px 0;scroll-margin-top:70px}
+section.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* fita de isolamento */
+.fita{background:var(--amarelo);color:var(--preto);font-family:'Archivo Black';font-size:.72rem;letter-spacing:2px;white-space:nowrap;overflow:hidden;padding:6px 0;border-top:3px solid var(--preto);border-bottom:3px solid var(--preto)}
+.fita span{display:inline-block;padding:0 22px}
+
+header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-filter:blur(10px);border-bottom:2px solid var(--verm)}
+.nav{display:flex;align-items:center;gap:20px;height:62px}
+.brand{margin-right:auto;font-family:'Archivo Black';text-transform:uppercase;letter-spacing:.5px;font-size:1rem;line-height:1.05;min-width:0}
+.brand em{font-style:normal;color:var(--verm)}
+.brand small{display:block;margin-top:5px;font-family:'Special Elite';font-size:.58rem;color:var(--amarelo);letter-spacing:3px}
+.nav a.link{color:var(--mut);font-weight:700;font-size:.88rem}
+.nav a.link:hover{color:var(--txt)}
+@media(max-width:820px){.nav a.link{display:none}}
+@media(max-width:520px){.brand{font-size:.82rem}.brand small{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--verm);color:#fff;font-weight:900;padding:15px 26px;border-radius:44px;font-size:1rem;border:2px solid var(--verm);cursor:pointer;transition:.18s;text-align:center;line-height:1.2}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px -10px rgba(255,59,48,.7)}
+.btn.ghost{background:rgba(0,0,0,.35);color:var(--txt);border-color:#565b5e}
+.btn.ghost:hover{border-color:var(--amarelo);color:var(--amarelo);box-shadow:none}
+.btn.sm{padding:9px 18px;font-size:.85rem}
+
+/* topo */
+.hero{padding:54px 0 60px;background:radial-gradient(900px 460px at 88% 0%,rgba(255,59,48,.16),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.9rem);margin:14px 0 6px}
+.hero .caso{font-family:'Archivo Black';text-transform:uppercase;font-size:clamp(1rem,2.6vw,1.4rem);letter-spacing:.5px;margin-bottom:18px}
+.hero p.sub{color:#e3e6e4;font-size:1.08rem;max-width:560px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:26px}
+.mini{color:var(--mut);font-size:.85rem;margin-top:14px}
+.media-leg{text-align:center;color:var(--mut);font-size:.85rem;margin-top:10px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero{padding:40px 0 46px}}
+
+/* vídeo */
+.media{position:relative;border-radius:var(--rad);overflow:hidden;border:2px solid var(--verm);background:#000;aspect-ratio:16/9;box-shadow:0 24px 60px -30px rgba(255,59,48,.6)}
+.media img{width:100%;height:100%;object-fit:cover}
+.media iframe,.media .capa{position:absolute;inset:0;width:100%;height:100%;border:0}
+.media .capa{background-size:cover;background-position:center;cursor:pointer;display:grid;place-items:center}
+.media .capa::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.3)}
+.play{position:relative;z-index:1;width:84px;height:84px;border-radius:50%;background:var(--verm);display:grid;place-items:center;box-shadow:0 0 0 10px rgba(255,59,48,.25)}
+.play::before{content:"";border-style:solid;border-width:15px 0 15px 25px;border-color:transparent transparent transparent #fff;margin-left:6px}
+
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+@media(max-width:960px){.grid4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
+@media(max-width:520px){.grid4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:22px}
+.card h3{font-size:1rem;margin-bottom:8px}
+.card p{color:var(--mut);font-size:.95rem}
+.card .n{font-family:'Archivo Black';color:var(--verm);font-size:1.7rem;line-height:1;display:block;margin-bottom:10px}
+
+/* o caso */
+.caso-grid{display:grid;grid-template-columns:340px 1fr;gap:38px;align-items:center}
+.caso-grid img{border-radius:var(--rad);border:1px solid var(--line);aspect-ratio:4/5;object-fit:cover;width:100%}
+.caso-grid p{color:#dfe2e0;margin-bottom:12px;font-size:1.03rem}
+.ficha{font-family:'Special Elite',monospace;background:#0f1112;border:1px dashed #3a3f42;border-radius:10px;padding:14px 16px;color:#cfd3d1;font-size:.9rem;margin-top:16px;line-height:1.7}
+.ficha b{color:var(--amarelo);font-weight:400}
+@media(max-width:820px){.caso-grid{grid-template-columns:1fr}.caso-grid img{max-width:320px}}
+
+/* fotos */
+.foto{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.foto img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.foto figcaption{padding:12px 14px;font-size:.9rem;color:var(--mut)}
+.foto figcaption b{display:block;color:var(--txt)}
+
+/* preço */
+.preco-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:28px;max-width:900px}
+@media(max-width:800px){.preco-grid{grid-template-columns:1fr}}
+.pbox{background:var(--card);border:2px solid var(--line);border-radius:var(--rad);padding:26px 24px;display:flex;flex-direction:column}
+.pbox.dest{border-color:var(--verm);box-shadow:0 24px 60px -34px rgba(255,59,48,.6)}
+.preco{font-family:'Archivo Black';font-size:2.8rem;line-height:1;margin:12px 0 4px}
+.pbox .eq{color:var(--mut);font-size:.9rem;margin-bottom:14px}
+.pbox ul{list-style:none;display:grid;gap:8px;margin-bottom:22px;flex:1}
+.pbox li{padding-left:24px;position:relative;font-size:.95rem}
+.pbox li::before{content:"✓";position:absolute;left:0;color:var(--amarelo);font-weight:900}
+.pbox .btn{width:100%}
+.garantia{display:flex;gap:16px;align-items:center;background:var(--card);border:1px dashed var(--amarelo);border-radius:var(--rad);padding:18px 20px;margin-top:22px;max-width:900px}
+.garantia .g7{font-family:'Archivo Black';color:var(--amarelo);font-size:1.5rem;line-height:1;text-align:center;flex:0 0 auto}
+.garantia .g7 small{display:block;font-size:.62rem;letter-spacing:2px}
+.garantia p{color:#dfe2e0;font-size:.95rem}
+
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-top:10px}
+summary{cursor:pointer;padding:16px 18px;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--verm);font-weight:900;font-size:1.2rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 18px 18px;color:var(--mut)}
+
+.quem{display:grid;grid-template-columns:280px 1fr;gap:34px;align-items:center}
+.quem img{border-radius:var(--rad);border:2px solid var(--amarelo);aspect-ratio:4/5;object-fit:cover;width:100%}
+.quem p{color:#dfe2e0;margin-bottom:12px}
+@media(max-width:800px){.quem{grid-template-columns:1fr}.quem img{max-width:260px}}
+
+.final{text-align:center}
+.final .lead{margin:0 auto 24px}
+.final .cta-row{justify-content:center}
+footer{border-top:1px solid var(--line);padding:26px 0 90px;color:var(--mut);font-size:.82rem;text-align:center}
+footer a{color:var(--amarelo)}
+
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(10,10,10,.97);border-top:2px solid var(--verm);padding:10px 14px;display:none;align-items:center;gap:12px}
+.barra b{font-family:'Archivo Black';font-size:1.05rem;line-height:1.1}
+.barra small{display:block;color:var(--mut);font-size:.72rem;font-family:'Inter';font-weight:600}
+.barra .btn{margin-left:auto;padding:11px 18px;font-size:.9rem}
+@media(max-width:760px){.barra{display:flex}}
+</style>
+</head>
+<body>
+
+<div class="fita" aria-hidden="true"><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span></div>
+<header><div class="wrap nav">
+  <a class="brand" href="#topo">Cena de Crime <em>360</em><small>CASO 01 · APARTAMENTO 1806</small></a>
+  <a class="link" href="#caso">O caso</a>
+  <a class="link" href="#como">Como se joga</a>
+  <a class="link" href="#duvidas">Dúvidas</a>
+  <a class="btn sm" data-previa href="https://jogo.peritohenriquetabosa.com.br">Jogar a prévia</a>
+</div></header>
+
+<!-- ===================== TOPO ===================== -->
+<section class="hero" id="topo"><div class="wrap hero-grid">
+  <div>
+    <span class="tag">// O primeiro jogo de investigação em 360° criado por um perito criminal de verdade</span>
+    <h1>Cena de Crime <em>360</em></h1>
+    <p class="caso">Caso 01 — Apartamento 1806</p>
+    <p class="sub">Um médico é encontrado morto dentro de casa. A cena parece contar uma história. Você é o perito: entre no apartamento, examine cada canto e assine o laudo dizendo o que aconteceu ali.</p>
+    <div class="cta-row">
+      <a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo — R$ 49,90</a>
+      <a class="btn ghost" data-previa href="https://jogo.peritohenriquetabosa.com.br">Jogar a prévia grátis</a>
+    </div>
+    <p class="mini">Joga no celular ou no computador, sem instalar nada · ficção com técnica real · não há gore</p>
+  </div>
+  <div>
+    <!-- VÍDEO DO PERITO: quando o vídeo estiver no YouTube, cole o endereço na linha VIDEO_YT, no fim desta página.
+         Enquanto estiver vazio, aparece a imagem da porta do apartamento. -->
+    <div class="media" id="midia"><img src="img/jogo-hero.webp" alt="Porta do apartamento 1806 entreaberta" width="1600" height="900"></div>
+    <p class="media-leg" id="midia-leg" hidden>▶ Assista: eu explico como o jogo funciona</p>
+  </div>
+</div></section>
+
+<!-- ===================== O CASO ===================== -->
+<section class="alt" id="caso"><div class="wrap caso-grid">
+  <img src="img/jogo-porta.webp" alt="Porta do apartamento 1806" loading="lazy" width="800" height="1000">
+  <div>
+    <span class="tag">// O caso</span>
+    <h2>O que aconteceu no <em>1806</em>?</h2>
+    <p>O porteiro e o síndico encontraram o morador caído na sala e chamaram a polícia. A porta do apartamento ficou entreaberta.</p>
+    <p>Quando você chega, os dois estão esperando no corredor. Lá dentro, tudo parece apontar para uma explicação simples. O seu trabalho é conferir se a cena confirma essa explicação.</p>
+    <div class="ficha">
+      <b>VÍTIMA:</b> Rafael Menezes Portela, médico, 30 anos<br>
+      <b>LOCAL:</b> apartamento 1806, onde morava sozinho<br>
+      <b>NO CORREDOR:</b> o porteiro e o síndico, que encontraram o corpo<br>
+      <b>SUA FUNÇÃO:</b> perito responsável pelo exame do local
+    </div>
+  </div>
+</div></section>
+
+<!-- ===================== COMO SE JOGA ===================== -->
+<section id="como"><div class="wrap">
+  <span class="tag">// Como se joga</span>
+  <h2>Do corredor <em>ao laudo</em></h2>
+  <p class="lead">Não tem contagem de tempo nem pontuação para correr atrás. Você avança quando encontra o que precisa, do jeito que acontece numa perícia.</p>
+  <div class="grid4">
+    <div class="card"><span class="n">1</span><h3>Ouça quem encontrou</h3><p>Antes de entrar, você ouve o porteiro e o síndico, em vídeo. Preste atenção no que cada um diz e no que deixa de dizer.</p></div>
+    <div class="card"><span class="n">2</span><h3>Examine o apartamento</h3><p>Ande pelos cômodos em 360°. Fotografe, colete e lacre cada vestígio. Abra gavetas e armários. O que passar batido faz falta depois.</p></div>
+    <div class="card"><span class="n">3</span><h3>Peça os exames</h3><p>Veja as gravações das câmeras, os registros da fechadura digital, as mensagens do celular e os resultados que chegam do laboratório.</p></div>
+    <div class="card"><span class="n">4</span><h3>Conclua e assine</h3><p>Confronte as versões, aponte o que aconteceu e assine o laudo com o seu nome. Ele sai em PDF, para você guardar.</p></div>
+  </div>
+</div></section>
+
+<!-- ===================== O QUE TEM ===================== -->
+<section class="alt"><div class="wrap">
+  <span class="tag">// O que tem dentro</span>
+  <h2>Feito com <em>material de verdade</em></h2>
+  <p class="lead">Nada aqui é desenho. As fotos, os vídeos e os documentos foram produzidos para o caso, como seriam numa ocorrência.</p>
+  <div class="grid4">
+    <figure class="foto"><img src="img/jogo-carteira.webp" alt="Carteira e documentos da vítima" loading="lazy" width="800" height="600"><figcaption><b>Vestígios</b>Cada objeto pode ser fotografado, coletado e analisado de perto.</figcaption></figure>
+    <figure class="foto"><img src="img/jogo-camera.webp" alt="Câmera de segurança da sala" loading="lazy" width="800" height="600"><figcaption><b>Câmeras</b>As gravações mostram as últimas horas dentro do apartamento.</figcaption></figure>
+    <figure class="foto"><img src="img/jogo-fechadura.webp" alt="Fechadura digital da porta" loading="lazy" width="800" height="600"><figcaption><b>Fechadura digital</b>Ela guarda quem abriu a porta, como e a que horas.</figcaption></figure>
+    <figure class="foto"><img src="img/jogo-log.webp" alt="Relatório de eventos da fechadura" loading="lazy" width="800" height="600"><figcaption><b>Documentos</b>Relatórios, mensagens e registros para você cruzar com os depoimentos.</figcaption></figure>
+  </div>
+  <div class="grid3">
+    <div class="card"><h3>🏠 Apartamento real em 360°</h3><p>14 pontos para você percorrer, do corredor do prédio ao banheiro, com mapa para se localizar.</p></div>
+    <div class="card"><h3>⏱️ De 45 minutos a 1h30</h3><p>Depende do quanto você quer vasculhar. O progresso fica salvo no aparelho, então dá para parar e continuar depois.</p></div>
+    <div class="card"><h3>📄 Laudo em PDF</h3><p>No fim você assina o laudo pericial do caso e baixa o arquivo, com anexo fotográfico e o seu nome como perito responsável.</p></div>
+  </div>
+</div></section>
+
+<!-- ===================== PARA QUEM ===================== -->
+<section><div class="wrap">
+  <span class="tag">// Para quem é</span>
+  <h2>Para jogar sozinho <em>ou em grupo</em></h2>
+  <div class="grid2">
+    <div class="card"><h3>🔎 Quem gosta de mistério e casos reais</h3><p>E quer resolver um caso com as próprias mãos, em vez de só assistir alguém resolver.</p></div>
+    <div class="card"><h3>🎒 Estudantes e concurseiros</h3><p>Que querem ver na prática a ordem do trabalho num local de crime: isolar, registrar, coletar, examinar, concluir.</p></div>
+    <div class="card"><h3>👩‍🏫 Professores</h3><p>Que querem uma atividade diferente para a turma. Dá para projetar na sala e decidir cada passo em grupo.</p></div>
+    <div class="card"><h3>👨‍👩‍👧 Família e amigos</h3><p>Para uma noite de jogo. Não tem cena forte: é um caso para pensar, discutir e discordar até o final.</p></div>
+  </div>
+  <p class="lead" style="margin-top:20px">Importante: é um jogo, não um curso. Ele não dá certificado e não substitui formação na área.</p>
+</div></section>
+
+<!-- ===================== QUEM FEZ ===================== -->
+<section class="alt"><div class="wrap quem">
+  <img src="img/henrique.webp" alt="Henrique Tabosa" loading="lazy" width="800" height="1000">
+  <div>
+    <span class="tag">// Quem fez</span>
+    <h2>Henrique <em>Tabosa</em></h2>
+    <p>Sou perito criminal há 17 anos e já atendi mais de 1.800 locais de crime. Sempre me perguntam como é chegar numa cena e saber por onde começar. Em vez de explicar, resolvi colocar você lá dentro.</p>
+    <p>O apartamento é de verdade, fotografado em 360°. A história é inventada. O jeito de trabalhar é o mesmo que eu uso: observar, registrar, coletar, pedir exame e só então concluir.</p>
+    <p>Eu escrevi o caso, montei a cena, gravei os depoimentos e revisei cada exame para que o caminho até a resposta fosse o de uma investigação de verdade.</p>
+  </div>
+</div></section>
+
+<!-- ===================== PREÇO ===================== -->
+<section id="comprar"><div class="wrap">
+  <span class="tag">// Caso completo</span>
+  <h2>Entre no <em>apartamento</em></h2>
+  <p class="lead">A prévia é grátis e vai até a porta do 1806. Para entrar, examinar a cena e fechar o caso, você precisa do caso completo.</p>
+  <div class="preco-grid">
+    <div class="pbox dest">
+      <h3>Cena de Crime 360 · Caso 01</h3>
+      <div class="preco">R$ 49,90</div>
+      <p class="eq">pagamento único · Pix, cartão ou boleto pela Hotmart</p>
+      <ul>
+        <li>O caso inteiro, do corredor ao laudo</li>
+        <li>Apartamento real em 360°</li>
+        <li>Câmeras, depoimentos em vídeo, exames e documentos</li>
+        <li>Laudo em PDF com o seu nome</li>
+        <li>Joga no celular ou no computador</li>
+      </ul>
+      <a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo</a>
+    </div>
+    <div class="pbox">
+      <h3>Já é do Acesso Total?</h3>
+      <p class="eq" style="margin-top:12px">Quem assina o curso Perícia Forense com o Tabosa já tem o jogo incluído. É só entrar com o e-mail da assinatura.</p>
+      <ul>
+        <li>20 aulas com casos reais brasileiros</li>
+        <li>Certificado de 4h por aula</li>
+        <li>O jogo incluído</li>
+      </ul>
+      <a class="btn ghost" href="curso">Conhecer o curso</a>
+    </div>
+  </div>
+  <div class="garantia">
+    <div class="g7">7<small>DIAS</small></div>
+    <p><b>Garantia de 7 dias.</b> Se você comprar e achar que não é para você, peça o reembolso pela própria Hotmart dentro de 7 dias.</p>
+  </div>
+</div></section>
+
+<!-- ===================== DÚVIDAS ===================== -->
+<section class="alt" id="duvidas"><div class="wrap" style="max-width:820px">
+  <span class="tag">// Dúvidas</span>
+  <h2>Antes de <em>começar</em></h2>
+  <details><summary>Como eu entro no jogo depois de comprar?</summary><p>Abra o jogo, toque em “Já comprei” e digite o mesmo e-mail que você usou na compra pela Hotmart. O acesso fica guardado naquele aparelho.</p></details>
+  <details><summary>Preciso instalar alguma coisa?</summary><p>Não. O jogo abre no navegador. No celular, vire a tela na horizontal. No computador, use o mouse para olhar em volta.</p></details>
+  <details><summary>Preciso entender de perícia?</summary><p>Não. O jogo explica o que fazer em cada etapa e o tablet do perito dá dicas quando você trava.</p></details>
+  <details><summary>Quanto tempo leva?</summary><p>De 45 minutos a 1h30, dependendo do quanto você vasculha o apartamento. Você pode parar e continuar depois no mesmo aparelho.</p></details>
+  <details><summary>Tem cena forte?</summary><p>Não há gore. O corpo aparece na cena, como apareceria num local real, mas sem imagens chocantes. É uma obra de ficção feita com técnica real.</p></details>
+  <details><summary>Posso jogar em grupo ou na sala de aula?</summary><p>Pode. Dá para projetar a tela e decidir cada passo em grupo. Funciona bem como atividade de turma.</p></details>
+  <details><summary>O jogo dá certificado?</summary><p>Não. É um jogo. Quem quer certificado encontra nas aulas do curso Perícia Forense com o Tabosa.</p></details>
+  <details><summary>Não consegui entrar. Com quem eu falo?</summary><p>Chame no WhatsApp pelo link no fim da página e a gente resolve.</p></details>
+</div></section>
+
+<!-- ===================== FINAL ===================== -->
+<section class="final"><div class="wrap">
+  <span class="tag">// A cena está isolada</span>
+  <h2>O porteiro e o síndico <em>estão te esperando</em></h2>
+  <p class="lead">Comece pela prévia, ouça os dois e decida se quer entrar.</p>
+  <div class="cta-row">
+    <a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo — R$ 49,90</a>
+    <a class="btn ghost" data-previa href="https://jogo.peritohenriquetabosa.com.br">Jogar a prévia grátis</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p>© 2026 Perito Criminal Henrique Tabosa · Cena de Crime 360 é uma obra de ficção. Nomes, pessoas e fatos do caso são inventados.</p>
+  <p style="margin-top:8px"><a href="https://peritohenriquetabosa.com.br">Site</a> · <a href="curso">Curso</a> · <a href="https://loja.peritohenriquetabosa.com.br">Loja</a> · <a href="https://wa.me/5587991016004?text=Preciso%20de%20ajuda%20com%20o%20jogo%20Cena%20de%20Crime%20360">Ajuda pelo WhatsApp</a></p>
+</div></footer>
+
+<div class="barra"><div><b>R$ 49,90</b><small>caso completo · prévia grátis</small></div><a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar</a></div>
+
+<script>
+/* =====================================================================
+   1) LINK DE PAGAMENTO DO JOGO NA HOTMART
+   Produto 8671253 (R$ 49,90). O link só abre o pagamento depois que
+   o cadastro do produto for finalizado e aprovado pela Hotmart.
+   Se ficar vazio (""), os botões de compra levam para o jogo
+   (lá a pessoa joga a prévia e encontra a opção de comprar na porta).
+   ===================================================================== */
+const CHECKOUT = "https://pay.hotmart.com/H107914485I";
+
+/* =====================================================================
+   2) VÍDEO DO PERITO
+   Quando o vídeo estiver no YouTube, cole o endereço entre as aspas.
+   ===================================================================== */
+const VIDEO_YT = "";
+
+const JOGO = "https://jogo.peritohenriquetabosa.com.br";
+document.querySelectorAll('a[data-comprar]').forEach(a => {
+  if(CHECKOUT){ a.href = CHECKOUT + (CHECKOUT.includes('?')?'&':'?') + 'src=pv-jogo'; a.target = '_blank'; a.rel = 'noopener'; }
+  else { a.href = JOGO; }
+  a.addEventListener('click', () => { try{ fbq('track','InitiateCheckout',{content_name:'Cena de Crime 360 - Caso 01', value:49.90, currency:'BRL'}); }catch(e){} });
+});
+document.querySelectorAll('a[data-previa]').forEach(a => a.addEventListener('click', () => { try{ fbq('trackCustom','PreviaJogo'); }catch(e){} }));
+
+(function(){
+  const m = String(VIDEO_YT).match(/(?:youtu\.be\/|[?&]v=|shorts\/|embed\/)([\w-]{11})/);
+  const id = m ? m[1] : (/^[\w-]{11}$/.test(VIDEO_YT) ? VIDEO_YT : "");
+  if(!id) return;
+  const box = document.getElementById('midia');
+  document.getElementById('midia-leg').hidden = false;
+  box.innerHTML = `<div class="capa" role="button" tabindex="0" aria-label="Assistir ao vídeo" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play"></span></div>`;
+  const tocar = () => { box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="O perito apresenta o jogo" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`; try{fbq('trackCustom','VideoJogo')}catch(e){} };
+  box.firstChild.addEventListener('click', tocar);
+  box.firstChild.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();tocar();} });
+})();
+</script>
+</body>
+</html>
