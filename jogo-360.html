@@ -86,6 +86,24 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-f
 .media .capa::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.3)}
 .play{position:relative;z-index:1;width:84px;height:84px;border-radius:50%;background:var(--verm);display:grid;place-items:center;box-shadow:0 0 0 10px rgba(255,59,48,.25)}
 .play::before{content:"";border-style:solid;border-width:15px 0 15px 25px;border-color:transparent transparent transparent #fff;margin-left:6px}
+/* vídeo de vendas: começa sozinho sem som; clique liga o som e volta ao início */
+.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.media.sem-som video{cursor:pointer}
+.som{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;background:linear-gradient(transparent 40%,rgba(0,0,0,.55));border:0;padding:0;cursor:pointer;color:#fff;font:inherit}
+.som span{display:flex;flex-direction:column;align-items:center;gap:6px;background:var(--verm);border-radius:16px;padding:14px 22px;box-shadow:0 0 0 0 rgba(255,59,48,.7);animation:pulsa 1.6s infinite;text-align:center;max-width:86%}
+.som b{font-size:clamp(1rem,2.6vw,1.2rem);font-weight:900;line-height:1.15}
+.som small{font-size:.8rem;opacity:.92;line-height:1.2}
+.som:focus-visible span{outline:3px solid var(--amarelo);outline-offset:3px}
+@keyframes pulsa{0%{box-shadow:0 0 0 0 rgba(255,59,48,.65)}70%{box-shadow:0 0 0 18px rgba(255,59,48,0)}100%{box-shadow:0 0 0 0 rgba(255,59,48,0)}}
+@media(prefers-reduced-motion:reduce){.som span{animation:none}}
+/* no celular, com vídeo, ele sobe para logo depois do título */
+@media(max-width:900px){
+  .hero-grid.vsl{gap:0}
+  .hero-grid.vsl>div:first-child{display:contents}
+  .hero-grid.vsl .tag{order:1}.hero-grid.vsl h1{order:2}.hero-grid.vsl .caso{order:3}
+  .hero-grid.vsl>div:last-child{order:4;margin:4px 0 20px}
+  .hero-grid.vsl p.sub{order:5}.hero-grid.vsl .cta-row{order:6}.hero-grid.vsl .mini{order:7}
+}
 
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
@@ -123,10 +141,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-f
 .pbox li{padding-left:24px;position:relative;font-size:.95rem}
 .pbox li::before{content:"✓";position:absolute;left:0;color:var(--amarelo);font-weight:900}
 .pbox .btn{width:100%}
-.garantia{display:flex;gap:16px;align-items:center;background:var(--card);border:1px dashed var(--amarelo);border-radius:var(--rad);padding:18px 20px;margin-top:22px;max-width:900px}
-.garantia .g7{font-family:'Archivo Black';color:var(--amarelo);font-size:1.5rem;line-height:1;text-align:center;flex:0 0 auto}
-.garantia .g7 small{display:block;font-size:.62rem;letter-spacing:2px}
-.garantia p{color:#dfe2e0;font-size:.95rem}
 
 details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-top:10px}
 summary{cursor:pointer;padding:16px 18px;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:14px}
@@ -178,8 +192,8 @@ footer a{color:var(--amarelo)}
     <p class="mini">Joga no celular ou no computador, sem instalar nada · ficção com técnica real · não há gore</p>
   </div>
   <div>
-    <!-- VÍDEO DO PERITO: quando o vídeo estiver no YouTube, cole o endereço na linha VIDEO_YT, no fim desta página.
-         Enquanto estiver vazio, aparece a imagem da porta do apartamento. -->
+    <!-- VÍDEO DO PERITO: preencha VIDEO_MP4 (arquivo no site) ou VIDEO_YT (YouTube) no fim desta página.
+         Com vídeo: começa sozinho, sem som, com o aviso "clique para ouvir". Sem vídeo: aparece a foto da porta. -->
     <div class="media" id="midia"><img src="img/jogo-hero.webp" alt="Porta do apartamento 1806 entreaberta" width="1600" height="900"></div>
     <p class="media-leg" id="midia-leg" hidden>▶ Assista: eu explico como o jogo funciona</p>
   </div>
@@ -288,10 +302,6 @@ footer a{color:var(--amarelo)}
       <a class="btn ghost" href="curso">Conhecer o curso</a>
     </div>
   </div>
-  <div class="garantia">
-    <div class="g7">7<small>DIAS</small></div>
-    <p><b>Garantia de 7 dias.</b> Se você comprar e achar que não é para você, peça o reembolso pela própria Hotmart dentro de 7 dias.</p>
-  </div>
 </div></section>
 
 <!-- ===================== DÚVIDAS ===================== -->
@@ -337,9 +347,15 @@ footer a{color:var(--amarelo)}
 const CHECKOUT = "https://pay.hotmart.com/H107914485I";
 
 /* =====================================================================
-   2) VÍDEO DO PERITO
-   Quando o vídeo estiver no YouTube, cole o endereço entre as aspas.
+   2) VÍDEO DO PERITO (pitch de vendas)
+   Use UMA das duas linhas (se as duas estiverem preenchidas, vale o MP4):
+   - VIDEO_MP4: arquivo no próprio site, ex.: "video/jogo-pitch.mp4"
+   - VIDEO_YT: endereço do YouTube (vídeo "Não listado")
+   Ao abrir a página o vídeo começa sozinho, SEM SOM, com o aviso
+   "Seu vídeo já começou — clique para ouvir". O clique liga o som e
+   volta para o começo. Vazio = aparece a foto da porta do 1806.
    ===================================================================== */
+const VIDEO_MP4 = "";
 const VIDEO_YT = "";
 
 const JOGO = "https://jogo.peritohenriquetabosa.com.br";
@@ -351,15 +367,44 @@ document.querySelectorAll('a[data-comprar]').forEach(a => {
 document.querySelectorAll('a[data-previa]').forEach(a => a.addEventListener('click', () => { try{ fbq('trackCustom','PreviaJogo'); }catch(e){} }));
 
 (function(){
-  const m = String(VIDEO_YT).match(/(?:youtu\.be\/|[?&]v=|shorts\/|embed\/)([\w-]{11})/);
-  const id = m ? m[1] : (/^[\w-]{11}$/.test(VIDEO_YT) ? VIDEO_YT : "");
-  if(!id) return;
   const box = document.getElementById('midia');
-  document.getElementById('midia-leg').hidden = false;
-  box.innerHTML = `<div class="capa" role="button" tabindex="0" aria-label="Assistir ao vídeo" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play"></span></div>`;
-  const tocar = () => { box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="O perito apresenta o jogo" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`; try{fbq('trackCustom','VideoJogo')}catch(e){} };
-  box.firstChild.addEventListener('click', tocar);
-  box.firstChild.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();tocar();} });
+  const m = String(VIDEO_YT).match(/(?:youtu\.be\/|[?&]v=|shorts\/|embed\/)([\w-]{11})/);
+  const yt = m ? m[1] : (/^[\w-]{11}$/.test(VIDEO_YT) ? VIDEO_YT : "");
+  if(!VIDEO_MP4 && !yt) return;
+  document.querySelector('.hero-grid').classList.add('vsl');
+  const capa = 'img/jogo-hero.webp';
+  const aviso = (txt1, txt2) => `<button type="button" class="som" id="som" aria-label="Ligar o som e assistir do começo"><span><b>${txt1}</b><small>${txt2}</small></span></button>`;
+  const marcar = () => { try{ fbq('trackCustom','VideoJogoSom'); }catch(e){} };
+  box.classList.add('sem-som');
+
+  if(VIDEO_MP4){
+    box.innerHTML = `<video id="pv" src="${VIDEO_MP4}" poster="${capa}" muted autoplay loop playsinline preload="auto"></video>` + aviso('🔊 Seu vídeo já começou','Clique para ouvir');
+    const v = document.getElementById('pv'), b = document.getElementById('som');
+    v.muted = true; // garante o autoplay no iPhone/Android
+    const p = v.play(); if(p && p.catch) p.catch(() => { b.querySelector('b').textContent = '▶ Assista ao vídeo'; b.querySelector('small').textContent = 'Toque para ver com som'; });
+    const ligar = () => {
+      v.loop = false; v.muted = false; v.currentTime = 0; v.controls = true;
+      const q = v.play(); if(q && q.catch) q.catch(()=>{});
+      b.remove(); box.classList.remove('sem-som'); marcar();
+    };
+    b.addEventListener('click', ligar);
+    // economiza dados: a prévia sem som só roda enquanto aparece na tela
+    if('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => {
+      if(!v.muted) return; e.isIntersecting ? v.play().catch(()=>{}) : v.pause();
+    }), {threshold:.25}).observe(v);
+    return;
+  }
+
+  // YouTube: começa sem som; o clique liga o som e volta ao início (comandos da API do YouTube)
+  const src = `https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&mute=1&playsinline=1&loop=1&playlist=${yt}&controls=1&rel=0&modestbranding=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
+  box.innerHTML = `<iframe id="pvyt" src="${src}" title="O perito apresenta o jogo" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>` + aviso('🔊 Seu vídeo já começou','Clique para ouvir');
+  const f = document.getElementById('pvyt'), b = document.getElementById('som');
+  const cmd = (func, args=[]) => { try{ f.contentWindow.postMessage(JSON.stringify({event:'command', func, args}), '*'); }catch(e){} };
+  f.addEventListener('load', () => { try{ f.contentWindow.postMessage(JSON.stringify({event:'listening'}), '*'); }catch(e){} });
+  b.addEventListener('click', () => {
+    cmd('unMute'); cmd('setVolume',[100]); cmd('seekTo',[0,true]); cmd('setLoop',[false]); cmd('playVideo');
+    b.remove(); box.classList.remove('sem-som'); marcar();
+  });
 })();
 </script>
 </body>
