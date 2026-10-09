@@ -125,6 +125,18 @@ footer a{text-decoration:underline}
 </div></footer>
 
 <script>
+// Hotmart manda para cá com ?status=aguardando (Pix/boleto ainda não pago) ou ?status=analise (cartão em análise)
+(function(){
+  var st=new URLSearchParams(location.search).get('status');
+  var txt={
+    aguardando:['⏳ Pedido recebido · aguardando pagamento','O acesso libera assim que o pagamento cair. Pix costuma levar poucos minutos; boleto, até 3 dias úteis. Depois disso, entre com o <strong>e-mail que você usou na compra</strong>.'],
+    analise:['⏳ Pagamento em análise','A operadora do cartão está conferindo o pagamento. Assim que aprovar, o acesso libera com o <strong>e-mail que você usou na compra</strong>.']
+  }[st];
+  if(!txt)return;
+  var ok=document.querySelector('.ok');ok.textContent=txt[0];ok.style.color='#FFD400';ok.style.borderColor='rgba(255,212,0,.45)';ok.style.background='rgba(255,212,0,.1)';
+  document.querySelector('.lead').innerHTML=txt[1];
+  document.querySelector('.cta small').textContent='Pode deixar o link salvo: quando o pagamento for aprovado, é só entrar.';
+})();
 document.getElementById('abrir').addEventListener('click',function(){try{fbq('trackCustom','ObrigadoAbrirJogo');}catch(e){}});
 </script>
 </body>
