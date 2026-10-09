@@ -10,23 +10,35 @@
 <meta property="og:description" content="Você é o perito. Entre no apartamento, examine a cena e assine o laudo. Prévia grátis.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://peritohenriquetabosa.com.br/img/jogo-capa.webp">
+<meta property="og:url" content="https://peritohenriquetabosa.com.br/jogo-360">
+<meta property="og:image" content="https://peritohenriquetabosa.com.br/img/jogo-compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="canonical" href="https://peritohenriquetabosa.com.br/jogo-360">
 
-<!-- Meta Pixel (mesmo ID dos outros sites) -->
+<!-- Meta Pixel: "Pixel de Loja Perito 2021" (portfólio Loja Perito 2021, ligado à Conta Loja Perito 2021) -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','984093961206190');fbq('track','PageView');
+fbq('init','1034119147300221');fbq('track','PageView');
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800;900&family=Special+Elite&display=swap" rel="stylesheet">
+<!-- Contador de visitas (Vercel Web Analytics): só aparece no painel da Vercel -->
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+<!-- Fontes hospedadas no próprio site (antes vinham do Google e seguravam a abertura da página) -->
+<link rel="preload" href="/fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
+@font-face{font-family:'Archivo Black';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/archivo-black.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/inter.woff2) format('woff2')}
+@font-face{font-family:'Special Elite';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/special-elite.woff2) format('woff2')}
+[hidden]{display:none!important}
 :root{
   --amarelo:#FFD400; --preto:#0a0a0a; --verm:#ff3b30;
   --bg:#0b0c0d; --bg2:#111315; --card:#15181a; --line:#262a2d;
@@ -66,6 +78,16 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-f
 .btn.ghost{background:rgba(0,0,0,.35);color:var(--txt);border-color:#565b5e}
 .btn.ghost:hover{border-color:var(--amarelo);color:var(--amarelo);box-shadow:none}
 .btn.sm{padding:9px 18px;font-size:.85rem}
+.btn.big{padding:17px 30px;font-size:1.08rem}
+/* compra em destaque; prévia como link discreto */
+.cta-col{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:26px}
+.previa-link{color:var(--mut);font-weight:700;font-size:.92rem;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#565b5e;padding:4px 0}
+.previa-link:hover{color:var(--amarelo);text-decoration-color:var(--amarelo)}
+.oferta{font-size:.92rem;color:var(--amarelo);font-weight:700;line-height:1.35}
+.oferta s{color:var(--mut);font-weight:600}
+/* faixa do cupom de lançamento (só aparece para quem chega pelo link com o cupom) */
+.lanc{background:#1c1500;border-bottom:1px solid #6b5200;color:#ffe680;text-align:center;font-size:.9rem;font-weight:700;padding:9px 14px;line-height:1.35}
+.lanc b{color:#fff}
 
 /* topo */
 .hero{padding:54px 0 60px;background:radial-gradient(900px 460px at 88% 0%,rgba(255,59,48,.16),transparent 70%)}
@@ -73,7 +95,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-f
 .hero h1{font-size:clamp(2.2rem,6vw,3.9rem);margin:14px 0 6px}
 .hero .caso{font-family:'Archivo Black';text-transform:uppercase;font-size:clamp(1rem,2.6vw,1.4rem);letter-spacing:.5px;margin-bottom:18px}
 .hero p.sub{color:#e3e6e4;font-size:1.08rem;max-width:560px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:26px}
 .mini{color:var(--mut);font-size:.85rem;margin-top:14px}
 .media-leg{text-align:center;color:var(--mut);font-size:.85rem;margin-top:10px}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero{padding:40px 0 46px}}
@@ -102,7 +123,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-f
   .hero-grid.vsl>div:first-child{display:contents}
   .hero-grid.vsl .tag{order:1}.hero-grid.vsl h1{order:2}.hero-grid.vsl .caso{order:3}
   .hero-grid.vsl>div:last-child{order:4;margin:4px 0 20px}
-  .hero-grid.vsl p.sub{order:5}.hero-grid.vsl .cta-row{order:6}.hero-grid.vsl .mini{order:7}
+  .hero-grid.vsl p.sub{order:5}.hero-grid.vsl .cta-col{order:6}.hero-grid.vsl .mini{order:7}
 }
 
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
@@ -136,6 +157,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-f
 .pbox{background:var(--card);border:2px solid var(--line);border-radius:var(--rad);padding:26px 24px;display:flex;flex-direction:column}
 .pbox.dest{border-color:var(--verm);box-shadow:0 24px 60px -34px rgba(255,59,48,.6)}
 .preco{font-family:'Archivo Black';font-size:2.8rem;line-height:1;margin:12px 0 4px}
+.preco s{font-family:'Inter';font-size:1.15rem;font-weight:700;color:var(--mut);margin-right:10px;vertical-align:middle}
 .pbox .eq{color:var(--mut);font-size:.9rem;margin-bottom:14px}
 .pbox ul{list-style:none;display:grid;gap:8px;margin-bottom:22px;flex:1}
 .pbox li{padding-left:24px;position:relative;font-size:.95rem}
@@ -156,7 +178,7 @@ details p{padding:0 18px 18px;color:var(--mut)}
 
 .final{text-align:center}
 .final .lead{margin:0 auto 24px}
-.final .cta-row{justify-content:center}
+.final .cta-col{align-items:center}
 footer{border-top:1px solid var(--line);padding:26px 0 90px;color:var(--mut);font-size:.82rem;text-align:center}
 footer a{color:var(--amarelo)}
 
@@ -165,17 +187,46 @@ footer a{color:var(--amarelo)}
 .barra small{display:block;color:var(--mut);font-size:.72rem;font-family:'Inter';font-weight:600}
 .barra .btn{margin-left:auto;padding:11px 18px;font-size:.9rem}
 @media(max-width:760px){.barra{display:flex}}
+
+/* ===== celular: página mais curta ===== */
+@media(max-width:820px){
+  section{padding:42px 0}
+  .caso-grid img{display:none}
+  .quem{gap:18px}.quem img{max-width:150px}
+  .btn.big{width:100%}
+  .cta-col{align-items:stretch}.cta-col .previa-link{text-align:center}
+  .oferta{text-align:center}
+  .so-desk{display:none}
+  .lanc{font-size:.84rem;padding:8px 12px}
+}
+@media(max-width:520px){
+  .passos{grid-template-columns:1fr;gap:10px}
+  .passos .card{display:grid;grid-template-columns:30px 1fr;column-gap:12px;padding:14px 16px}
+  .passos .card .n{grid-row:1/3;margin:2px 0 0;font-size:1.45rem}
+  .passos .card h3{margin-bottom:4px;font-size:.92rem}
+  .passos .card p{font-size:.9rem}
+  .fotos{grid-template-columns:repeat(2,1fr);gap:10px}
+  .fotos figcaption{padding:9px 10px;font-size:.78rem;line-height:1.35}
+  .grid2,.grid3{gap:10px;margin-top:18px}
+  .grid2 .card,.grid3 .card{padding:14px 16px}
+  .grid2 .card h3,.grid3 .card h3{font-size:.92rem;margin-bottom:4px}
+  .grid2 .card p,.grid3 .card p{font-size:.9rem}
+  .pbox{padding:22px 18px}
+  summary{padding:14px 16px}
+}
 </style>
 </head>
 <body>
 
 <div class="fita" aria-hidden="true"><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span></div>
+<div class="lanc" id="lanc" hidden>Cupom <b>LANCAMENTO</b> aplicado: <span class="so-desk">de R$ 49,90 por </span><b>R$ 39,90</b> · <span data-prazo>por tempo limitado</span></div>
 <header><div class="wrap nav">
   <a class="brand" href="#topo">Cena de Crime <em>360</em><small>CASO 01 · APARTAMENTO 1806</small></a>
   <a class="link" href="#caso">O caso</a>
   <a class="link" href="#como">Como se joga</a>
   <a class="link" href="#duvidas">Dúvidas</a>
-  <a class="btn sm" data-previa href="https://jogo.peritohenriquetabosa.com.br">Jogar a prévia</a>
+  <a class="link" data-previa href="https://jogo.peritohenriquetabosa.com.br">Prévia grátis</a>
+  <a class="btn sm" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar</a>
 </div></header>
 
 <!-- ===================== TOPO ===================== -->
@@ -185,16 +236,17 @@ footer a{color:var(--amarelo)}
     <h1>Cena de Crime <em>360</em></h1>
     <p class="caso">Caso 01 — Apartamento 1806</p>
     <p class="sub">Um médico é encontrado morto dentro de casa. A cena parece contar uma história. Você é o perito: entre no apartamento, examine cada canto e assine o laudo dizendo o que aconteceu ali.</p>
-    <div class="cta-row">
-      <a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo — R$ 49,90</a>
-      <a class="btn ghost" data-previa href="https://jogo.peritohenriquetabosa.com.br">Jogar a prévia grátis</a>
+    <div class="cta-col">
+      <a class="btn big" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo — <span data-preco>R$ 49,90</span></a>
+      <p class="oferta" data-de hidden><s>R$ 49,90</s> · cupom de lançamento aplicado · <span data-prazo></span></p>
+      <a class="previa-link" data-previa href="https://jogo.peritohenriquetabosa.com.br">ou jogue a prévia grátis, até a porta do 1806 →</a>
     </div>
-    <p class="mini">Joga no celular ou no computador, sem instalar nada · ficção com técnica real · não há gore</p>
+    <p class="mini">No Pix libera na hora · joga no celular ou no computador, sem instalar nada · não há gore</p>
   </div>
   <div>
-    <!-- VÍDEO DO PERITO: preencha VIDEO_MP4 (arquivo no site) ou VIDEO_YT (YouTube) no fim desta página.
-         Com vídeo: começa sozinho, sem som, com o aviso "clique para ouvir". Sem vídeo: aparece a foto da porta. -->
-    <div class="media" id="midia"><img src="img/jogo-hero.webp" alt="Porta do apartamento 1806 entreaberta" width="1600" height="900"></div>
+    <!-- VÍDEO DO PERITO: ver TEASER_MP4 / VIDEO_YT / VIDEO_MP4 no fim desta página.
+         Abre com um trecho leve, sem som, em loop. O vídeo completo (YouTube) só carrega quando a pessoa clica. -->
+    <div class="media" id="midia"><img src="img/jogo-hero.webp" alt="Porta do apartamento 1806 entreaberta" width="1600" height="900" fetchpriority="high"></div>
     <p class="media-leg" id="midia-leg" hidden>▶ Assista: eu explico como o jogo funciona</p>
   </div>
 </div></section>
@@ -221,7 +273,7 @@ footer a{color:var(--amarelo)}
   <span class="tag">// Como se joga</span>
   <h2>Do corredor <em>ao laudo</em></h2>
   <p class="lead">Não tem contagem de tempo nem pontuação para correr atrás. Você avança quando encontra o que precisa, do jeito que acontece numa perícia.</p>
-  <div class="grid4">
+  <div class="grid4 passos">
     <div class="card"><span class="n">1</span><h3>Ouça quem encontrou</h3><p>Antes de entrar, você ouve o porteiro e o síndico, em vídeo. Preste atenção no que cada um diz e no que deixa de dizer.</p></div>
     <div class="card"><span class="n">2</span><h3>Examine o apartamento</h3><p>Ande pelos cômodos em 360°. Fotografe, colete e lacre cada vestígio. Abra gavetas e armários. O que passar batido faz falta depois.</p></div>
     <div class="card"><span class="n">3</span><h3>Peça os exames</h3><p>Veja as gravações das câmeras, os registros da fechadura digital, as mensagens do celular e os resultados que chegam do laboratório.</p></div>
@@ -234,7 +286,7 @@ footer a{color:var(--amarelo)}
   <span class="tag">// O que tem dentro</span>
   <h2>Feito com <em>material de verdade</em></h2>
   <p class="lead">Nada aqui é desenho. As fotos, os vídeos e os documentos foram produzidos para o caso, como seriam numa ocorrência.</p>
-  <div class="grid4">
+  <div class="grid4 fotos">
     <figure class="foto"><img src="img/jogo-carteira.webp" alt="Carteira e documentos da vítima" loading="lazy" width="800" height="600"><figcaption><b>Vestígios</b>Cada objeto pode ser fotografado, coletado e analisado de perto.</figcaption></figure>
     <figure class="foto"><img src="img/jogo-camera.webp" alt="Câmera de segurança da sala" loading="lazy" width="800" height="600"><figcaption><b>Câmeras</b>As gravações mostram as últimas horas dentro do apartamento.</figcaption></figure>
     <figure class="foto"><img src="img/jogo-fechadura.webp" alt="Fechadura digital da porta" loading="lazy" width="800" height="600"><figcaption><b>Fechadura digital</b>Ela guarda quem abriu a porta, como e a que horas.</figcaption></figure>
@@ -280,16 +332,18 @@ footer a{color:var(--amarelo)}
   <div class="preco-grid">
     <div class="pbox dest">
       <h3>Cena de Crime 360 · Caso 01</h3>
-      <div class="preco">R$ 49,90</div>
-      <p class="eq">pagamento único · Pix, cartão ou boleto pela Hotmart</p>
+      <div class="preco"><s data-de hidden>R$ 49,90</s><span data-preco>R$ 49,90</span></div>
+      <p class="oferta" data-de hidden>Cupom de lançamento aplicado · <span data-prazo></span></p>
+      <p class="eq">pagamento único · no Pix libera na hora · cartão ou boleto pela Hotmart</p>
       <ul>
         <li>O caso inteiro, do corredor ao laudo</li>
         <li>Apartamento real em 360°</li>
         <li>Câmeras, depoimentos em vídeo, exames e documentos</li>
         <li>Laudo em PDF com o seu nome</li>
+        <li>Acesso por 1 ano, sem limite de aparelhos</li>
         <li>Joga no celular ou no computador</li>
       </ul>
-      <a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo</a>
+      <a class="btn big" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo</a>
     </div>
     <div class="pbox">
       <h3>Já é do Acesso Total?</h3>
@@ -309,6 +363,8 @@ footer a{color:var(--amarelo)}
   <span class="tag">// Dúvidas</span>
   <h2>Antes de <em>começar</em></h2>
   <details><summary>Como eu entro no jogo depois de comprar?</summary><p>Abra o jogo, toque em “Já comprei” e digite o mesmo e-mail que você usou na compra pela Hotmart. O acesso fica guardado naquele aparelho.</p></details>
+  <details><summary>Paguei no Pix. Quando libera?</summary><p>Na hora. Assim que a Hotmart confirma o Pix, o jogo já aceita o seu e-mail. No cartão também é na hora. No boleto pode levar até 3 dias úteis.</p></details>
+  <details><summary>Por quanto tempo fico com o acesso?</summary><p>Por 1 ano, contado da data da compra. Não tem limite de aparelhos: você entra com o mesmo e-mail no celular, no computador ou no tablet.</p></details>
   <details><summary>Preciso instalar alguma coisa?</summary><p>Não. O jogo abre no navegador. No celular, vire a tela na horizontal. No computador, use o mouse para olhar em volta.</p></details>
   <details><summary>Preciso entender de perícia?</summary><p>Não. O jogo explica o que fazer em cada etapa e o tablet do perito dá dicas quando você trava.</p></details>
   <details><summary>Quanto tempo leva?</summary><p>De 30 a 50 minutos, dependendo do quanto você vasculha o apartamento. Você pode parar e continuar depois no mesmo aparelho.</p></details>
@@ -322,10 +378,11 @@ footer a{color:var(--amarelo)}
 <section class="final"><div class="wrap">
   <span class="tag">// A cena está isolada</span>
   <h2>O porteiro e o síndico <em>estão te esperando</em></h2>
-  <p class="lead">Comece pela prévia, ouça os dois e decida se quer entrar.</p>
-  <div class="cta-row">
-    <a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo — R$ 49,90</a>
-    <a class="btn ghost" data-previa href="https://jogo.peritohenriquetabosa.com.br">Jogar a prévia grátis</a>
+  <p class="lead">Entre no apartamento, examine a cena e assine o laudo com o seu nome.</p>
+  <div class="cta-col">
+    <a class="btn big" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo — <span data-preco>R$ 49,90</span></a>
+    <p class="oferta" data-de hidden><s>R$ 49,90</s> · cupom de lançamento aplicado · <span data-prazo></span></p>
+    <a class="previa-link" data-previa href="https://jogo.peritohenriquetabosa.com.br">ou jogue a prévia grátis →</a>
   </div>
 </div></section>
 
@@ -334,38 +391,120 @@ footer a{color:var(--amarelo)}
   <p style="margin-top:8px"><a href="https://peritohenriquetabosa.com.br">Site</a> · <a href="curso">Curso</a> · <a href="https://loja.peritohenriquetabosa.com.br">Loja</a> · <a href="https://wa.me/5581991016004?text=Preciso%20de%20ajuda%20com%20o%20jogo%20Cena%20de%20Crime%20360">Ajuda pelo WhatsApp</a></p>
 </div></footer>
 
-<div class="barra"><div><b>R$ 49,90</b><small>caso completo · prévia grátis</small></div><a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar</a></div>
+<div class="barra"><div><b data-preco>R$ 49,90</b><small data-barra>caso completo · no Pix libera na hora</small></div><a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar</a></div>
 
 <script>
 /* =====================================================================
    1) LINK DE PAGAMENTO DO JOGO NA HOTMART
-   Produto 8671253 (R$ 49,90). O link só abre o pagamento depois que
-   o cadastro do produto for finalizado e aprovado pela Hotmart.
-   Se ficar vazio (""), os botões de compra levam para o jogo
-   (lá a pessoa joga a prévia e encontra a opção de comprar na porta).
+   Produto 8671253 (R$ 49,90). Se ficar vazio (""), os botões de compra
+   levam para o jogo (lá a pessoa joga a prévia e encontra a opção de
+   comprar na porta).
    ===================================================================== */
 const CHECKOUT = "https://pay.hotmart.com/H107914485I";
 
 /* =====================================================================
-   2) VÍDEO DO PERITO (pitch de vendas)
-   Use UMA das duas linhas (se as duas estiverem preenchidas, vale o MP4):
-   - VIDEO_MP4: arquivo no próprio site, ex.: "video/jogo-pitch.mp4"
-   - VIDEO_YT: endereço do YouTube (vídeo "Não listado")
-   Ao abrir a página o vídeo começa sozinho, SEM SOM, com o aviso
-   "Seu vídeo já começou — clique para ouvir". O clique liga o som e
-   volta para o começo. Vazio = aparece a foto da porta do 1806.
+   2) CUPOM DE LANÇAMENTO
+   A página mostra sempre R$ 49,90. Quem chega pelo link
+     https://peritohenriquetabosa.com.br/jogo-360?cupom=LANCAMENTO
+   vê a faixa do cupom, o preço de R$ 39,90 e já cai no pagamento com o
+   desconto aplicado. Depois da data em "ate" tudo volta sozinho para
+   R$ 49,90. Para encerrar antes, troque "ate" por uma data passada.
+   (O cupom precisa existir na Hotmart com a mesma validade.)
    ===================================================================== */
-const VIDEO_MP4 = "";
+const CUPOM = { codigo: "LANCAMENTO", preco: "R$ 39,90", valor: 39.90, ate: "2026-10-19T23:59:59-03:00", dia: "19/10" };
+
+/* =====================================================================
+   3) VÍDEO DO PERITO (pitch de vendas)
+   - TEASER_MP4: trecho curto e leve, SEM SOM, que roda em loop quando a
+     página abre (arquivo no próprio site). Vazio = fica a foto da porta.
+   - VIDEO_YT: vídeo completo no YouTube. Só é carregado quando a pessoa
+     clica em "Assista com som" (assim a página abre rápido no celular).
+   - VIDEO_MP4: se um dia o vídeo completo ficar no próprio site, preencha
+     aqui; aí ele começa sozinho sem som e o clique liga o som.
+   ===================================================================== */
+const TEASER_MP4 = "video/entrada-1806.mp4";
 const VIDEO_YT = "https://youtu.be/8sDaK3PbL3s";
+const VIDEO_MP4 = "";
 
 const JOGO = "https://jogo.peritohenriquetabosa.com.br";
-document.querySelectorAll('a[data-comprar]').forEach(a => {
-  if(CHECKOUT){ a.href = CHECKOUT + (CHECKOUT.includes('?')?'&':'?') + 'src=pv-jogo'; a.target = '_blank'; a.rel = 'noopener'; }
-  else { a.href = JOGO; }
-  a.addEventListener('click', () => { try{ fbq('track','InitiateCheckout',{content_name:'Cena de Crime 360 - Caso 01', value:49.90, currency:'BRL'}); }catch(e){} });
-});
-document.querySelectorAll('a[data-previa]').forEach(a => a.addEventListener('click', () => { try{ fbq('trackCustom','PreviaJogo'); }catch(e){} }));
 
+/* ---------- medição ---------- */
+const qs = new URLSearchParams(location.search);
+const limpo = v => String(v || '').replace(/[^\w.-]/g, '').slice(0, 30);
+const ev = (nome, dados, padrao) => { try{ fbq(padrao ? 'track' : 'trackCustom', nome, dados || {}); }catch(e){} };
+
+/* ---------- cupom ---------- */
+let comCupom = false;
+(function(){
+  const veio = (qs.get('cupom') || '').toUpperCase() === CUPOM.codigo;
+  let guardado = false;
+  try{
+    if(veio) localStorage.setItem('cc360cupom', CUPOM.codigo);
+    guardado = localStorage.getItem('cc360cupom') === CUPOM.codigo;
+  }catch(e){}
+  comCupom = (veio || guardado) && Date.now() < Date.parse(CUPOM.ate);
+})();
+const VALOR = comCupom ? CUPOM.valor : 49.90;
+
+if(comCupom){
+  const fim = new Date(CUPOM.ate), hoje = new Date();
+  const dias = Math.round((new Date(fim.getFullYear(), fim.getMonth(), fim.getDate()) - new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate())) / 864e5);
+  const falta = dias <= 0 ? 'termina hoje' : dias === 1 ? 'termina amanhã' : `faltam ${dias} dias`;
+  document.querySelectorAll('[data-preco]').forEach(e => e.textContent = CUPOM.preco);
+  document.querySelectorAll('[data-prazo]').forEach(e => e.textContent = `vale até ${CUPOM.dia} (${falta})`);
+  document.querySelectorAll('[data-de]').forEach(e => e.hidden = false);
+  document.querySelectorAll('[data-barra]').forEach(e => e.textContent = `com o cupom · até ${CUPOM.dia}`);
+  document.getElementById('lanc').hidden = false;
+}
+
+/* ---------- links de compra e de prévia ---------- */
+const origem = limpo(qs.get('utm_source'));
+const campanha = limpo(qs.get('utm_campaign'));
+const linkCompra = (function(){
+  if(!CHECKOUT) return '';
+  const u = new URL(CHECKOUT);
+  u.searchParams.set('src', origem ? origem + '-jogo' : 'pv-jogo');   // de onde veio a venda (aparece na Hotmart)
+  if(campanha) u.searchParams.set('sck', campanha);
+  if(comCupom) u.searchParams.set('offDiscount', CUPOM.codigo);
+  return u.toString();
+})();
+const linkPrevia = (function(){
+  const u = new URL(JOGO);
+  if(comCupom) u.searchParams.set('cupom', CUPOM.codigo);
+  if(origem) u.searchParams.set('utm_source', origem);
+  if(campanha) u.searchParams.set('utm_campaign', campanha);
+  return u.toString();
+})();
+
+document.querySelectorAll('a[data-comprar]').forEach(a => {
+  if(linkCompra){ a.href = linkCompra; a.target = '_blank'; a.rel = 'noopener'; }
+  else { a.href = linkPrevia; }
+  a.addEventListener('click', () => ev('InitiateCheckout', {content_name:'Cena de Crime 360 - Caso 01', content_ids:['8671253'], content_type:'product', value:VALOR, currency:'BRL'}, true));
+});
+document.querySelectorAll('a[data-previa]').forEach(a => {
+  a.href = linkPrevia;
+  a.addEventListener('click', () => ev('PreviaJogo'));
+});
+
+/* ---------- eventos da página ---------- */
+ev('ViewContent', {content_name:'Cena de Crime 360 - Caso 01', content_ids:['8671253'], content_type:'product', value:VALOR, currency:'BRL'}, true);
+if(comCupom) ev('ChegouComCupom', {cupom: CUPOM.codigo});
+(function(){
+  let rolou = false;
+  const ver = () => {
+    if(rolou) return;
+    const total = document.documentElement.scrollHeight - innerHeight;
+    if(total > 0 && scrollY / total >= .5){ rolou = true; ev('Rolou50'); removeEventListener('scroll', ver); }
+  };
+  addEventListener('scroll', ver, {passive:true});
+  const preco = document.getElementById('comprar');
+  if(preco && 'IntersectionObserver' in window){
+    const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ ev('ViuPreco', {value:VALOR, currency:'BRL'}); io.disconnect(); } }), {threshold:.3});
+    io.observe(preco);
+  }
+})();
+
+/* ---------- vídeo ---------- */
 (function(){
   const box = document.getElementById('midia');
   const m = String(VIDEO_YT).match(/(?:youtu\.be\/|[?&]v=|shorts\/|embed\/)([\w-]{11})/);
@@ -373,39 +512,49 @@ document.querySelectorAll('a[data-previa]').forEach(a => a.addEventListener('cli
   if(!VIDEO_MP4 && !yt) return;
   document.querySelector('.hero-grid').classList.add('vsl');
   const capa = 'img/jogo-hero.webp';
-  const aviso = (txt1, txt2) => `<button type="button" class="som" id="som" aria-label="Ligar o som e assistir do começo"><span><b>${txt1}</b><small>${txt2}</small></span></button>`;
-  const marcar = () => { try{ fbq('trackCustom','VideoJogoSom'); }catch(e){} };
+  const aviso = (txt1, txt2) => `<button type="button" class="som" id="som" aria-label="Assistir ao vídeo com som"><span><b>${txt1}</b><small>${txt2}</small></span></button>`;
+  const marcar = () => ev('VideoJogoSom');
   box.classList.add('sem-som');
 
+  // vídeo completo no próprio site: começa sozinho sem som; o clique liga o som e volta ao início
   if(VIDEO_MP4){
     box.innerHTML = `<video id="pv" src="${VIDEO_MP4}" poster="${capa}" muted autoplay loop playsinline preload="auto"></video>` + aviso('🔊 Seu vídeo já começou','Clique para ouvir');
     const v = document.getElementById('pv'), b = document.getElementById('som');
     v.muted = true; // garante o autoplay no iPhone/Android
     const p = v.play(); if(p && p.catch) p.catch(() => { b.querySelector('b').textContent = '▶ Assista ao vídeo'; b.querySelector('small').textContent = 'Toque para ver com som'; });
-    const ligar = () => {
+    b.addEventListener('click', () => {
       v.loop = false; v.muted = false; v.currentTime = 0; v.controls = true;
       const q = v.play(); if(q && q.catch) q.catch(()=>{});
       b.remove(); box.classList.remove('sem-som'); marcar();
-    };
-    b.addEventListener('click', ligar);
-    // economiza dados: a prévia sem som só roda enquanto aparece na tela
+    });
     if('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => {
       if(!v.muted) return; e.isIntersecting ? v.play().catch(()=>{}) : v.pause();
     }), {threshold:.25}).observe(v);
     return;
   }
 
-  // YouTube: começa sem som; o clique liga o som e volta ao início (comandos da API do YouTube)
-  const src = `https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&mute=1&playsinline=1&loop=1&playlist=${yt}&controls=1&rel=0&modestbranding=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
-  box.innerHTML = `<iframe id="pvyt" src="${src}" title="O perito apresenta o jogo" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>` + aviso('🔊 Seu vídeo já começou','Clique para ouvir');
-  const f = document.getElementById('pvyt'), b = document.getElementById('som');
-  const cmd = (func, args=[]) => { try{ f.contentWindow.postMessage(JSON.stringify({event:'command', func, args}), '*'); }catch(e){} };
-  f.addEventListener('load', () => { try{ f.contentWindow.postMessage(JSON.stringify({event:'listening'}), '*'); }catch(e){} });
-  b.addEventListener('click', () => {
-    cmd('unMute'); cmd('setVolume',[100]); cmd('seekTo',[0,true]); cmd('setLoop',[false]); cmd('playVideo');
-    b.remove(); box.classList.remove('sem-som'); marcar();
+  // padrão: trecho leve sem som em loop; o YouTube só é carregado no clique
+  box.insertAdjacentHTML('beforeend', aviso('▶ Assista com som','Eu explico o jogo em 4 minutos'));
+  const economia = navigator.connection && navigator.connection.saveData;   // quem está economizando dados fica só com a foto
+  const ligarTeaser = () => {
+    if(!TEASER_MP4 || economia || !document.getElementById('som')) return;
+    document.getElementById('som').insertAdjacentHTML('beforebegin', `<video id="pv" poster="${capa}" muted loop playsinline preload="auto" disablepictureinpicture><source src="${TEASER_MP4}" type="video/mp4"></video>`);
+    const v = document.getElementById('pv');
+    v.muted = true;
+    const p = v.play(); if(p && p.catch) p.catch(()=>{});
+    if('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => {
+      e.isIntersecting ? v.play().catch(()=>{}) : v.pause();
+    }), {threshold:.25}).observe(v);
+  };
+  if(document.readyState === 'complete') ligarTeaser(); else addEventListener('load', ligarTeaser);
+
+  document.getElementById('som').addEventListener('click', () => {
+    box.classList.remove('sem-som');
+    box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="O perito apresenta o jogo" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    marcar();
   });
 })();
 </script>
+
 </body>
 </html>
