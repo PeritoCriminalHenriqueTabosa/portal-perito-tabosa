@@ -412,6 +412,14 @@ const CHECKOUT = "https://pay.hotmart.com/H107914485I";
    (O cupom precisa existir na Hotmart com a mesma validade.)
    ===================================================================== */
 const CUPOM = { codigo: "LANCAMENTO", preco: "R$ 39,90", valor: 39.90, ate: "2026-10-19T23:59:59-03:00", dia: "19/10" };
+/* A Hotmart não deixa mudar a validade de um cupom já criado. O cupom
+   LANCAMENTO de lá vence em 13/10; de 14/10 a 19/10 quem vale é o
+   LANCAMENTO360 (mesmo desconto). A página troca sozinha de um para o outro. */
+const CUPOM_HOTMART = [
+  { codigo: "LANCAMENTO",    ate: "2026-10-13T23:59:59-03:00" },
+  { codigo: "LANCAMENTO360", ate: "2026-10-19T23:59:59-03:00" }
+];
+const cupomHotmart = () => { const v = CUPOM_HOTMART.find(c => Date.now() < Date.parse(c.ate)); return v ? v.codigo : ""; };
 
 /* =====================================================================
    3) VÍDEO DO PERITO (pitch de vendas)
@@ -465,7 +473,7 @@ const linkCompra = (function(){
   const u = new URL(CHECKOUT);
   u.searchParams.set('src', origem ? origem + '-jogo' : 'pv-jogo');   // de onde veio a venda (aparece na Hotmart)
   if(campanha) u.searchParams.set('sck', campanha);
-  if(comCupom) u.searchParams.set('offDiscount', CUPOM.codigo);
+  if(comCupom && cupomHotmart()) u.searchParams.set('offDiscount', cupomHotmart());
   return u.toString();
 })();
 const linkPrevia = (function(){

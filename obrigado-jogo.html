@@ -64,6 +64,20 @@ h2{font-size:1.15rem;margin-bottom:10px}
 .caixa li{padding-left:20px;position:relative}
 .caixa li::before{content:"›";position:absolute;left:4px;color:var(--amarelo);font-weight:900}
 
+.oferta{padding:8px 0 30px}
+.oferta .cx{background:linear-gradient(180deg,#1a1710,#15181a);border:1px solid #4a3f12;border-radius:var(--rad);padding:24px 22px}
+.oferta h2{font-size:1.35rem;margin:10px 0 12px}
+.oferta p{color:#d7dbd9;font-size:.98rem}
+.oferta ul{list-style:none;display:grid;gap:7px;margin:14px 0 4px;color:#d7dbd9;font-size:.95rem}
+.oferta li{padding-left:22px;position:relative}
+.oferta li::before{content:"✓";position:absolute;left:2px;color:var(--amarelo);font-weight:900}
+.oferta .preco{margin:18px 0 16px;font-size:1rem;color:var(--mut)}
+.oferta .preco span{display:block;font-size:.85rem;margin-bottom:2px}
+.oferta .preco s{color:#8b9190}
+.oferta .preco b{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:1.9rem;color:var(--amarelo);margin:0 8px;white-space:nowrap}
+.oferta .btn{background:var(--amarelo);border-color:var(--amarelo);color:var(--preto)}
+.oferta .btn:hover{box-shadow:0 10px 26px -10px rgba(255,212,0,.6)}
+.oferta small{display:block;color:var(--mut);font-size:.84rem;margin-top:12px}
 .ajuda{text-align:center;padding:26px 0 50px}
 .ajuda p{color:var(--mut);margin-bottom:14px}
 
@@ -113,6 +127,22 @@ footer a{text-decoration:underline}
   </div>
 </div></section>
 
+<!-- Oferta do curso para quem comprou o jogo. Só aparece quando OFERTA_CURSO.link (no fim do arquivo) estiver preenchido. -->
+<section class="oferta" id="oferta-curso" hidden><div class="wrap"><div class="cx">
+  <p class="tag">Só para quem comprou o jogo</p>
+  <h2>O preço do jogo vira desconto no curso</h2>
+  <p>No jogo você entra em uma cena. No curso <strong>Perícia Criminal com o Tabosa</strong> eu abro 20 casos reais brasileiros e mostro, passo a passo, o que a perícia fez em cada um.</p>
+  <ul>
+    <li>20 aulas, cada uma em cima de um caso real</li>
+    <li>Slides e e-books de todas as aulas</li>
+    <li>Certificado de 4 horas por aula</li>
+    <li>Aula ao vivo toda quarta, às 21h</li>
+  </ul>
+  <p class="preco"><span>Um ano de acesso</span><s>R$ 297</s><b>R$ 247,10</b></p>
+  <a class="btn" id="curso-btn" href="#" target="_blank" rel="noopener">Quero o curso com o desconto →</a>
+  <small>Os R$ 49,90 do jogo saem do preço do curso. Garantia de 7 dias pela Hotmart.</small>
+</div></div></section>
+
 <section class="ajuda"><div class="wrap">
   <p>Não conseguiu entrar ou comprou com um e-mail e quer jogar com outro?</p>
   <a class="btn ghost" href="https://wa.me/5581991016004?text=Comprei%20o%20jogo%20Cena%20de%20Crime%20360%20e%20preciso%20de%20ajuda%20para%20entrar" target="_blank" rel="noopener">Falar no WhatsApp · 81 99101-6004</a>
@@ -138,6 +168,25 @@ footer a{text-decoration:underline}
   document.querySelector('.cta small').textContent='Pode deixar o link salvo: quando o pagamento for aprovado, é só entrar.';
 })();
 document.getElementById('abrir').addEventListener('click',function(){try{fbq('trackCustom','ObrigadoAbrirJogo');}catch(e){}});
+
+/* =====================================================================
+   OFERTA DO CURSO PARA QUEM COMPROU O JOGO
+   Cole em "link" o endereço de pagamento do curso já com o cupom de
+   desconto (plano anual de R$ 297 por R$ 247,10). Enquanto estiver
+   vazio (""), o bloco da oferta não aparece na página.
+   ===================================================================== */
+var OFERTA_CURSO = { link: "" };
+(function(){
+  var st=new URLSearchParams(location.search).get('status');
+  if(st) return;                                   // pagamento ainda não aprovado: sem oferta e sem evento de compra
+  try{                                             // compra aprovada: avisa o pixel uma única vez por aparelho
+    if(!localStorage.getItem('cc360comprou')){ localStorage.setItem('cc360comprou','1'); fbq('trackCustom','CompraJogoAprovada',{value:49.90,currency:'BRL'}); }
+  }catch(e){}
+  if(!OFERTA_CURSO.link) return;
+  var b=document.getElementById('curso-btn'); b.href=OFERTA_CURSO.link;
+  b.addEventListener('click',function(){try{fbq('trackCustom','OfertaCursoClique');}catch(e){}});
+  document.getElementById('oferta-curso').hidden=false;
+})();
 </script>
 </body>
 </html>
