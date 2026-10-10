@@ -230,7 +230,7 @@ footer a{color:var(--amarelo)}
 </div></header>
 
 <!-- ===================== TOPO ===================== -->
-<section class="hero" id="topo"><div class="wrap hero-grid">
+<section class="hero" id="topo"><div class="wrap hero-grid vsl">
   <div>
     <span class="tag">// O primeiro jogo de investigação em 360° criado por um perito criminal de verdade</span>
     <h1>Cena de Crime <em>360</em></h1>
@@ -246,7 +246,7 @@ footer a{color:var(--amarelo)}
   <div>
     <!-- VÍDEO DO PERITO: ver TEASER_MP4 / VIDEO_YT / VIDEO_MP4 no fim desta página.
          Abre com um trecho leve, sem som, em loop. O vídeo completo (YouTube) só carrega quando a pessoa clica. -->
-    <div class="media" id="midia"><img src="img/jogo-hero.webp" alt="Porta do apartamento 1806 entreaberta" width="1600" height="900" fetchpriority="high"></div>
+    <div class="media" id="midia"><img src="img/jogo-hero.webp" srcset="img/jogo-hero-800.webp 800w, img/jogo-hero.webp 1600w" sizes="(max-width:900px) 100vw, 540px" alt="Porta do apartamento 1806 entreaberta" width="1600" height="900" fetchpriority="high"></div>
     <p class="media-leg" id="midia-leg" hidden>▶ Assista: eu explico como o jogo funciona</p>
   </div>
 </div></section>
@@ -538,7 +538,7 @@ if(comCupom) ev('ChegouComCupom', {cupom: CUPOM.codigo});
   const economia = navigator.connection && navigator.connection.saveData;   // quem está economizando dados fica só com a foto
   const ligarTeaser = () => {
     if(!TEASER_MP4 || economia || !document.getElementById('som')) return;
-    document.getElementById('som').insertAdjacentHTML('beforebegin', `<video id="pv" poster="${capa}" muted loop playsinline preload="auto" disablepictureinpicture><source src="${TEASER_MP4}" type="video/mp4"></video>`);
+    document.getElementById('som').insertAdjacentHTML('beforebegin', `<video id="pv" style="background:transparent" muted loop playsinline preload="auto" disablepictureinpicture><source src="${TEASER_MP4}" type="video/mp4"></video>`);
     const v = document.getElementById('pv');
     v.muted = true;
     const p = v.play(); if(p && p.catch) p.catch(()=>{});
