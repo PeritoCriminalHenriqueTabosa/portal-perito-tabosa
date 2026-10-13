@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0a0a0a">
 <title>Perícia Forense com Tabosa — Investigação Criminal 2026.2</title>
-<meta name="description" content="20 aulas, 20 casos reais brasileiros. Em cada aula, um perito criminal há 17 anos mostra a técnica usada na cena. Aulas completas, slides, e-books e certificado de 4h por live. R$ 297 por 12 meses.">
+<meta name="description" content="20 aulas, 20 casos reais brasileiros. Em cada aula, um perito criminal há 17 anos mostra a técnica usada na cena. Aulas completas, slides, e-books e certificado de 4h por aula. R$ 297 por 12 meses.">
 <meta property="og:title" content="Perícia Forense com Tabosa — Investigação Criminal 2026.2">
-<meta property="og:description" content="Aprenda perícia criminal pelos casos que o Brasil inteiro acompanhou. 20 aulas completas, slides, e-books e certificado de 4h por live.">
+<meta property="og:description" content="Aprenda perícia criminal pelos casos que o Brasil inteiro acompanhou. 20 aulas completas, slides, e-books e certificado de 4h por aula.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://loja.peritohenriquetabosa.com.br/img/curso-pericia-forense-2026-2.webp">
+<meta property="og:image" content="https://peritohenriquetabosa.com.br/img/curso/capa-curso-2026-2.webp">
 
 <!-- Meta Pixel (mesmo ID dos outros sites) -->
 <script>
@@ -26,356 +26,509 @@ fbq('init','1034119147300221');fbq('track','PageView');
 <link rel="stylesheet" type="text/css" href="https://static.hotmart.com/css/hotmart-fb.min.css">
 <script type="text/javascript" src="https://static.hotmart.com/checkout/widget.min.js" defer></script>
 
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800;900&family=Special+Elite&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --amarelo:#FFD400; --preto:#0a0a0a;
-  --bg:#0d0d0d; --bg2:#121212; --card:#161616; --line:#262626;
-  --txt:#f5f5f2; --mut:#a8a8a0; --vermelho:#ff4d3d; --verde:#3ddc84; --rad:14px;
-  --hazard:repeating-linear-gradient(-45deg,var(--amarelo),var(--amarelo) 16px,var(--preto) 16px,var(--preto) 32px);
+:root{color-scheme:dark;
+  --amarelo:#FFD400; --preto:#0a0a0a; --carvao:#151515; --linha:#2a2a2a;
+  --texto:#f4f2ec; --suave:#b9b6ab; --papel:#f2eee3; --tinta:#161512; --tinta-suave:#5c584e;
+  --fita:repeating-linear-gradient(-45deg,var(--amarelo) 0 14px,var(--preto) 14px 28px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;line-height:1.55;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--preto);color:var(--texto);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
-.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
-h1,h2,h3{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:.3px;text-transform:uppercase;line-height:1.05}
-h2{font-size:clamp(1.55rem,4.2vw,2.5rem);margin:8px 0 14px}
-h2 em,h1 em{font-style:normal;color:var(--amarelo)}
-.tag{font-family:'Special Elite',monospace;color:var(--amarelo);font-size:.74rem;letter-spacing:3px;text-transform:uppercase}
-.lead{color:var(--mut);max-width:660px;font-size:1.02rem}
-section{padding:64px 0;scroll-margin-top:70px}
-section.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.hazard-bar{height:12px;background:var(--hazard)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
+.caixa{max-width:1080px;margin:0 auto;padding:0 18px}
+.estreita{max-width:760px}
+h1,h2,h3.t{font-family:'Anton','Arial Narrow',sans-serif;font-weight:400;text-transform:uppercase;line-height:1.06;letter-spacing:.01em}
+h2{font-size:clamp(1.9rem,7.4vw,2.9rem);margin-bottom:12px}
+h2 b{font-weight:400;color:var(--amarelo)}
+.sub{color:var(--suave);max-width:640px}
+.bloco{padding:52px 0}
+.bloco.cinza{background:var(--carvao)}
+.fita{height:12px;background:var(--fita)}
 
-/* header */
-header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-filter:blur(10px);border-bottom:2px solid var(--amarelo)}
-.nav{display:flex;align-items:center;gap:20px;height:62px}
-.brand{display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0}
-.brand .mark{width:38px;height:38px;background:var(--amarelo);border-radius:9px;display:grid;place-items:center;font-family:'Archivo Black';color:var(--preto);font-size:.85rem;flex:0 0 auto}
-.brand .t1{font-family:'Archivo Black';font-size:.98rem;letter-spacing:.5px;line-height:1.05;text-transform:uppercase}
-.brand .t1 em{font-style:normal;color:var(--amarelo)}
-.brand .t2{font-family:'Special Elite';font-size:.58rem;color:var(--amarelo);letter-spacing:3px;display:block}
-.nav a.link{color:var(--mut);font-weight:700;font-size:.88rem}
-.nav a.link:hover{color:var(--amarelo)}
-@media(max-width:820px){.nav a.link{display:none}}
-@media(max-width:560px){.brand .t2{display:none}.brand .t1{font-size:.8rem}}
+/* aviso da próxima aula */
+.proxima{background:var(--amarelo);color:var(--preto);font-size:.86rem;font-weight:700;line-height:1.3;padding:9px 14px;text-align:center}
+.proxima b{font-weight:800}
+.proxima .falta{display:inline-block;background:var(--preto);color:var(--amarelo);border-radius:6px;padding:2px 8px;margin-left:4px;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* topo fixo */
+.topo{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(10,10,10,.96);border-bottom:1px solid var(--linha)}
+.topo .caixa{display:flex;align-items:center;gap:14px;height:56px}
+.marca{margin-right:auto;text-decoration:none;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.02rem;letter-spacing:.03em;line-height:1;white-space:nowrap}
+.marca span{color:var(--amarelo)}
+.marca{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.topo nav a{color:var(--suave);font-weight:600;font-size:.9rem;text-decoration:none;margin-left:18px}
+.topo nav a:hover{color:var(--amarelo)}
+@media(max-width:860px){.topo nav{display:none}}
 
 /* botões */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--amarelo);color:var(--preto);font-weight:900;padding:15px 26px;border-radius:44px;font-size:1rem;border:2px solid var(--amarelo);cursor:pointer;transition:.18s;text-align:center;line-height:1.2}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px -10px rgba(255,212,0,.6)}
-.btn.ghost{background:transparent;color:var(--txt);border-color:#3a3a3a}
-.btn.ghost:hover{border-color:var(--amarelo);color:var(--amarelo);box-shadow:none}
-.btn.sm{padding:9px 18px;font-size:.85rem}
-/* o widget da Hotmart injeta estilos nos botões; estes ganham dele */
-a.hotmart-fb.btn,a.hotmart-fb.plano{font-family:'Inter',sans-serif!important;text-decoration:none!important}
+.botao{display:inline-flex;align-items:center;justify-content:center;background:var(--amarelo);color:var(--preto);font-weight:800;font-size:1.06rem;line-height:1.2;text-align:center;text-decoration:none;padding:17px 26px;border-radius:12px;border:0;cursor:pointer;box-shadow:0 5px 0 #b39400;transition:transform .12s,box-shadow .12s}
+.botao:hover{transform:translateY(-1px)}
+.botao:active{transform:translateY(4px);box-shadow:0 1px 0 #b39400}
+.botao.p{padding:10px 16px;font-size:.88rem;border-radius:9px;box-shadow:0 3px 0 #b39400;white-space:nowrap}
+@media(max-width:380px){.marca{font-size:.9rem}.botao.p{padding:10px 12px}}
+.botao.largo{width:100%}
+a.hotmart-fb.botao{font-family:'Inter',sans-serif!important;text-decoration:none!important}
+.sob-botao{color:var(--suave);font-size:.84rem;margin-top:10px}
+.sob-botao b{color:var(--texto);font-weight:700}
 
-/* hero */
-.hero{padding:48px 0 56px;background:radial-gradient(900px 420px at 85% 0%,rgba(255,212,0,.10),transparent 70%)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
-.hero h1{font-size:clamp(1.9rem,5.4vw,3.35rem);margin:12px 0 16px}
-.hero p.sub{color:#d6d6cf;font-size:1.08rem;max-width:560px}
-.checks{list-style:none;margin:20px 0 26px;display:grid;gap:9px}
-.checks li{padding-left:30px;position:relative;font-weight:600}
-.checks li::before{content:"✓";position:absolute;left:0;top:0;width:21px;height:21px;border-radius:50%;background:var(--amarelo);color:var(--preto);font-weight:900;font-size:.78rem;display:grid;place-items:center;margin-top:2px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.mini{color:var(--mut);font-size:.85rem;margin-top:12px}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+/* abertura */
+.abre{padding:22px 0 40px}
+.abre .grade{display:grid;gap:18px}
+.etiqueta{display:inline-flex;flex-direction:column;align-items:flex-start;font-family:'Anton',sans-serif;text-transform:uppercase;line-height:1;letter-spacing:.03em;margin-bottom:14px}
+.etiqueta i{font-style:normal;background:var(--amarelo);color:var(--preto);padding:5px 9px 4px;font-size:.9rem}
+.etiqueta u{text-decoration:none;background:#fff;color:var(--preto);padding:5px 9px 4px;font-size:.9rem}
+h1{font-size:clamp(1.9rem,8.4vw,3.5rem)}
+h1 b{font-weight:400;color:var(--amarelo)}
+.abre .resumo{font-size:1.04rem;color:#dddacf;margin-top:12px;max-width:560px}
+.midia{position:relative;border-radius:14px;overflow:hidden;background:#000;aspect-ratio:16/9;box-shadow:0 0 0 2px var(--amarelo)}
+.midia img,.midia iframe,.midia .capa{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.midia .capa{background-size:cover;background-position:center;cursor:pointer;display:grid;place-items:center}
+.midia .capa::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.3)}
+.tocar{position:relative;z-index:1;width:76px;height:76px;border-radius:50%;background:var(--amarelo);display:grid;place-items:center;box-shadow:0 0 0 10px rgba(255,212,0,.28)}
+.tocar::before{content:"";border-style:solid;border-width:14px 0 14px 23px;border-color:transparent transparent transparent var(--preto);margin-left:6px}
+.midia-nota{color:var(--suave);font-size:.84rem;margin-top:10px;text-align:center}
+.abre .acao{margin-top:0}
+.de-por{font-size:.98rem;color:#dddacf;margin-top:16px}
+.de-por s{color:#8d8a80}
+.de-por b{color:var(--amarelo);font-weight:800}
+@media(min-width:900px){
+  .abre{padding:46px 0 56px}
+  .abre .grade{grid-template-columns:1.05fr .95fr;grid-template-areas:"texto midia" "acao midia";column-gap:44px;row-gap:6px;align-items:center}
+  .abre .lado-texto{grid-area:texto;align-self:end}
+  .abre .lado-midia{grid-area:midia}
+  .abre .acao{grid-area:acao;align-self:start}
+}
 
-/* vídeo */
-.media{position:relative;border-radius:var(--rad);overflow:hidden;border:2px solid var(--amarelo);background:#000;box-shadow:0 24px 60px -30px rgba(255,212,0,.45)}
-.media.foto{aspect-ratio:4/5;max-width:440px;margin:0 auto}
-.media.foto img{width:100%;height:100%;object-fit:cover}
-.media.foto .leg{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.9));font-weight:800}
-.media.foto .leg small{display:block;color:var(--amarelo);font-family:'Special Elite';letter-spacing:2px;font-size:.68rem;font-weight:400}
-.media.video{aspect-ratio:16/9}
-.media.video iframe,.media.video .capa{position:absolute;inset:0;width:100%;height:100%;border:0}
-.media.video .capa{background-size:cover;background-position:center;cursor:pointer;display:grid;place-items:center}
-.media.video .capa::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28)}
-.play{position:relative;z-index:1;width:84px;height:84px;border-radius:50%;background:var(--amarelo);display:grid;place-items:center;box-shadow:0 0 0 10px rgba(255,212,0,.25)}
-.play::before{content:"";border-style:solid;border-width:15px 0 15px 25px;border-color:transparent transparent transparent var(--preto);margin-left:6px}
-.media-leg{text-align:center;color:var(--mut);font-size:.85rem;margin-top:10px}
+/* prova rápida */
+.provas{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--linha);border-radius:14px;overflow:hidden;background:var(--linha);gap:1px}
+.provas div{background:var(--carvao);padding:16px 12px;text-align:center}
+.provas b{display:block;font-family:'Anton',sans-serif;font-weight:400;font-size:1.75rem;line-height:1;color:var(--amarelo)}
+.provas span{color:var(--suave);font-size:.82rem;line-height:1.3;display:block;margin-top:5px}
+@media(min-width:760px){.provas{grid-template-columns:repeat(4,1fr)}}
 
-/* números */
-.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden}
-.nums div{background:var(--card);padding:22px 14px;text-align:center}
-.nums b{display:block;font-family:'Archivo Black';font-size:clamp(1.5rem,4vw,2.2rem);color:var(--amarelo);line-height:1}
-.nums span{color:var(--mut);font-size:.85rem}
-@media(max-width:700px){.nums{grid-template-columns:repeat(2,1fr)}}
+/* carrossel das aulas gravadas */
+.linha-t{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:30px 0 14px}
+.linha-t h3{font-size:1.08rem;font-weight:800}
+.selo{font-size:.74rem;font-weight:800;padding:4px 10px;border-radius:30px;white-space:nowrap}
+.selo.ja{background:#12331f;color:#63e69a}
+.selo.vivo{background:#3a3000;color:var(--amarelo)}
+.trilho{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 18px 16px;margin:0 -18px;scrollbar-width:thin;scrollbar-color:#444 transparent;-webkit-overflow-scrolling:touch}
+.trilho::-webkit-scrollbar{height:6px}
+.trilho::-webkit-scrollbar-thumb{background:#444;border-radius:6px}
+.cartao-aula{flex:0 0 82%;max-width:400px;scroll-snap-align:center;background:var(--preto);border:1px solid var(--linha);border-radius:14px;overflow:hidden}
+.bloco.cinza .cartao-aula{background:#0e0e0e}
+.cartao-aula img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#ddd}
+.cartao-aula div{padding:12px 14px 15px}
+.cartao-aula small{font-family:'Anton',sans-serif;text-transform:uppercase;color:var(--amarelo);letter-spacing:.05em;font-size:.86rem}
+.cartao-aula b{display:block;line-height:1.3;margin-top:2px}
+.cartao-aula span{display:block;color:var(--suave);font-size:.9rem;line-height:1.35;margin-top:3px}
+.arraste{color:var(--suave);font-size:.82rem;margin-top:2px}
+@media(min-width:760px){.cartao-aula{flex-basis:340px}.arraste{display:none}}
 
-/* cartões */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
-@media(max-width:860px){.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:22px}
-.card h3{font-size:1.02rem;margin-bottom:8px}
-.card p{color:var(--mut);font-size:.95rem}
-.card .n{font-family:'Special Elite';color:var(--amarelo);letter-spacing:2px;font-size:.75rem;display:block;margin-bottom:10px}
-.card .ic{font-size:1.6rem;display:block;margin-bottom:10px}
+/* trechos das aulas em vídeo */
+.trechos .trecho{flex:0 0 64%;max-width:290px;scroll-snap-align:center;position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;border:0;padding:0;cursor:pointer;box-shadow:0 0 0 2px var(--linha);color:var(--texto);font:inherit;text-align:left}
+.trechos .trecho img,.trechos .trecho video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.trechos .trecho .tocar{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:64px;height:64px}
+.trechos .trecho .tocar::before{border-width:12px 0 12px 20px;margin-left:5px}
+.trechos .trecho .rot{position:absolute;left:0;right:0;bottom:0;padding:40px 12px 12px;background:linear-gradient(transparent,rgba(0,0,0,.92));font-size:.88rem;line-height:1.3;font-weight:700}
+.trechos .trecho .rot small{display:block;font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.05em;color:var(--amarelo);font-size:.8rem;margin-bottom:2px}
+.trechos .trecho.tocando{box-shadow:0 0 0 2px var(--amarelo)}
+.trechos .trecho.tocando .tocar,.trechos .trecho.tocando .rot{display:none}
+@media(min-width:760px){.trechos{justify-content:center}.trechos .trecho{flex-basis:270px}}
+.entra-ate{max-width:520px;margin:18px auto 0;background:#1d1a05;border-left:4px solid var(--amarelo);border-radius:0 10px 10px 0;padding:12px 14px;font-size:.93rem;color:#e9e6dc}
+.entra-ate b{color:var(--amarelo)}
+.duvida-zap{text-align:center;max-width:520px;margin:14px auto 0;font-size:.9rem;color:var(--suave)}
+.duvida-zap a{color:var(--amarelo);font-weight:700}
 
-/* grade de aulas */
-.bloco-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;margin:34px 0 12px}
-.bloco-h h3{font-size:1.15rem}
-.selo{font-size:.72rem;font-weight:900;padding:4px 10px;border-radius:30px;letter-spacing:.4px;text-transform:uppercase}
-.selo.ok{background:rgba(61,220,132,.14);color:var(--verde);border:1px solid rgba(61,220,132,.4)}
-.selo.novo{background:rgba(255,212,0,.12);color:var(--amarelo);border:1px solid rgba(255,212,0,.4)}
-.aulas{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-@media(max-width:800px){.aulas{grid-template-columns:1fr}}
-.aula{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;align-items:flex-start}
-.aula .num{font-family:'Archivo Black';color:var(--amarelo);font-size:1.25rem;line-height:1.1;flex:0 0 34px}
-.aula b{display:block;line-height:1.3}
-.aula span{color:var(--mut);font-size:.9rem;display:block;margin-top:2px}
-.aula i{font-style:normal;font-family:'Special Elite';color:var(--amarelo);font-size:.72rem;letter-spacing:1.5px;display:block;margin-top:5px}
+/* aulas ao vivo */
+.lista-vivo{display:grid;gap:8px}
+@media(min-width:800px){.lista-vivo{grid-template-columns:1fr 1fr}}
+.vivo{display:flex;gap:12px;align-items:flex-start;background:#0e0e0e;border:1px solid var(--linha);border-radius:12px;padding:12px 14px}
+.vivo .n{flex:0 0 36px;height:36px;background:var(--amarelo);color:var(--preto);font-family:'Anton',sans-serif;font-size:1.15rem;display:grid;place-items:center;border-radius:6px}
+.vivo b{display:block;line-height:1.3;font-size:.98rem}
+.vivo span{display:block;color:var(--suave);font-size:.88rem;line-height:1.35;margin-top:2px}
+.vivo em{font-style:normal;display:inline-block;font-size:.76rem;font-weight:800;margin-top:7px;color:var(--suave)}
+.vivo.prox{border-color:var(--amarelo);box-shadow:inset 4px 0 0 var(--amarelo)}
+.vivo.prox em{background:var(--amarelo);color:var(--preto);padding:3px 8px;border-radius:5px}
+.vivo.foi em{color:#63e69a}
+
+/* como é a aula */
+.passos{display:grid;gap:12px;margin-top:24px;counter-reset:p}
+@media(min-width:800px){.passos{grid-template-columns:repeat(3,1fr)}}
+.passo{border-left:4px solid var(--amarelo);background:var(--carvao);border-radius:0 12px 12px 0;padding:16px 18px}
+.bloco.cinza .passo{background:#0e0e0e}
+.passo h3{font-size:1.05rem;font-weight:800;margin-bottom:5px}
+.passo h3::before{counter-increment:p;content:counter(p) ". ";color:var(--amarelo)}
+.passo p{color:var(--suave);font-size:.95rem}
+
+/* o que recebe */
+.itens{list-style:none;margin-top:22px;border-top:1px solid var(--linha)}
+.itens li{display:grid;grid-template-columns:30px 1fr;gap:4px 12px;padding:15px 0;border-bottom:1px solid var(--linha)}
+.itens li::before{content:"✓";grid-row:span 2;width:26px;height:26px;border-radius:50%;background:var(--amarelo);color:var(--preto);font-weight:800;font-size:.9rem;display:grid;place-items:center;margin-top:1px}
+.itens b{font-weight:800;line-height:1.3}
+.itens span{color:var(--suave);font-size:.94rem;grid-column:2}
+@media(min-width:860px){.itens{display:grid;grid-template-columns:1fr 1fr;column-gap:44px}}
+
+/* a conta (recibo) */
+.conta-fundo{background:var(--carvao)}
+.recibo{background:var(--papel);color:var(--tinta);max-width:520px;margin:26px auto 0;padding:26px 22px 30px;position:relative;font-size:.98rem;
+  --dente:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16px 100%;
+  -webkit-mask:var(--dente);mask:var(--dente)}
+.recibo h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.3rem;letter-spacing:.02em;text-align:center;margin-bottom:4px}
+.recibo .peq{text-align:center;color:var(--tinta-suave);font-size:.84rem;margin-bottom:16px}
+.recibo dl{display:grid;grid-template-columns:1fr auto;gap:9px 14px;border-top:2px dashed #b9b3a2;border-bottom:2px dashed #b9b3a2;padding:14px 0}
+.recibo dt{line-height:1.3}
+.recibo dt small{display:block;color:var(--tinta-suave);font-size:.8rem}
+.recibo dd{font-weight:700;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.recibo .soma{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0 0;font-weight:700}
+.recibo .soma s{font-size:1.15rem;color:#8a2c20;text-decoration-thickness:2px}
+.recibo .final{text-align:center;margin-top:16px;padding-top:16px;border-top:2px solid var(--tinta)}
+.recibo .final span{display:block;font-size:.86rem;color:var(--tinta-suave);font-weight:700}
+.recibo .final strong{display:block;font-family:'Anton',sans-serif;font-weight:400;font-size:3.6rem;line-height:1.05}
+.recibo .final em{display:inline-block;font-style:normal;background:var(--tinta);color:var(--amarelo);font-weight:800;font-size:.88rem;padding:5px 12px;border-radius:6px;margin-top:6px}
+.recibo .por-aula{text-align:center;color:var(--tinta-suave);font-size:.88rem;margin-top:12px}
+.conta-acao{max-width:520px;margin:22px auto 0;text-align:center}
+.conta-acao .sob-botao{margin-top:16px}
+
+/* live grátis x curso */
+.compara{margin-top:24px;border:1px solid var(--linha);border-radius:14px;overflow:hidden;font-size:.9rem}
+.compara .l{display:grid;grid-template-columns:1.05fr 1fr 1fr;border-top:1px solid var(--linha)}
+.compara .l:first-child{border-top:0}
+.compara .l>*{padding:11px 10px;line-height:1.3}
+.compara .l>:nth-child(2){color:var(--suave);background:#0e0e0e}
+.compara .l>:nth-child(3){background:#1d1a05;font-weight:700}
+.compara .cab>*{font-weight:800;font-size:.8rem}
+.compara .cab>:nth-child(3){background:var(--amarelo);color:var(--preto)}
+.compara .l>:first-child{font-weight:700}
+.nota{color:var(--suave);font-size:.86rem;margin-top:14px}
+
+/* para quem */
+.quem-e{display:grid;gap:10px;margin-top:22px}
+@media(min-width:800px){.quem-e{grid-template-columns:1fr 1fr}}
+.quem-e div{background:var(--carvao);border-radius:12px;padding:16px 18px}
+.bloco.cinza .quem-e div{background:#0e0e0e}
+.quem-e b{display:block;margin-bottom:3px}
+.quem-e span{color:var(--suave);font-size:.94rem}
 
 /* quem ensina */
-.quem{display:grid;grid-template-columns:320px 1fr;gap:36px;align-items:center}
-.quem img{border-radius:var(--rad);border:2px solid var(--amarelo);aspect-ratio:4/5;object-fit:cover;width:100%}
-.quem p{color:#d6d6cf;margin-bottom:12px}
-@media(max-width:800px){.quem{grid-template-columns:1fr}.quem img{max-width:300px}}
+.professor{display:grid;gap:22px;align-items:center}
+.professor img{border-radius:14px;aspect-ratio:4/5;object-fit:cover;width:100%;max-width:300px;box-shadow:10px 10px 0 var(--amarelo)}
+.professor p{color:#dddacf;margin-bottom:12px}
+@media(min-width:800px){.professor{grid-template-columns:300px 1fr;gap:46px}}
 
 /* depoimentos */
-.dep{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amarelo);border-radius:12px;padding:20px}
-.dep p{font-size:1rem;color:var(--txt)}
-.dep span{display:block;margin-top:12px;color:var(--mut);font-size:.85rem}
+.falas{display:grid;gap:12px;margin-top:22px}
+@media(min-width:860px){.falas{grid-template-columns:repeat(3,1fr)}}
+.fala{background:var(--papel);color:var(--tinta);border-radius:12px;padding:18px}
+.fala p{font-size:.98rem}
+.fala span{display:block;margin-top:10px;color:var(--tinta-suave);font-size:.84rem;font-weight:700}
+.comunidade{color:var(--suave);font-size:.94rem;margin-top:18px}
+.comunidade b{color:var(--texto)}
 
-/* planos */
-.planos{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px;max-width:480px}
-@media(max-width:760px){.planos{grid-template-columns:1fr}}
-.plano-box{background:var(--card);border:2px solid var(--line);border-radius:var(--rad);padding:26px 24px;display:flex;flex-direction:column;position:relative}
-.plano-box.dest{border-color:var(--amarelo);box-shadow:0 24px 60px -34px rgba(255,212,0,.55)}
-.plano-box .fita{position:absolute;top:-13px;left:22px;background:var(--amarelo);color:var(--preto);font-weight:900;font-size:.72rem;padding:4px 12px;border-radius:30px;letter-spacing:.5px}
-.plano-box h3{font-size:1.05rem}
-.preco{font-family:'Archivo Black';font-size:2.6rem;line-height:1;margin:12px 0 2px}
-.preco small{font-size:1rem;color:var(--mut);font-family:'Inter';font-weight:700}
-.plano-box .eq{color:var(--mut);font-size:.9rem;margin-bottom:14px}
-.plano-box ul{list-style:none;display:grid;gap:8px;margin-bottom:22px;flex:1}
-.plano-box li{padding-left:24px;position:relative;font-size:.95rem}
-.plano-box li::before{content:"✓";position:absolute;left:0;color:var(--amarelo);font-weight:900}
-.plano-box .btn{width:100%}
-.garantia{display:flex;gap:16px;align-items:center;background:var(--card);border:1px dashed var(--amarelo);border-radius:var(--rad);padding:18px 20px;margin-top:22px;max-width:860px}
-.garantia .g7{font-family:'Archivo Black';color:var(--amarelo);font-size:1.5rem;line-height:1;text-align:center;flex:0 0 auto}
-.garantia .g7 small{display:block;font-size:.62rem;letter-spacing:2px}
-.garantia p{color:#d6d6cf;font-size:.95rem}
-.avulsa{color:var(--mut);margin-top:16px;font-size:.95rem}
-.avulsa a{color:var(--amarelo);font-weight:700;text-decoration:underline}
+/* oferta */
+.oferta{background:var(--carvao);border:2px solid var(--amarelo);border-radius:18px;max-width:520px;margin:26px auto 0;overflow:hidden}
+.oferta .cab{background:var(--amarelo);color:var(--preto);font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.03em;text-align:center;padding:10px;font-size:1.05rem}
+.oferta .corpo{padding:22px 20px 24px}
+.oferta .antes{color:var(--suave);font-size:.95rem;text-align:center}
+.oferta .preco{font-family:'Anton',sans-serif;font-size:4.1rem;line-height:1;text-align:center;margin:6px 0 4px}
+.oferta .preco small{font-family:'Inter',sans-serif;font-size:1rem;font-weight:700;color:var(--suave)}
+.oferta .equiv{text-align:center;color:var(--suave);font-size:.92rem;margin-bottom:18px}
+.oferta .equiv b{color:var(--texto)}
+.oferta ul{list-style:none;display:grid;gap:9px;margin-bottom:22px}
+.oferta li{padding-left:26px;position:relative;font-size:.96rem;line-height:1.35}
+.oferta li::before{content:"✓";position:absolute;left:0;color:var(--amarelo);font-weight:800}
+.pagamentos{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:16px}
+.pagamentos span{border:1px solid #3a3a3a;border-radius:6px;padding:4px 10px;font-size:.78rem;font-weight:700;color:var(--suave)}
+.garantia{display:flex;gap:16px;align-items:center;max-width:520px;margin:18px auto 0;border:2px dashed var(--amarelo);border-radius:14px;padding:16px 18px}
+.garantia .g7{font-family:'Anton',sans-serif;color:var(--amarelo);font-size:2.6rem;line-height:.9;text-align:center;flex:0 0 auto}
+.garantia .g7 small{display:block;font-size:.8rem;letter-spacing:.12em;margin-top:4px}
+.garantia p{font-size:.93rem;color:#dddacf}
+.avulsa{color:var(--suave);font-size:.9rem;text-align:center;max-width:520px;margin:18px auto 0}
+.avulsa a{color:var(--amarelo);font-weight:700}
 
-/* faq */
-details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-top:10px}
-summary{cursor:pointer;padding:16px 18px;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:14px}
+/* dúvidas */
+details{border-bottom:1px solid var(--linha)}
+details:first-of-type{border-top:1px solid var(--linha);margin-top:20px}
+summary{cursor:pointer;padding:16px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:14px;line-height:1.35}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--amarelo);font-weight:900;font-size:1.2rem;line-height:1}
+summary::after{content:"+";color:var(--amarelo);font-weight:800;font-size:1.3rem;line-height:1}
 details[open] summary::after{content:"–"}
-details p{padding:0 18px 18px;color:var(--mut)}
+details p{padding:0 0 18px;color:var(--suave);font-size:.97rem}
+details a{color:var(--amarelo)}
 
-.final{text-align:center;background:radial-gradient(700px 300px at 50% 0%,rgba(255,212,0,.12),transparent 70%)}
-.final .lead{margin:0 auto 24px}
-footer{border-top:1px solid var(--line);padding:26px 0 90px;color:var(--mut);font-size:.82rem;text-align:center}
+.fecho{text-align:center}
+.fecho .sub{margin:0 auto 22px}
+footer{border-top:1px solid var(--linha);padding:26px 0 104px;color:var(--suave);font-size:.8rem;text-align:center}
 footer a{color:var(--amarelo)}
+footer p+p{margin-top:8px}
 
 /* barra fixa no celular */
-.barra{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(10,10,10,.97);border-top:2px solid var(--amarelo);padding:10px 14px;display:none;align-items:center;gap:12px}
-.barra b{font-family:'Archivo Black';font-size:1.05rem;line-height:1.1}
-.barra small{display:block;color:var(--mut);font-size:.72rem;font-family:'Inter';font-weight:600}
-.barra .btn{margin-left:auto;padding:11px 18px;font-size:.9rem}
-@media(max-width:760px){.barra{display:flex}}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(10,10,10,.97);border-top:2px solid var(--amarelo);padding:9px 14px calc(9px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .25s}
+.barra.ativa{transform:none}
+.barra b{font-family:'Anton',sans-serif;font-weight:400;font-size:1.3rem;line-height:1}
+.barra small{display:block;color:var(--suave);font-size:.72rem;font-weight:600;margin-top:3px}
+.barra .botao{margin-left:auto;padding:12px 18px;font-size:.95rem;box-shadow:0 3px 0 #b39400}
+@media(min-width:900px){.barra{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.botao,.barra{transition:none}}
+.prints{display:grid;gap:16px;margin-top:22px}
+@media(min-width:860px){.prints{grid-template-columns:1.1fr 1fr 1fr;align-items:start}}
+.prints figure{background:#0e0e0e;border:1px solid var(--linha);border-radius:14px;overflow:hidden}
+.prints img{width:100%;height:auto;border-bottom:1px solid var(--linha)}
+.prints figcaption{padding:12px 14px 14px;color:var(--suave);font-size:.9rem;line-height:1.4}
+.prints figcaption b{color:var(--texto)}
+.aviso-previa{background:#2a2a2a;color:#f4f2ec;font-size:.78rem;font-weight:600;text-align:center;padding:6px 12px;line-height:1.3}
 </style>
 </head>
 <body>
+<div class="proxima" id="proxima" hidden></div>
 
-<div class="hazard-bar"></div>
-<header><div class="wrap nav">
-  <a class="brand" href="https://peritohenriquetabosa.com.br">
-    <span class="mark">HT</span>
-    <span><span class="t1">Perícia Forense <em>com Tabosa</em></span><span class="t2">CURSO · 2026.2</span></span>
-  </a>
-  <a class="link" href="#aulas">As 20 aulas</a>
-  <a class="link" href="#recebe">O que você recebe</a>
-  <a class="link" href="#duvidas">Dúvidas</a>
-  <a class="btn sm" href="#planos">Quero entrar</a>
+<header class="topo"><div class="caixa">
+  <a class="marca" href="https://peritohenriquetabosa.com.br">Perícia Forense <span>com Tabosa</span></a>
+  <nav>
+    <a href="#aulas">As 20 aulas</a>
+    <a href="#recebe">O que você recebe</a>
+    <a href="#duvidas">Dúvidas</a>
+  </nav>
+  <a class="botao p" href="#oferta">Quero entrar</a>
 </div></header>
 
-<!-- ===================== TOPO ===================== -->
-<section class="hero"><div class="wrap hero-grid">
-  <div>
-    <span class="tag">// Perícia Forense com Tabosa · Investigação Criminal 2026.2</span>
-    <h1>Aprenda perícia criminal pelos <em>casos que o Brasil inteiro acompanhou</em></h1>
-    <p class="sub">São 20 aulas. Em cada uma eu pego um caso real brasileiro e mostro, passo a passo, o que a perícia fez na cena, o que deveria ter feito e qual técnica explica o resultado.</p>
-    <ul class="checks">
-      <li>20 aulas completas: 10 já liberadas e mais 10 entrando toda quarta</li>
-      <li>Os slides de todas as aulas</li>
-      <li>E-books dos casos reais e da parte técnica (perícia criminal e medicina legal)</li>
-      <li>Certificado de 4 horas por live</li>
-      <li>Jogo Cena de Crime 360° incluído</li>
-    </ul>
-    <div class="cta-row">
-      <a class="btn" href="#planos">Quero entrar no curso</a>
-      <a class="btn ghost" href="#aulas">Ver as 20 aulas</a>
-    </div>
-    <p class="mini">R$ 297 por 12 meses · garantia de 7 dias · acesso liberado logo depois do pagamento</p>
+<!-- ===================== ABERTURA ===================== -->
+<section class="abre"><div class="caixa grade">
+  <div class="lado-texto">
+    <span class="etiqueta"><i>Curso online com certificado</i><u>Investigação Criminal 2026.2</u></span>
+    <h1>Aprenda perícia criminal pelos <b>casos que o Brasil inteiro acompanhou</b></h1>
+    <p class="resumo">São 20 aulas. Em cada uma eu pego um caso real e mostro, passo a passo, o que a perícia fez na cena.</p>
   </div>
-  <div>
+  <div class="lado-midia">
     <!-- VÍDEO DE APRESENTAÇÃO: quando o vídeo estiver no YouTube, cole o endereço na linha VIDEO_YT, no fim desta página.
-         Enquanto estiver vazio, aparece a foto. -->
-    <div class="media foto" id="midia">
-      <img src="img/henrique.webp" alt="Henrique Tabosa, perito criminal" width="800" height="1000">
-      <div class="leg"><small>QUEM DÁ A AULA</small>Henrique Tabosa · perito criminal há 17 anos</div>
+         Enquanto estiver vazio, aparece a capa do curso. -->
+    <div class="midia" id="midia">
+      <img src="img/curso/capa-curso-2026-2-800.webp" srcset="img/curso/capa-curso-2026-2-800.webp 800w, img/curso/capa-curso-2026-2.webp 1280w" sizes="(max-width:900px) 100vw, 560px" width="1280" height="720" alt="Perícia Forense com Tabosa, Investigação Criminal 2026.2: 20 aulas, 20 casos reais, certificado de 4h por aula" fetchpriority="high">
     </div>
-    <p class="media-leg" id="midia-leg" hidden>▶ Assista: eu explico como o curso funciona</p>
+    <p class="midia-nota" id="midia-nota" hidden>▶ Assista: eu explico como o curso funciona</p>
+  </div>
+  <div class="acao">
+    <a class="botao largo" href="#oferta" id="botao-topo">Quero entrar no curso</a>
+    <p class="de-por"><b>R$ 297</b> por 12 meses. Só as 20 aulas avulsas sairiam por <s>R$ 598</s>.</p>
+    <p class="sob-botao">Pix, boleto ou cartão em até 12x · 7 dias de garantia · acesso liberado logo depois do pagamento</p>
   </div>
 </div></section>
 
-<!-- ===================== NÚMEROS ===================== -->
-<div class="wrap">
-  <div class="nums">
+<div class="caixa">
+  <div class="provas">
     <div><b>17 anos</b><span>de perícia criminal</span></div>
     <div><b>1.800+</b><span>locais de crime atendidos</span></div>
-    <div><b>20</b><span>aulas, 20 casos reais</span></div>
-    <div><b>4h</b><span>de certificado por live</span></div>
+    <div><b>43 mil</b><span>inscritos no YouTube</span></div>
+    <div><b>80 horas</b><span>de certificado (4h por aula)</span></div>
   </div>
 </div>
 
-<!-- ===================== COMO É A AULA ===================== -->
-<section><div class="wrap">
-  <span class="tag">// Como é cada aula</span>
-  <h2>Primeiro o caso. <em>Depois a técnica.</em></h2>
-  <p class="lead">Aqui não tem teoria solta. Você entende a técnica porque viu onde ela foi usada, e lembra dela porque lembra do caso.</p>
-  <div class="grid3">
-    <div class="card"><span class="n">01 · O CASO</span><h3>O que aconteceu</h3><p>Começo contando o caso do jeito que ele chegou para a perícia: o local, as pessoas, o que foi encontrado e o que a imprensa noticiou.</p></div>
-    <div class="card"><span class="n">02 · A TÉCNICA</span><h3>O que a perícia faz</h3><p>Mostro a técnica daquela aula: isolamento do local, fotografia forense, medicina legal, análise de vestígios, impressões digitais, manchas de sangue.</p></div>
-    <div class="card"><span class="n">03 · O MATERIAL</span><h3>Para você revisar</h3><p>Cada aula vem com os slides e o e-book do caso para você revisar quando quiser. Terminou a aula, o certificado de 4 horas é seu.</p></div>
-  </div>
+<!-- ===================== TRECHOS DAS AULAS ===================== -->
+<section class="bloco" id="trechos" style="padding-bottom:20px"><div class="caixa">
+  <h2>Veja a aula <b>por dentro</b></h2>
+  <p class="sub">Três trechos tirados das aulas do curso, do jeito que você vai assistir. Toque para ver.</p>
+  <div class="trilho trechos" id="trechos-lista" tabindex="0" aria-label="Trechos das aulas, arraste para o lado" style="margin-top:18px"></div>
+  <p class="arraste">Arraste para o lado para ver os 3 trechos →</p>
 </div></section>
 
-<!-- ===================== GRADE ===================== -->
-<section class="alt" id="aulas"><div class="wrap">
-  <span class="tag">// A grade completa</span>
-  <h2>20 aulas. <em>20 casos.</em></h2>
-  <p class="lead">O Bloco A já está gravado e fica liberado assim que você entra. O Bloco B vai ao ar toda quarta, e cada aula entra na sua área de aluno depois da transmissão.</p>
+<!-- ===================== AS AULAS ===================== -->
+<section class="bloco" id="aulas"><div class="caixa">
+  <h2>20 aulas. <b>20 casos reais.</b></h2>
+  <p class="sub" id="txt-aulas"><span class="n-gravadas">10</span> aulas já estão gravadas e ficam liberadas assim que você entra. As outras <span class="n-faltam">10</span> vão ao ar toda quarta, às 21h, e depois ficam gravadas na sua área de aluno.</p>
 
-  <div class="bloco-h"><h3>Bloco A · aulas 01 a 10</h3><span class="selo ok">Disponível agora</span></div>
-  <div class="aulas" id="blocoA"></div>
+  <div class="linha-t"><h3>Aulas 01 a 10</h3><span class="selo ja">Gravadas · liberadas na hora</span></div>
+  <div class="trilho" id="gravadas" tabindex="0" aria-label="Aulas gravadas, arraste para o lado"></div>
+  <p class="arraste">Arraste para o lado para ver as 10 aulas →</p>
 
-  <div class="bloco-h"><h3>Bloco B · aulas 11 a 20</h3><span class="selo novo">De 07/10 a 09/12 · entra toda quarta</span></div>
-  <div class="aulas" id="blocoB"></div>
+  <div class="linha-t"><h3>Aulas 11 a 20</h3><span class="selo vivo" id="selo-b">Ao vivo toda quarta, 21h · até 09/12</span></div>
+  <div class="lista-vivo" id="aovivo"></div>
+</div></section>
+
+<!-- ===================== COMO É A AULA ===================== -->
+<section class="bloco cinza"><div class="caixa">
+  <h2>Primeiro o caso. <b>Depois a técnica.</b></h2>
+  <p class="sub">Aqui não tem teoria solta. Você entende a técnica porque viu onde ela foi usada, e lembra dela porque lembra do caso.</p>
+  <div class="passos">
+    <div class="passo"><h3>O caso</h3><p>Começo contando o caso do jeito que ele chegou para a perícia: o local, as pessoas, o que foi encontrado e o que a imprensa noticiou.</p></div>
+    <div class="passo"><h3>A técnica</h3><p>Mostro a técnica daquela aula: isolamento do local, fotografia forense, medicina legal, impressões digitais, luminol, manchas de sangue.</p></div>
+    <div class="passo"><h3>O material</h3><p>Cada aula vem com os slides e o e-book do caso para você revisar quando quiser. Terminou a aula, o certificado de 4 horas é seu.</p></div>
+  </div>
 </div></section>
 
 <!-- ===================== O QUE RECEBE ===================== -->
-<section id="recebe"><div class="wrap">
-  <span class="tag">// O que você recebe ao comprar</span>
-  <h2>Tudo o que entra <em>no curso</em></h2>
-  <div class="grid2">
-    <div class="card"><span class="ic">🎬</span><h3>20 aulas completas</h3><p>As 10 aulas do Bloco A liberadas na hora. As 10 do Bloco B entram uma por semana, depois da live de quarta, até 09/12. Assista pelo celular ou computador, quantas vezes quiser.</p></div>
-    <div class="card"><span class="ic">🖥️</span><h3>Todos os slides das aulas</h3><p>Os mesmos slides que eu uso na aula, para você revisar o caso e a técnica sem precisar voltar o vídeo.</p></div>
-    <div class="card"><span class="ic">📘</span><h3>E-books dos casos reais</h3><p>Cada caso contado do começo ao fim: o que aconteceu, o que a perícia encontrou e como a investigação terminou.</p></div>
-    <div class="card"><span class="ic">🔬</span><h3>E-book da parte técnica</h3><p>A perícia criminal e a medicina legal explicadas num material só, para estudar, consultar e levar para a prova.</p></div>
-    <div class="card"><span class="ic">🎓</span><h3>Certificado de 4 horas por live</h3><p>Cada uma das 20 aulas vale 4 horas, que você pode apresentar como horas complementares. Com as 20, são 80 horas.</p></div>
-    <div class="card"><span class="ic">🛡️</span><h3>Garantia de 7 dias</h3><p>Tempo para você ver se o material é de qualidade mesmo. Não gostou? O reembolso é garantido pela Hotmart, sem precisar explicar o motivo.</p></div>
-    <div class="card"><span class="ic">🤝</span><h3>Equipe para te ajudar</h3><p>Dúvida com acesso, senha, certificado ou onde está cada material? Nossa equipe te ajuda em tudo sobre a plataforma, pelo WhatsApp.</p></div>
-    <div class="card"><span class="ic">🕵️</span><h3>Jogo Cena de Crime 360° <small style="color:var(--amarelo)">incluído</small></h3><p>O Caso 01, Apartamento 1806: você entra num apartamento em 360°, examina a cena e assina o laudo. O jogo já está no ar, e quem é aluno do curso joga sem pagar a mais.</p></div>
+<section class="bloco" id="recebe"><div class="caixa">
+  <h2>Tudo o que entra <b>no curso</b></h2>
+  <ul class="itens">
+    <li><b>20 aulas completas</b><span id="txt-recebe"><span class="n-gravadas">10</span> liberadas na hora e <span class="n-faltam">10</span> entrando uma por semana, até 09/12. Assista pelo celular ou pelo computador, quantas vezes quiser.</span></li>
+    <li><b>Os slides de todas as aulas</b><span>Os mesmos que eu uso na aula, para você revisar o caso e a técnica sem precisar voltar o vídeo.</span></li>
+    <li><b>E-books dos casos reais</b><span>Cada caso contado do começo ao fim: o que aconteceu, o que a perícia encontrou e como a investigação terminou.</span></li>
+    <li><b>E-book da parte técnica</b><span>Perícia criminal e medicina legal num material só, para estudar e consultar.</span></li>
+    <li><b>Certificado de 4 horas por aula</b><span>São 80 horas nas 20 aulas, que você pode apresentar como horas complementares.</span></li>
+    <li><b>Jogo Cena de Crime 360° incluído</b><span>Você entra num apartamento em 360°, examina a cena e assina o laudo. Aluno do curso joga sem pagar a mais.</span></li>
+    <li><b>Equipe para te ajudar</b><span>Dúvida com acesso, senha ou certificado? A gente resolve pelo WhatsApp.</span></li>
+    <li><b>7 dias de garantia</b><span>Entrou e não gostou? O reembolso é feito pela própria Hotmart, sem precisar explicar o motivo.</span></li>
+  </ul>
+</div></section>
+
+<!-- ===================== ÁREA DO ALUNO (prints reais) ===================== -->
+<section class="bloco cinza" id="por-dentro"><div class="caixa">
+  <h2>Como é a <b>sua área de aluno</b></h2>
+  <p class="sub">Prints da área de alunos do curso, na Hotmart. É aqui que ficam as aulas gravadas, os slides e os e-books.</p>
+  <div class="prints">
+    <figure><img src="img/curso/area-aluno-lista-aulas.webp" alt="Lista de aulas do curso na área de alunos, com capa e duração de cada aula" width="652" height="352" loading="lazy" decoding="async"><figcaption><b>Todas as aulas num lugar só.</b> Cada caso com capa e duração. As aulas novas entram aqui depois da live.</figcaption></figure>
+    <figure><img src="img/curso/area-aluno-aula-player.webp" alt="Aula 02 aberta na área de alunos, com o vídeo da aula" width="576" height="410" loading="lazy" decoding="async"><figcaption><b>A aula completa gravada.</b> Assista pelo celular ou computador, quantas vezes quiser.</figcaption></figure>
+    <figure><img src="img/curso/area-aluno-materiais-pdf.webp" alt="Materiais em PDF de uma aula: resumo do caso, resumo técnico, mapa mental, matérias de jornal, quiz e técnica aplicada" width="576" height="318" loading="lazy" decoding="async"><figcaption><b>O material de cada aula.</b> Resumo do caso, resumo técnico, mapa mental, matérias de jornal, quiz e a técnica aplicada ao caso, em PDF.</figcaption></figure>
   </div>
 </div></section>
 
+<!-- ===================== A CONTA ===================== -->
+<div class="fita"></div>
+<section class="bloco conta-fundo" id="conta"><div class="caixa">
+  <h2 style="text-align:center">Faça <b>a conta</b></h2>
+  <p class="sub" style="text-align:center;margin:0 auto">Quanto sairia se você comprasse cada coisa separada.</p>
+  <div class="recibo">
+    <h3>Comprando separado</h3>
+    <p class="peq">preço normal de cada item</p>
+    <dl>
+      <dt>20 aulas avulsas<small>20 × R$ 29,90, com slides e certificado</small></dt><dd>R$ 598,00</dd>
+      <dt>Jogo Cena de Crime 360°<small>Caso 01, comprado sozinho</small></dt><dd>R$ 49,90</dd>
+    </dl>
+    <div class="soma"><span>Total separado</span><s>R$ 647,90</s></div>
+    <div class="final">
+      <span>No curso completo, por 12 meses</span>
+      <strong>R$ 297</strong>
+      <em>Você fica com R$ 350,90 no bolso</em>
+    </div>
+    <p class="por-aula">Dá R$ 14,85 por aula, já com o material e o certificado.</p>
+  </div>
+  <div class="conta-acao">
+    <a class="botao largo hotmart-fb hotmart__button-checkout" data-plano="Anual" data-valor="297" data-onde="conta"
+       href="https://pay.hotmart.com/G106657014T?off=ve0ehw8j&amp;src=pv-curso&amp;checkoutMode=2">Quero entrar por R$ 297</a>
+    <p class="sob-botao">Pix, boleto ou cartão em até 12x · 7 dias de garantia</p>
+  </div>
+</div></section>
+<div class="fita"></div>
+
+<!-- ===================== LIVE GRÁTIS x CURSO ===================== -->
+<section class="bloco"><div class="caixa estreita">
+  <h2>A live é grátis. <b>O que muda no curso?</b></h2>
+  <p class="sub">A live de quarta continua aberta no YouTube. O curso é para quem quer a aula inteira guardada, o material e o certificado maior.</p>
+  <div class="compara" role="table" aria-label="Diferença entre a live grátis e o curso">
+    <div class="l cab" role="row"><span role="columnheader"></span><span role="columnheader">Live grátis</span><span role="columnheader">Curso</span></div>
+    <div class="l" role="row"><span role="cell">Aula completa</span><span role="cell">Só na hora, ao vivo</span><span role="cell">Gravada, para ver e rever quando quiser</span></div>
+    <div class="l" role="row"><span role="cell">Certificado</span><span role="cell">2 horas, para quem está ao vivo</span><span role="cell">4 horas por aula (80h no total)</span></div>
+    <div class="l" role="row"><span role="cell">Slides da aula</span><span role="cell">Não</span><span role="cell">Sim, de todas</span></div>
+    <div class="l" role="row"><span role="cell">E-books</span><span role="cell">Não</span><span role="cell">Dos casos e da parte técnica</span></div>
+    <div class="l" role="row"><span role="cell">Jogo 360°</span><span role="cell">Não</span><span role="cell">Incluído</span></div>
+    <div class="l" role="row"><span role="cell">Aulas 01 a 10</span><span role="cell">Já passaram</span><span role="cell">Liberadas na hora</span></div>
+  </div>
+  <p class="nota">Sobre o certificado: este é um curso livre. O certificado comprova as horas de estudo e pode ser apresentado como atividade complementar na faculdade. Quem aprova é a coordenação do seu curso, então vale conferir a regra de lá. Ele não habilita ninguém a atuar como perito.</p>
+</div></section>
+
 <!-- ===================== PARA QUEM ===================== -->
-<section class="alt"><div class="wrap">
-  <span class="tag">// Para quem é</span>
-  <h2>Você não precisa <em>ser da área</em></h2>
-  <p class="lead">As aulas partem do caso e explicam a técnica do zero. Quem já é da área ganha profundidade. Quem não é, entende do mesmo jeito.</p>
-  <div class="grid2">
-    <div class="card"><h3>🎒 Estudante</h3><p>De Direito, Biomedicina, Enfermagem, Farmácia, Biologia, Química e áreas próximas, que quer horas complementares e contato com a prática.</p></div>
-    <div class="card"><h3>📚 Quem vai prestar concurso</h3><p>Da área policial e pericial, e quer ver a matéria aplicada em casos reais em vez de só decorar apostila.</p></div>
-    <div class="card"><h3>⚖️ Profissional</h3><p>De saúde, direito ou segurança, que lida com ocorrências, laudos ou processos e quer entender como a perícia trabalha.</p></div>
-    <div class="card"><h3>🔎 Quem gosta de casos reais</h3><p>E quer ir além do documentário: saber o que cada vestígio diz e por que um detalhe muda a investigação.</p></div>
+<section class="bloco cinza"><div class="caixa">
+  <h2>Você não precisa <b>ser da área</b></h2>
+  <p class="sub">As aulas partem do caso e explicam a técnica do zero. Quem já é da área ganha profundidade. Quem não é, entende do mesmo jeito.</p>
+  <div class="quem-e">
+    <div><b>Estudante</b><span>De Direito, Biomedicina, Enfermagem, Farmácia, Biologia, Química e áreas próximas, que quer horas complementares e contato com a prática.</span></div>
+    <div><b>Quem vai prestar concurso</b><span>Da área policial e pericial, e quer ver a matéria aplicada em casos reais em vez de só decorar apostila.</span></div>
+    <div><b>Profissional</b><span>De saúde, direito ou segurança, que lida com ocorrências, laudos ou processos e quer entender como a perícia trabalha.</span></div>
+    <div><b>Quem gosta de casos reais</b><span>E quer ir além do documentário: saber o que cada vestígio diz e por que um detalhe muda a investigação.</span></div>
   </div>
 </div></section>
 
 <!-- ===================== QUEM ENSINA ===================== -->
-<section><div class="wrap quem">
-  <img src="img/henrique.webp" alt="Henrique Tabosa" loading="lazy" width="800" height="1000">
+<section class="bloco"><div class="caixa professor">
+  <img src="img/henrique.webp" alt="Henrique Tabosa, perito criminal" loading="lazy" width="800" height="1000">
   <div>
-    <span class="tag">// Quem dá a aula</span>
-    <h2>Henrique <em>Tabosa</em></h2>
+    <h2>Quem dá a aula: <b>Henrique Tabosa</b></h2>
     <p>Sou perito criminal há 17 anos e já atendi mais de 1.800 locais de crime. O que eu ensino aqui é o que eu faço no trabalho: chegar, isolar, observar, registrar e explicar o que a cena mostra.</p>
-    <p>Também sou autor dos livros <b>O Caso do Marchante Suicida</b> e <b>Os Canibais de Pernambuco</b>, e toda quarta, às 21h, dou aula ao vivo no YouTube para uma turma que já passa de 43 mil inscritos.</p>
+    <p>Também sou professor, doutor e autor dos livros <b>O Caso do Marchante Suicida</b> e <b>Os Canibais de Pernambuco</b>. Toda quarta, às 21h, dou aula ao vivo no YouTube para um canal que já passa de 43 mil inscritos.</p>
     <p>Nas aulas eu falo como falo em sala: sem enrolar, sem palavra difícil sem explicação, e sempre mostrando de onde vem cada conclusão.</p>
   </div>
 </div></section>
 
 <!-- ===================== DEPOIMENTOS ===================== -->
-<section class="alt"><div class="wrap">
-  <span class="tag">// Quem já assiste</span>
-  <h2>O que a turma <em>diz nas aulas</em></h2>
-  <div class="grid3">
-    <div class="dep"><p>“Eu fico ansiosa para chegar quarta e nos encontrarmos aqui. Cada live que participo eu aprendo muito — cada detalhe faz toda a diferença.”</p><span>Janaína · Macapá, AP</span></div>
-    <div class="dep"><p>“Muito obrigada, professor. Aula maravilhosa.”</p><span>Solange · comentário no YouTube</span></div>
-    <div class="dep"><p>“Mais uma vez, muito obrigada pelos seus conhecimentos e por todo o aprendizado. É sempre bom aprender com você.”</p><span>Helen · chat da Aula 07</span></div>
+<section class="bloco cinza"><div class="caixa">
+  <h2>O que a turma <b>diz nas aulas</b></h2>
+  <div class="falas">
+    <div class="fala"><p>“Eu fico ansiosa para chegar quarta e nos encontrarmos aqui. Cada live que participo eu aprendo muito — cada detalhe faz toda a diferença.”</p><span>Janaína · Macapá, AP</span></div>
+    <div class="fala"><p>“Mais uma vez, muito obrigada pelos seus conhecimentos e por todo o aprendizado. É sempre bom aprender com você.”</p><span>Helen · chat da Aula 07</span></div>
   </div>
+  <p class="comunidade">Já teve gente de <b>mais de 20 estados</b> numa mesma aula ao vivo, e o grupo da turma no WhatsApp já passa de <b>650 pessoas</b>.</p>
 </div></section>
 
-<!-- ===================== PLANOS ===================== -->
-<section id="planos"><div class="wrap">
-  <span class="tag">// Planos</span>
-  <h2>Entre <em>na turma 2026.2</em></h2>
-  <p class="lead">Um plano só, com tudo dentro: as 20 aulas, o material, os certificados e o jogo. Pagamento por Pix, cartão (em até 12x) ou boleto.</p>
-  <div class="planos">
-    <div class="plano-box dest">
-      <span class="fita">TURMA 2026.2</span>
-      <h3>Curso completo · 12 meses</h3>
-      <div class="preco">R$ 297<small> /ano</small></div>
-      <p class="eq">12 meses de acesso</p>
+<!-- ===================== OFERTA ===================== -->
+<section class="bloco" id="oferta"><div class="caixa">
+  <h2 style="text-align:center">Entre na <b>turma 2026.2</b></h2>
+  <p class="sub" id="txt-oferta" style="text-align:center;margin:0 auto">Um plano só, com tudo dentro. Entrando agora você já assiste às <span class="n-gravadas">10</span> aulas gravadas e acompanha as próximas ao vivo.</p>
+  <div class="oferta">
+    <div class="cab">Curso completo · 12 meses de acesso</div>
+    <div class="corpo">
+      <p class="antes">Comprando separado: <s>R$ 647,90</s></p>
+      <div class="preco">R$ 297<small> à vista</small></div>
+      <p class="equiv" id="equiv">ou em até <b>12x no cartão</b> · dá <b>R$ 14,85 por aula</b></p>
       <ul>
-        <li>As 20 aulas completas de 2026.2</li>
+        <li>As 20 aulas completas de 2026.2 (<span class="n-gravadas">10</span> já gravadas)</li>
         <li>Slides de todas as aulas</li>
         <li>E-books dos casos e da parte técnica</li>
-        <li>Certificado de 4h por live</li>
-        <li>Equipe para te ajudar na plataforma</li>
+        <li>Certificado de 4h por aula (80 horas)</li>
         <li>Jogo Cena de Crime 360° incluído</li>
-        <li>As aulas novas que entrarem nos 12 meses</li>
+        <li>Equipe para te ajudar pelo WhatsApp</li>
       </ul>
-      <a class="btn hotmart-fb hotmart__button-checkout" data-plano="Anual" data-valor="297"
+      <a class="botao largo hotmart-fb hotmart__button-checkout" data-plano="Anual" data-valor="297" data-onde="oferta"
          href="https://pay.hotmart.com/G106657014T?off=ve0ehw8j&amp;src=pv-curso&amp;checkoutMode=2">Quero entrar no curso</a>
+      <div class="pagamentos"><span>Pix</span><span>Cartão até 12x</span><span>Boleto</span><span>Compra segura Hotmart</span></div>
     </div>
   </div>
   <div class="garantia">
     <div class="g7">7<small>DIAS</small></div>
-    <p><b>Garantia de 7 dias.</b> Entre, assista e veja se o material é de qualidade mesmo. Se achar que não é para você, peça o reembolso pela própria Hotmart dentro de 7 dias e o valor volta inteiro. Pagamento por Pix, cartão ou boleto.</p>
+    <p><b>Garantia de 7 dias.</b> Entre, assista e veja se é para você. Se achar que não é, peça o reembolso pela própria Hotmart dentro de 7 dias e o valor volta inteiro.</p>
   </div>
+  <p class="entra-ate" id="entra-ate" hidden></p>
+  <p class="duvida-zap">Ficou com alguma dúvida antes de entrar? <a href="https://wa.me/5581991016004?text=Tenho%20uma%20d%C3%BAvida%20sobre%20o%20curso%20Per%C3%ADcia%20Forense%20com%20Tabosa" data-zap="oferta">Chama a gente no WhatsApp</a></p>
   <p class="avulsa">Quer só uma aula? Cada aula gravada sai por R$ 29,90, com o material e o certificado de 4h. <a href="https://lives.peritohenriquetabosa.com.br/#aulas">Escolher uma aula avulsa</a></p>
 </div></section>
 
 <!-- ===================== DÚVIDAS ===================== -->
-<section class="alt" id="duvidas"><div class="wrap" style="max-width:820px">
-  <span class="tag">// Dúvidas</span>
-  <h2>Antes de <em>decidir</em></h2>
+<section class="bloco cinza" id="duvidas"><div class="caixa estreita">
+  <h2>Antes de <b>decidir</b></h2>
   <details><summary>Preciso ser da área para acompanhar?</summary><p>Não. As aulas partem do caso e explicam a técnica do zero. A linguagem é de aula, não de laudo.</p></details>
-  <details><summary>Como eu recebo o acesso?</summary><p>Assim que o pagamento é aprovado, a Hotmart manda um e-mail com o acesso à área de alunos. No Pix e no cartão isso costuma levar poucos minutos. Você assiste pelo celular ou pelo computador.</p></details>
-  <details><summary>As lives de quarta não são gratuitas?</summary><p>São, e continuam sendo: toda quarta, 21h, no YouTube, com certificado gratuito de 2 horas para quem participa ao vivo. O curso é para quem quer as aulas completas, os slides, os e-books, o certificado de 4 horas por live e não quer depender de estar ao vivo.</p></details>
-  <details><summary>Como funciona o certificado?</summary><p>Cada live do curso dá direito a um certificado de 4 horas. Só o Bloco A soma 40 horas; com as 20, são 80. É um curso livre: o certificado comprova as horas de estudo e pode ser usado como horas complementares, mas não habilita ninguém a atuar como perito.</p></details>
+  <details><summary>E se eu não conseguir assistir ao vivo?</summary><p>Não tem problema. Toda aula fica gravada na sua área de aluno, com os slides e o e-book. Você assiste no dia e na hora que der, pelo celular ou pelo computador.</p></details>
+  <details><summary>Como eu recebo o acesso?</summary><p>Assim que o pagamento é aprovado, a Hotmart manda um e-mail com o acesso à área de alunos. No Pix e no cartão isso costuma levar poucos minutos.</p></details>
+  <details><summary>As lives de quarta não são gratuitas?</summary><p>São, e continuam sendo: toda quarta, 21h, no YouTube, com certificado gratuito de 2 horas para quem participa ao vivo. O curso é para quem quer as aulas completas gravadas, os slides, os e-books, o certificado de 4 horas por aula e não quer depender de estar ao vivo.</p></details>
+  <details><summary>O certificado vale como horas complementares?</summary><p>Cada aula do curso dá um certificado de 4 horas. Só as 10 primeiras somam 40 horas; com as 20, são 80. Você pode apresentar na faculdade como atividade complementar. Quem aprova é a coordenação do seu curso, então vale conferir a regra de lá. É um curso livre: o certificado comprova as horas de estudo e não habilita ninguém a atuar como perito.</p></details>
+  <details><summary>Serve para quem estuda para concurso?</summary><p>Não é um cursinho preparatório. O que você ganha aqui é ver a matéria de criminalística e medicina legal aplicada em casos reais, o que ajuda a entender e a lembrar na hora da prova.</p></details>
   <details><summary>É assinatura? Como eu cancelo?</summary><p>Sim. O plano vale por 12 meses e renova no fim do período. Se não quiser continuar, é só cancelar antes da renovação, direto na sua conta da Hotmart, sem precisar falar com ninguém.</p></details>
-  <details><summary>Quando entram as aulas do Bloco B?</summary><p>Uma por semana, de 07/10 a 09/12. A aula vai ao ar na quarta, às 21h, e depois a gravação entra na sua área de alunos com o material.</p></details>
+  <details><summary>Posso pagar no Pix ou parcelar?</summary><p>Pode. O pagamento é pela Hotmart: Pix, boleto ou cartão de crédito em até 12 vezes. O valor de cada parcela aparece na tela de pagamento, antes de você confirmar.</p></details>
+  <details><summary>Quando entram as aulas 11 a 20?</summary><p>Uma por semana, de 07/10 a 09/12. A aula vai ao ar na quarta, às 21h, e depois a gravação entra na sua área de alunos com o material.</p></details>
   <details><summary>O jogo Cena de Crime 360° está incluído mesmo?</summary><p>Está. O jogo já está no ar: quem é aluno do curso entra com o mesmo e-mail da compra, sem pagar a mais. Quem quiser só o jogo compra separado.</p></details>
-  <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia para ver se o material é de qualidade mesmo. O reembolso é garantido pela própria Hotmart.</p></details>
-  <details><summary>E se eu tiver problema com o acesso?</summary><p>Nossa equipe te ajuda em tudo sobre a plataforma: acesso, senha, certificado, onde encontrar cada slide e e-book. É só chamar no <a href="https://wa.me/5581991016004?text=Preciso%20de%20ajuda%20com%20a%20plataforma%20do%20curso" style="color:var(--amarelo)">WhatsApp (81) 99101-6004</a>.</p></details>
+  <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. O reembolso é feito pela própria Hotmart e o valor volta inteiro.</p></details>
+  <details><summary>Ainda estou com dúvida. Com quem eu falo?</summary><p>Chama a gente no <a href="https://wa.me/5581991016004?text=Tenho%20uma%20d%C3%BAvida%20sobre%20o%20curso%20Per%C3%ADcia%20Forense%20com%20Tabosa">WhatsApp (81) 99101-6004</a>. A equipe responde sobre o curso, o acesso, a senha e o certificado.</p></details>
 </div></section>
 
-<!-- ===================== FINAL ===================== -->
-<section class="final"><div class="wrap">
-  <span class="tag">// Te espero na aula</span>
-  <h2>A cena sempre <em>conta a história</em></h2>
-  <p class="lead">Em 20 aulas você aprende a ler o que ela diz. Entre hoje e comece pelo caso que quiser.</p>
-  <a class="btn" href="#planos">Quero entrar no curso</a>
-  <p class="mini">R$ 297 por 12 meses · garantia de 7 dias</p>
+<!-- ===================== FECHO ===================== -->
+<section class="bloco fecho"><div class="caixa">
+  <h2>A cena sempre <b>conta a história</b></h2>
+  <p class="sub">Em 20 aulas você aprende a ler o que ela diz. Entre hoje e comece pelo caso que quiser.</p>
+  <a class="botao" href="#oferta">Quero entrar no curso</a>
+  <p class="sob-botao">R$ 297 por 12 meses · 7 dias de garantia</p>
 </div></section>
 
-<footer><div class="wrap">
+<footer><div class="caixa">
   <p>© 2026 Perito Criminal Henrique Tabosa · Curso livre, de caráter educacional. O certificado comprova as horas de estudo e não habilita ao exercício da função de perito.</p>
-  <p style="margin-top:8px"><a href="https://peritohenriquetabosa.com.br">Site</a> · <a href="https://lives.peritohenriquetabosa.com.br">Lives</a> · <a href="https://loja.peritohenriquetabosa.com.br">Loja</a> · <a href="https://wa.me/5581991016004?text=Tenho%20uma%20d%C3%BAvida%20sobre%20o%20curso%20Per%C3%ADcia%20Criminal%20com%20o%20Tabosa">Dúvida? Fale no WhatsApp</a></p>
+  <p><a href="https://peritohenriquetabosa.com.br">Site</a> · <a href="https://lives.peritohenriquetabosa.com.br">Lives</a> · <a href="https://loja.peritohenriquetabosa.com.br">Loja</a> · <a href="https://wa.me/5581991016004?text=Tenho%20uma%20d%C3%BAvida%20sobre%20o%20curso%20Per%C3%ADcia%20Forense%20com%20Tabosa">Dúvida? Fale no WhatsApp</a></p>
 </div></footer>
 
-<div class="barra"><div><b>R$ 297</b><small>12 meses · 7 dias de garantia</small></div><a class="btn" href="#planos">Quero entrar</a></div>
+<div class="barra" id="barra"><div><b>R$ 297</b><small>12 meses · 7 dias de garantia</small></div><a class="botao" href="#oferta">Quero entrar</a></div>
 
 <script>
 /* =====================================================================
@@ -385,53 +538,188 @@ footer a{color:var(--amarelo)}
    ===================================================================== */
 const VIDEO_YT = "";
 
-const AULAS_A = [
-  ["01","O Caso do apresentador Wallace Souza (AM)","Rotinas de trabalho e isolamento de locais"],
-  ["02","O Caso do boxeador Arturo Gatti (PE)","Introdução à Medicina Legal e exame tanatoscópico"],
-  ["03","O Caso Isabella Nardoni (SP)","Fotografia forense e desenho esquemático"],
-  ["04","O Caso do serial killer de Curitiba (PR/SC)","Antropologia forense"],
-  ["05","O Caso Eliza Samudio e goleiro Bruno (RJ/MG)","Tipos de locais de crime"],
-  ["06","O Caso da Boate Kiss (RS)","Tanatologia: fenômenos abióticos e consecutivos"],
-  ["07","O Caso do indígena Galdino Pataxó (DF)","Análise de vestimentas"],
-  ["08","O Caso do Enfermeiro da Morte (RJ)","Tanatologia: fenômenos transformativos, destrutivos e conservadores"],
-  ["09","O Caso Elize Matsunaga (SP)","Como o lixo pode mudar o rumo da perícia criminal"],
-  ["10","O Caso Marielle Franco (RJ)","Interpretação de avarias em vidro por projétil de arma de fogo"]
-];
-const AULAS_B = [
-  ["11","O Caso Tatiane Spitzner (PR)","Como acontecem os principais quadros de asfixia em humanos","07/10"],
-  ["12","O Caso do jogador Daniel Corrêa (PR)","Como fazer o uso de luminol em cenas de crime","14/10"],
-  ["13","O Caso do furto ao Banco Central (CE)","Como se encontram as impressões digitais em locais de crime","21/10"],
-  ["14","O Caso “Helicoca” (ES)","Testes rápidos para drogas encontradas em cenas de crime","28/10"],
-  ["15","O Caso Celso Daniel (SP)","Características de lesões por arma de fogo e arma branca","04/11"],
-  ["16","O Caso Richthofen (SP)","Passo a passo para analisar manchas de sangue — parte 1","11/11"],
-  ["17","O Caso do Maníaco do Parque (SP)","Medicina legal: sexologia forense","18/11"],
-  ["18","O Caso do Crime da 113 Sul (DF)","Passo a passo para analisar manchas de sangue — parte 2","25/11"],
-  ["19","O Caso João Goulart (RS)","Motivações e por que ocorrem as exumações de corpos","02/12"],
-  ["20","O Caso PC Farias e Suzana Marcolino (AL)","Como realizar uma reprodução simulada dos fatos","09/12"]
-];
-const linha = a => `<div class="aula"><span class="num">${a[0]}</span><div><b>${a[1]}</b><span>${a[2]}</span>${a[3]?`<i>AO VIVO EM ${a[3]} · 21H</i>`:''}</div></div>`;
-document.getElementById('blocoA').innerHTML = AULAS_A.map(linha).join('');
-document.getElementById('blocoB').innerHTML = AULAS_B.map(linha).join('');
+/* PARCELA NO CARTÃO: valor de cada uma das 12 parcelas, como aparece no checkout da Hotmart.
+   Deixe vazio ("") para mostrar só "em até 12x no cartão". Exemplo: const PARCELA_12X = "31,25"; */
+const PARCELA_12X = "30,72";
 
-/* vídeo: troca a foto pelo vídeo quando houver endereço */
+const AULAS_A = [
+  ["01","O Caso do apresentador Wallace Souza (AM)","Rotinas de trabalho e isolamento de locais","aula-01-wallace-souza"],
+  ["02","O Caso do boxeador Arturo Gatti (PE)","Introdução à Medicina Legal e exame tanatoscópico","aula-02-arturo-gatti"],
+  ["03","O Caso Isabella Nardoni (SP)","Fotografia forense e desenho esquemático","aula-03-isabella-nardoni"],
+  ["04","O Caso do serial killer de Curitiba (PR/SC)","Antropologia forense","aula-04-serial-killer-curitiba"],
+  ["05","O Caso Eliza Samudio e goleiro Bruno (RJ/MG)","Tipos de locais de crime","aula-05-eliza-samudio"],
+  ["06","O Caso da Boate Kiss (RS)","Tanatologia: fenômenos abióticos e consecutivos","aula-06-boate-kiss"],
+  ["07","O Caso do indígena Galdino Pataxó (DF)","Análise de vestimentas","aula-07-galdino-pataxo"],
+  ["08","O Caso do Enfermeiro da Morte (RJ)","Tanatologia: fenômenos transformativos, destrutivos e conservadores","aula-08-enfermeiro-da-morte"],
+  ["09","O Caso Elize Matsunaga (SP)","Como o lixo pode mudar o rumo da perícia criminal","aula-09-elize-matsunaga"],
+  ["10","O Caso Marielle Franco (RJ)","Interpretação de avarias em vidro por projétil de arma de fogo","aula-10-marielle-franco"]
+];
+/* [número, caso, técnica, dia, mês, nome curto para o aviso do topo] — todas em 2026, quarta, 21h (horário de Brasília) */
+const AULAS_B = [
+  ["11","O Caso Tatiane Spitzner (PR)","Como acontecem os principais quadros de asfixia em humanos",7,10,"Caso Tatiane Spitzner · asfixias"],
+  ["12","O Caso do jogador Daniel Corrêa (PR)","Como fazer o uso de luminol em cenas de crime",14,10,"Caso Daniel Corrêa · luminol"],
+  ["13","O Caso do furto ao Banco Central (CE)","Como se encontram as impressões digitais em locais de crime",21,10,"Furto ao Banco Central · impressões digitais"],
+  ["14","O Caso “Helicoca” (ES)","Testes rápidos para drogas encontradas em cenas de crime",28,10,"Caso “Helicoca” · testes para drogas"],
+  ["15","O Caso Celso Daniel (SP)","Características de lesões por arma de fogo e arma branca",4,11,"Caso Celso Daniel · lesões por arma"],
+  ["16","O Caso Richthofen (SP)","Passo a passo para analisar manchas de sangue — parte 1",11,11,"Caso Richthofen · manchas de sangue"],
+  ["17","O Caso do Maníaco do Parque (SP)","Medicina legal: sexologia forense",18,11,"Maníaco do Parque · sexologia forense"],
+  ["18","O Caso do Crime da 113 Sul (DF)","Passo a passo para analisar manchas de sangue — parte 2",25,11,"Crime da 113 Sul · manchas de sangue"],
+  ["19","O Caso João Goulart (RS)","Motivações e por que ocorrem as exumações de corpos",2,12,"Caso João Goulart · exumações"],
+  ["20","O Caso PC Farias e Suzana Marcolino (AL)","Como realizar uma reprodução simulada dos fatos",9,12,"Caso PC Farias · reprodução simulada"]
+];
+const d2 = n => String(n).padStart(2,'0');
+/* 21h de Brasília = 00h UTC do dia seguinte */
+const inicio = a => Date.UTC(2026, a[4]-1, a[3]+1, 0, 0, 0);
+const FIM_AULA = 90*60*1000;
+
+document.getElementById('gravadas').innerHTML = AULAS_A.map((a,i) =>
+  `<article class="cartao-aula"><img src="img/curso/${a[3]}.webp" alt="Capa da Aula ${a[0]}: ${a[1]}" width="960" height="540" ${i>1?'loading="lazy"':''} decoding="async"><div><small>Aula ${a[0]}</small><b>${a[1]}</b><span>${a[2]}</span></div></article>`
+).join('');
+
+/* TRECHOS DAS AULAS: [arquivo, aula, título]. Vídeo em video/curso/ARQUIVO.mp4 e capa em img/curso/ARQUIVO.webp */
+const TRECHOS = [
+  ["trecho-vestigio","Aula 05","Vestígio, evidência e indício: qual a diferença?"],
+  ["trecho-roupa","Aula 07","O que a roupa conta para o perito?"],
+  ["trecho-tribunal","Aula 05","O que mais pesou na condenação do goleiro Bruno?"]
+];
+(function(){
+  const lista = document.getElementById('trechos-lista');
+  lista.innerHTML = TRECHOS.map(t =>
+    `<button class="trecho" type="button" data-v="${t[0]}" aria-label="Assistir ao trecho da ${t[1]}: ${t[2]}"><img src="img/curso/${t[0]}.webp" alt="" width="540" height="960" loading="lazy" decoding="async"><span class="tocar"></span><span class="rot"><small>${t[1]} · trecho</small>${t[2]}</span></button>`
+  ).join('');
+  lista.addEventListener('click', ev => {
+    const b = ev.target.closest('.trecho'); if(!b || b.classList.contains('tocando')) return;
+    lista.querySelectorAll('video').forEach(v => v.pause());
+    const v = document.createElement('video');
+    v.src = `video/curso/${b.dataset.v}.mp4`; v.poster = `img/curso/${b.dataset.v}.webp`;
+    v.controls = true; v.playsInline = true; v.setAttribute('playsinline',''); v.preload = 'auto';
+    b.querySelector('img').replaceWith(v); b.classList.add('tocando');
+    v.addEventListener('play', () => lista.querySelectorAll('video').forEach(o => { if(o!==v) o.pause(); }));
+    v.play().catch(()=>{});
+    try{ fbq('trackCustom','TrechoAula',{trecho:b.dataset.v}); }catch(e){}
+  });
+})();
+
+function montarAoVivo(){
+  const agora = Date.now();
+  const prox = AULAS_B.find(a => inicio(a) + FIM_AULA > agora);
+  document.getElementById('aovivo').innerHTML = AULAS_B.map(a => {
+    const t = inicio(a), data = `${d2(a[3])}/${d2(a[4])}`;
+    let cls = '', rot = `Ao vivo em ${data} · 21h`;
+    if (t + FIM_AULA <= agora) { cls = ' foi'; rot = `Gravada · já disponível (foi ao ar em ${data})`; }
+    else if (a === prox) { cls = ' prox'; rot = (agora >= t) ? 'Ao vivo agora' : `Próxima ao vivo · quarta, ${data}, 21h`; }
+    return `<div class="vivo${cls}"><span class="n">${a[0]}</span><div><b>${a[1]}</b><span>${a[2]}</span><em>${rot}</em></div></div>`;
+  }).join('');
+  return prox;
+}
+const PROX = montarAoVivo();
+
+/* quantas aulas já estão gravadas: as 10 do Bloco A + as do Bloco B que já foram ao ar (atualiza sozinho) */
+(function(){
+  const agora = Date.now();
+  const passadas = AULAS_B.filter(a => inicio(a) + FIM_AULA <= agora).length;
+  document.querySelectorAll('.n-gravadas').forEach(e => e.textContent = 10 + passadas);
+  document.querySelectorAll('.n-faltam').forEach(e => e.textContent = 10 - passadas);
+  if (passadas >= 10) { /* turma encerrada: tudo gravado */
+    const t = (id, h) => { const el = document.getElementById(id); if (el) el.innerHTML = h; };
+    t('txt-aulas', 'As 20 aulas já estão gravadas e ficam liberadas assim que você entra, com os slides e os e-books.');
+    t('txt-oferta', 'Um plano só, com tudo dentro. Entrando agora você já assiste às 20 aulas gravadas.');
+    t('txt-recebe', 'Todas gravadas e liberadas na hora. Assista pelo celular ou pelo computador, quantas vezes quiser.');
+    const sb = document.getElementById('selo-b'); if (sb) { sb.className = 'selo ja'; sb.textContent = 'Gravadas · liberadas na hora'; }
+  }
+})();
+
+/* aviso no topo com a contagem para a próxima aula ao vivo (data real da grade) */
+(function(){
+  const el = document.getElementById('proxima');
+  if(!PROX) return;
+  const t = inicio(PROX), data = `${d2(PROX[3])}/${d2(PROX[4])}`;
+  const nome = `Aula ${PROX[0]} · ${PROX[5]}`;
+  function pinta(){
+    const falta = t - Date.now();
+    if (falta <= -FIM_AULA) { el.hidden = true; return; }
+    let txt;
+    if (falta <= 0) txt = `<b>Ao vivo agora</b> · ${nome}`;
+    else {
+      const dias = Math.floor(falta/864e5), h = Math.floor(falta%864e5/36e5), m = Math.floor(falta%36e5/6e4);
+      const c = dias > 0 ? `${dias}d ${d2(h)}h ${d2(m)}min` : `${d2(h)}h ${d2(m)}min`;
+      txt = `Próxima aula ao vivo: <b>quarta, ${data}, 21h</b> · ${nome} <span class="falta">faltam ${c}</span>`;
+    }
+    el.innerHTML = txt; el.hidden = false;
+  }
+  pinta(); setInterval(pinta, 30000);
+})();
+
+/* frase com a data real da próxima aula ao vivo (some sozinha quando a turma acabar) */
+(function(){
+  const el = document.getElementById('entra-ate'); if(!PROX || !el) return;
+  if (Date.now() >= inicio(PROX)) return;
+  el.innerHTML = `Entrando até <b>quarta, ${d2(PROX[3])}/${d2(PROX[4])}</b>, você já assiste à <b>Aula ${PROX[0]}</b> ao vivo como aluno, às 21h, e depois recebe a gravação com os slides e o e-book.`;
+  el.hidden = false;
+})();
+
+/* Pixel: até onde a pessoa chegou na página (para ler o funil no Gerenciador) */
+(function(){
+  let rolou = false;
+  addEventListener('scroll', () => {
+    if(rolou) return;
+    if ((scrollY + innerHeight) / document.documentElement.scrollHeight >= .5) { rolou = true; try{ fbq('trackCustom','Rolou50',{pagina:'curso'}); }catch(e){} }
+  }, {passive:true});
+  if('IntersectionObserver' in window){
+    const alvo = document.querySelector('.oferta');
+    const io = new IntersectionObserver(es => { if(es.some(e => e.isIntersecting)){ try{ fbq('trackCustom','ViuPreco',{pagina:'curso'}); }catch(e){} io.disconnect(); } }, {threshold:.4});
+    io.observe(alvo);
+  }
+  document.addEventListener('click', ev => { const z = ev.target.closest('a[href*="wa.me"]'); if(z){ try{ fbq('track','Contact',{content_name:'Curso 2026.2'}); }catch(e){} } });
+})();
+
+/* parcela no cartão, quando informada */
+if (PARCELA_12X) document.getElementById('equiv').innerHTML = `ou <b>12x de R$ ${PARCELA_12X}</b> no cartão · dá <b>R$ 14,85 por aula</b>`;
+
+/* vídeo: troca a capa pelo vídeo quando houver endereço */
 (function(){
   const m = String(VIDEO_YT).match(/(?:youtu\.be\/|[?&]v=|shorts\/|embed\/)([\w-]{11})/);
   const id = m ? m[1] : (/^[\w-]{11}$/.test(VIDEO_YT) ? VIDEO_YT : "");
   if(!id) return;
   const box = document.getElementById('midia');
-  box.className = 'media video';
-  box.innerHTML = `<div class="capa" role="button" tabindex="0" aria-label="Assistir ao vídeo" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play"></span></div>`;
-  const tocar = () => { box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="Vídeo de apresentação do curso" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`; try{fbq('trackCustom','VideoCurso')}catch(e){} };
+  box.innerHTML = `<div class="capa" role="button" tabindex="0" aria-label="Assistir ao vídeo" style="background-image:url(img/curso/capa-curso-2026-2-800.webp)"><span class="tocar"></span></div>`;
+  const tocar = () => { box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0" title="Vídeo de apresentação do curso" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`; try{fbq('trackCustom','VideoCurso')}catch(e){} };
   box.firstChild.addEventListener('click', tocar);
   box.firstChild.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();tocar();} });
-  document.getElementById('midia-leg').hidden = false;
+  document.getElementById('midia-nota').hidden = false;
+})();
+
+/* de qual anúncio veio: leva o nome do anúncio até a Hotmart (campo "src"),
+   para dar para ver na Hotmart qual anúncio vendeu */
+(function(){
+  try{
+    const q = new URLSearchParams(location.search);
+    const fonte = q.get('utm_source'), anuncio = q.get('utm_content');
+    if(!fonte) return;
+    const limpa = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    const src = (limpa(fonte) + (anuncio ? '-' + limpa(anuncio) : '')).slice(0,40) || 'pv-curso';
+    document.querySelectorAll('a[data-plano]').forEach(a => { const u = new URL(a.href); u.searchParams.set('src', src); a.href = u.toString(); });
+  }catch(e){}
 })();
 
 /* Pixel: avisa a Meta quando alguém clica para pagar */
 document.addEventListener('click', ev => {
   const a = ev.target.closest('a[data-plano]'); if(!a) return;
-  try{ fbq('track','InitiateCheckout',{content_name:'Curso 2026.2 '+a.dataset.plano, value:Number(a.dataset.valor), currency:'BRL'}); }catch(e){}
+  try{ fbq('track','InitiateCheckout',{content_name:'Curso 2026.2 '+a.dataset.plano, content_category:a.dataset.onde||'', value:Number(a.dataset.valor), currency:'BRL'}); }catch(e){}
 });
+
+/* barra fixa do celular: aparece depois do botão do topo e some quando a oferta está na tela */
+(function(){
+  const barra = document.getElementById('barra'), topo = document.getElementById('botao-topo'), oferta = document.querySelector('.oferta'), conta = document.querySelector('.conta-acao');
+  if(!('IntersectionObserver' in window)){ barra.classList.add('ativa'); return; }
+  const vis = new Set();
+  let passou = false;
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { e.isIntersecting ? vis.add(e.target) : vis.delete(e.target); if(e.target===topo && !e.isIntersecting && e.boundingClientRect.top < 0) passou = true; if(e.target===topo && e.isIntersecting) passou = false; });
+    barra.classList.toggle('ativa', passou && !vis.has(oferta) && !vis.has(conta));
+  }, {threshold:0});
+  [topo, oferta, conta].forEach(x => io.observe(x));
+})();
 </script>
 </body>
 </html>
