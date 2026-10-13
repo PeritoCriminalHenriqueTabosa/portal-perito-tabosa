@@ -134,15 +134,16 @@ h1 b{font-weight:400;color:var(--amarelo)}
 @media(min-width:760px){.cartao-aula{flex-basis:340px}.arraste{display:none}}
 
 /* trechos das aulas em vídeo */
-.trechos .trecho{flex:0 0 64%;max-width:290px;scroll-snap-align:center;position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;border:0;padding:0;cursor:pointer;box-shadow:0 0 0 2px var(--linha);color:var(--texto);font:inherit;text-align:left}
+.trechos .trecho-item{flex:0 0 64%;max-width:290px;scroll-snap-align:center;margin:0}
+.trechos .trecho{display:block;width:100%;position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;border:0;padding:0;cursor:pointer;box-shadow:0 0 0 2px var(--linha);color:var(--texto);font:inherit;text-align:left}
 .trechos .trecho img,.trechos .trecho video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.trechos .trecho .tocar{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:64px;height:64px}
+.trechos .trecho .tocar{position:absolute;left:50%;top:29%;transform:translate(-50%,-50%);width:64px;height:64px}
 .trechos .trecho .tocar::before{border-width:12px 0 12px 20px;margin-left:5px}
-.trechos .trecho .rot{position:absolute;left:0;right:0;bottom:0;padding:40px 12px 12px;background:linear-gradient(transparent,rgba(0,0,0,.92));font-size:.88rem;line-height:1.3;font-weight:700}
-.trechos .trecho .rot small{display:block;font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.05em;color:var(--amarelo);font-size:.8rem;margin-bottom:2px}
+.trechos .rot{padding:10px 4px 0;font-size:.92rem;line-height:1.3;font-weight:700}
+.trechos .rot small{display:block;font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.05em;color:var(--amarelo);font-size:.8rem;margin-bottom:2px}
 .trechos .trecho.tocando{box-shadow:0 0 0 2px var(--amarelo)}
-.trechos .trecho.tocando .tocar,.trechos .trecho.tocando .rot{display:none}
-@media(min-width:760px){.trechos{justify-content:center}.trechos .trecho{flex-basis:270px}}
+.trechos .trecho.tocando .tocar{display:none}
+@media(min-width:760px){.trechos{justify-content:center}.trechos .trecho-item{flex-basis:270px}}
 .entra-ate{max-width:520px;margin:18px auto 0;background:#1d1a05;border-left:4px solid var(--amarelo);border-radius:0 10px 10px 0;padding:12px 14px;font-size:.93rem;color:#e9e6dc}
 .entra-ate b{color:var(--amarelo)}
 .duvida-zap{text-align:center;max-width:520px;margin:14px auto 0;font-size:.9rem;color:var(--suave)}
@@ -585,7 +586,7 @@ const TRECHOS = [
 (function(){
   const lista = document.getElementById('trechos-lista');
   lista.innerHTML = TRECHOS.map(t =>
-    `<button class="trecho" type="button" data-v="${t[0]}" aria-label="Assistir ao trecho da ${t[1]}: ${t[2]}"><img src="img/curso/${t[0]}.webp" alt="" width="540" height="960" loading="lazy" decoding="async"><span class="tocar"></span><span class="rot"><small>${t[1]} · trecho</small>${t[2]}</span></button>`
+    `<figure class="trecho-item"><button class="trecho" type="button" data-v="${t[0]}" aria-label="Assistir ao trecho da ${t[1]}: ${t[2]}"><img src="img/curso/${t[0]}.webp" alt="" width="540" height="960" loading="lazy" decoding="async"><span class="tocar"></span></button><figcaption class="rot"><small>${t[1]} · trecho</small>${t[2]}</figcaption></figure>`
   ).join('');
   lista.addEventListener('click', ev => {
     const b = ev.target.closest('.trecho'); if(!b || b.classList.contains('tocando')) return;
