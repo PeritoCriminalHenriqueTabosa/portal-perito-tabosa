@@ -219,7 +219,7 @@ footer a{color:var(--amarelo)}
 <body>
 
 <div class="fita" aria-hidden="true"><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span><span>LOCAL DE CRIME - NÃO ULTRAPASSE</span></div>
-<div class="lanc" id="lanc" hidden>Cupom <b>LANCAMENTO</b> aplicado: <span class="so-desk">de R$ 49,90 por </span><b>R$ 39,90</b> · <span data-prazo>por tempo limitado</span></div>
+<div class="lanc" id="lanc" hidden>Cupom <b>LANCAMENTO</b> aplicado: <span class="so-desk">de R$ 49,90 por </span><b>R$ 39,92</b> · <span data-prazo>por tempo limitado</span></div>
 <header><div class="wrap nav">
   <a class="brand" href="#topo">Cena de Crime <em>360</em><small>CASO 01 · APARTAMENTO 1806</small></a>
   <a class="link" href="#caso">O caso</a>
@@ -406,18 +406,19 @@ const CHECKOUT = "https://pay.hotmart.com/H107914485I";
    2) CUPOM DE LANÇAMENTO
    A página mostra sempre R$ 49,90. Quem chega pelo link
      https://peritohenriquetabosa.com.br/jogo-360?cupom=LANCAMENTO
-   vê a faixa do cupom, o preço de R$ 39,90 e já cai no pagamento com o
+   vê a faixa do cupom, o preço de R$ 39,92 e já cai no pagamento com o
    desconto aplicado. Depois da data em "ate" tudo volta sozinho para
    R$ 49,90. Para encerrar antes, troque "ate" por uma data passada.
    (O cupom precisa existir na Hotmart com a mesma validade.)
    ===================================================================== */
-const CUPOM = { codigo: "LANCAMENTO", preco: "R$ 39,90", valor: 39.90, ate: "2026-10-19T23:59:59-03:00", dia: "19/10" };
-/* A Hotmart não deixa mudar a validade de um cupom já criado. O cupom
-   LANCAMENTO de lá vence em 13/10; de 14/10 a 19/10 quem vale é o
-   LANCAMENTO360 (mesmo desconto). A página troca sozinha de um para o outro. */
+const CUPOM = { codigo: "LANCAMENTO", preco: "R$ 39,92", valor: 39.92, ate: "2026-11-24T23:59:59-03:00", dia: "24/11" };
+/* A Hotmart não deixa mudar a validade de um cupom já criado.
+   19/10/2026: Henrique recriou o cupom LANCAMENTO na Hotmart — 20%
+   (R$ 49,90 -> R$ 39,92), todas as ofertas, de 19/10 17h25 até 25/11 00h00.
+   Para trocar de cupom: acrescente uma linha aqui (vale a primeira que
+   ainda não venceu) e ajuste o "ate" do CUPOM acima. */
 const CUPOM_HOTMART = [
-  { codigo: "LANCAMENTO",    ate: "2026-10-13T23:59:59-03:00" },
-  { codigo: "LANCAMENTO360", ate: "2026-10-19T23:59:59-03:00" }
+  { codigo: "LANCAMENTO", ate: "2026-11-24T23:59:59-03:00" }
 ];
 const cupomHotmart = () => { const v = CUPOM_HOTMART.find(c => Date.now() < Date.parse(c.ate)); return v ? v.codigo : ""; };
 
