@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /obrigado-jogo
+Sitemap: https://peritohenriquetabosa.com.br/sitemap.xml

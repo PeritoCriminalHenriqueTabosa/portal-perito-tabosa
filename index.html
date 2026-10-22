@@ -3,10 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perito Henrique Tabosa — Portal Oficial | Loja, Lives, Certificados e mais</title>
-<meta name="description" content="O portal oficial do Perito Henrique Tabosa: Loja CSI, Lives semanais de perícia criminal, aulas gravadas, certificados e crachás da comunidade. 17 anos de perícia real.">
-<meta property="og:title" content="Perito Henrique Tabosa — Portal Oficial">
-<meta property="og:description" content="Loja CSI, Lives da Perícia, aulas gravadas e todos os canais oficiais num só lugar.">
+<meta name="theme-color" content="#0d0d0d">
+<title>Perito Henrique Tabosa — Jogo Cena de Crime 360, Curso de Perícia Forense e Loja CSI</title>
+<meta name="description" content="Site oficial do perito criminal Henrique Tabosa: o jogo de investigação Cena de Crime 360 (prévia grátis), o curso Perícia Forense com Tabosa (20 casos reais), a Loja CSI e a live semanal de perícia toda quarta, 21h.">
+<link rel="canonical" href="https://peritohenriquetabosa.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Perito Henrique Tabosa">
+<meta property="og:url" content="https://peritohenriquetabosa.com.br/">
+<meta property="og:title" content="Perito Henrique Tabosa — Jogo, Curso e Loja de Perícia Criminal">
+<meta property="og:description" content="17 anos de perícia criminal e 1.800+ locais de crime. Jogue o Cena de Crime 360, entre no curso de perícia forense ou visite a Loja CSI.">
+<meta property="og:image" content="https://peritohenriquetabosa.com.br/img/portal-compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Person","@id":"https://peritohenriquetabosa.com.br/#henrique","name":"Henrique Tabosa","alternateName":"Perito Criminal Henrique Tabosa","jobTitle":"Perito criminal","description":"Perito criminal há 17 anos, com mais de 1.800 locais de crime atendidos. Autor de dois romances forenses. Toda quarta, às 21h, faz a live semanal da perícia com um caso real brasileiro.","url":"https://peritohenriquetabosa.com.br/","image":"https://peritohenriquetabosa.com.br/img/henrique.webp","sameAs":["https://www.instagram.com/peritocriminalhenriquetabosa/","https://www.youtube.com/channel/UCnHD29lXGln8aWOQCxb_aJQ","https://www.facebook.com/peritocriminalhenriquetabosa/","https://hotmart.com/pt-br/marketplace/especialista/henrique-tabosa/SUTDHP3OFD"]},
+ {"@type":"WebSite","@id":"https://peritohenriquetabosa.com.br/#site","url":"https://peritohenriquetabosa.com.br/","name":"Perito Henrique Tabosa","inLanguage":"pt-BR","publisher":{"@id":"https://peritohenriquetabosa.com.br/#henrique"}},
+ {"@type":"ItemList","name":"Produtos do Perito Henrique Tabosa","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Cena de Crime 360 — Caso 01: Apartamento 1806","url":"https://peritohenriquetabosa.com.br/jogo-360"},
+  {"@type":"ListItem","position":2,"name":"Perícia Forense com Tabosa — Investigação Criminal 2026.2","url":"https://peritohenriquetabosa.com.br/curso"},
+  {"@type":"ListItem","position":3,"name":"Loja CSI","url":"https://loja.peritohenriquetabosa.com.br/"},
+  {"@type":"ListItem","position":4,"name":"Live Semanal da Perícia","url":"https://lives.peritohenriquetabosa.com.br/"}]}
+]}
+</script>
 
 <!-- Meta Pixel (mesmo ID dos demais sites) -->
 <script>
@@ -19,85 +40,106 @@ fbq('init','1034119147300221');fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1034119147300221&ev=PageView&noscript=1"/></noscript>
+<!-- Contador de visitas (Vercel Web Analytics): só aparece no painel da Vercel -->
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800;900&family=Special+Elite&display=swap" rel="stylesheet">
-
+<link rel="preload" href="/fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:'Archivo Black';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/archivo-black.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/inter.woff2) format('woff2')}
+@font-face{font-family:'Special Elite';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/special-elite.woff2) format('woff2')}
 :root{
-  --amarelo:#FFD400; --amarelo2:#ffdf3d; --preto:#0a0a0a;
+  --amarelo:#FFD400; --preto:#0a0a0a; --verm:#ff3b30;
   --bg:#0d0d0d; --bg2:#121212; --card:#161616; --line:#262626;
   --txt:#f5f5f2; --mut:#a3a39b;
   --hazard:repeating-linear-gradient(-45deg,var(--amarelo),var(--amarelo) 16px,var(--preto) 16px,var(--preto) 32px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;line-height:1.5;overflow-x:hidden}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;line-height:1.55;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:960px;margin:0 auto;padding:0 18px}
-h1,h2{font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;line-height:1.05}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;line-height:1.05;letter-spacing:.3px}
+h2{font-size:clamp(1.5rem,4vw,2.3rem);margin:8px 0 12px}
+h2 em,h1 em{font-style:normal;color:var(--amarelo)}
+.tag{font-family:'Special Elite',monospace;color:var(--amarelo);font-size:.74rem;letter-spacing:3px;text-transform:uppercase}
+.lead{color:var(--mut);max-width:680px;font-size:1.02rem}
+section{padding:54px 0}
+section.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .hazard-bar{height:12px;background:var(--hazard)}
 
-/* ---------- hero ---------- */
-.hero{position:relative;text-align:center;padding:64px 0 44px;background:
-  radial-gradient(700px 340px at 50% -10%,rgba(255,212,0,.14),transparent 60%),var(--bg)}
-.mark{width:64px;height:64px;margin:0 auto 16px;background:var(--amarelo);border-radius:14px;display:grid;place-items:center;font-family:'Archivo Black';color:var(--preto);font-size:1.35rem;position:relative;box-shadow:0 8px 28px -8px rgba(255,212,0,.55)}
-.mark::after{content:"";position:absolute;left:10px;right:10px;bottom:7px;height:6px;border-radius:3px;background:repeating-linear-gradient(-45deg,var(--preto),var(--preto) 6px,var(--amarelo) 6px,var(--amarelo) 12px)}
+/* ---------- topo ---------- */
+.hero{text-align:center;padding:52px 0 38px;background:radial-gradient(700px 340px at 50% -10%,rgba(255,212,0,.14),transparent 60%),var(--bg)}
+.hero .foto{width:124px;height:124px;border-radius:50%;object-fit:cover;object-position:top;margin:0 auto 16px;border:3px solid var(--amarelo);box-shadow:0 8px 28px -8px rgba(255,212,0,.55)}
 .kick{display:inline-flex;align-items:center;gap:8px;background:#191919;border:1px solid var(--line);color:var(--amarelo);font-family:'Special Elite';font-size:.72rem;letter-spacing:2px;padding:7px 14px;border-radius:40px;text-transform:uppercase}
-.hero h1{font-size:clamp(1.9rem,6vw,3.4rem);margin:16px 0 8px}
-.hero h1 em{font-style:normal;color:var(--amarelo)}
-.hero p{color:var(--mut);max-width:560px;margin:0 auto;font-size:1.02rem}
+.hero h1{font-size:clamp(1.9rem,6vw,3.2rem);margin:16px 0 10px}
+.hero p{color:var(--mut);max-width:620px;margin:0 auto;font-size:1.04rem}
 .stats{display:flex;gap:28px;justify-content:center;margin-top:22px;flex-wrap:wrap}
-.stats b{font-family:'Archivo Black';font-size:1.35rem;color:var(--amarelo);display:block;line-height:1}
+.stats b{font-family:'Archivo Black';font-size:1.3rem;color:var(--amarelo);display:block;line-height:1}
 .stats span{font-size:.72rem;color:var(--mut)}
+.atalhos{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.atalhos a{background:var(--card);border:1px solid var(--line);border-radius:40px;padding:9px 16px;font-weight:800;font-size:.85rem}
+.atalhos a:hover{border-color:var(--amarelo);color:var(--amarelo)}
 
-/* ---------- vídeo de apresentação ---------- */
-.video{padding:6px 0 4px}
-.yt{position:relative;max-width:680px;margin:0 auto;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;border:2px solid var(--amarelo);box-shadow:0 24px 60px -30px rgba(255,212,0,.5)}
-.yt::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:var(--hazard);z-index:2}
-.yt img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88;transition:opacity .2s}
-.yt:hover img{opacity:1}
-.yt .play{position:absolute;inset:0;margin:auto;width:78px;height:78px;border-radius:50%;background:var(--amarelo);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.6);transition:transform .15s}
-.yt .play::after{content:"";margin-left:6px;border-style:solid;border-width:15px 0 15px 25px;border-color:transparent transparent transparent var(--preto)}
-.yt:hover .play{transform:scale(1.08)}
-.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-/* vídeo: começa sozinho sem som; o clique liga o som e volta ao início (igual às páginas de venda) */
-.yt.sem-som iframe{pointer-events:none}
-.som{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;background:linear-gradient(transparent 40%,rgba(0,0,0,.55));border:0;padding:0;cursor:pointer;color:var(--preto);font:inherit}
-.som span{display:flex;flex-direction:column;align-items:center;gap:6px;background:var(--amarelo);border-radius:16px;padding:14px 22px;box-shadow:0 0 0 0 rgba(255,212,0,.7);animation:pulsa 1.6s infinite;text-align:center;max-width:86%}
-.som b{font-size:clamp(1rem,2.6vw,1.2rem);font-weight:900;line-height:1.15}
-.som small{font-size:.8rem;opacity:.85;line-height:1.2;font-weight:700}
-.som:focus-visible span{outline:3px solid #fff;outline-offset:3px}
-@keyframes pulsa{0%{box-shadow:0 0 0 0 rgba(255,212,0,.65)}70%{box-shadow:0 0 0 18px rgba(255,212,0,0)}100%{box-shadow:0 0 0 0 rgba(255,212,0,0)}}
-@media(prefers-reduced-motion:reduce){.som span{animation:none}}
-.yt-leg{text-align:center;color:var(--mut);font-size:.8rem;margin-top:10px;letter-spacing:.5px}
-.yt-leg b{color:var(--amarelo)}
+/* ---------- botões ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--amarelo);color:var(--preto);font-weight:900;padding:14px 24px;border-radius:44px;font-size:1rem;border:2px solid var(--amarelo);cursor:pointer;transition:.18s;text-align:center;line-height:1.2}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px -10px rgba(255,212,0,.7)}
+.btn.ghost{background:transparent;color:var(--txt);border-color:#565656}
+.btn.ghost:hover{border-color:var(--amarelo);color:var(--amarelo);box-shadow:none}
+.btn.verm{background:var(--verm);border-color:var(--verm);color:#fff}
+.btn.verm:hover{box-shadow:0 10px 26px -10px rgba(255,59,48,.7)}
 
-/* ---------- destinos ---------- */
-.destinos{padding:34px 0 10px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.grid>.card:last-child:nth-child(odd){grid-column:1/-1}
-@media(max-width:640px){.grid{grid-template-columns:1fr}}
-.card{position:relative;display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;transition:transform .15s,border-color .2s,box-shadow .2s;overflow:hidden}
+/* ---------- produtos ---------- */
+.prod{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;margin-top:22px;position:relative;overflow:hidden}
+.prod::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--hazard)}
+.prod.jogo{border-color:var(--verm)}
+.prod.jogo::before{background:repeating-linear-gradient(-45deg,var(--verm),var(--verm) 16px,var(--preto) 16px,var(--preto) 32px)}
+.prod img{border-radius:12px;border:1px solid var(--line);width:100%;aspect-ratio:16/10;object-fit:cover}
+.prod h2{font-size:clamp(1.35rem,3.4vw,1.9rem)}
+.prod p{color:#dfe2e0;margin-bottom:10px}
+.prod ul{list-style:none;display:grid;gap:6px;margin:12px 0 16px}
+.prod li{padding-left:22px;position:relative;font-size:.95rem;color:var(--txt)}
+.prod li::before{content:"✓";position:absolute;left:0;color:var(--amarelo);font-weight:900}
+.preco{font-family:'Archivo Black';font-size:1.9rem;line-height:1;margin:6px 0 2px}
+.preco small{font-family:'Inter';font-size:.85rem;font-weight:600;color:var(--mut);display:block;margin-top:6px}
+.ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.badge{display:inline-block;background:var(--amarelo);color:var(--preto);font-weight:900;font-size:.62rem;letter-spacing:1px;padding:4px 10px;border-radius:30px;text-transform:uppercase;margin-bottom:10px}
+.prod.jogo .badge{background:var(--verm);color:#fff}
+@media(max-width:820px){.prod{grid-template-columns:1fr;gap:18px;padding:20px}.prod img{aspect-ratio:16/9}.ctas .btn{width:100%}}
+
+/* ---------- cartões secundários ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.card{position:relative;display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;transition:transform .15s,border-color .2s;overflow:hidden}
 .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--hazard)}
-.card:hover{transform:translateY(-4px);border-color:var(--amarelo);box-shadow:0 20px 40px -22px rgba(255,212,0,.3)}
-.card .ic{flex:0 0 58px;height:58px;border-radius:13px;background:#101010;border:1px solid var(--line);display:grid;place-items:center;font-size:1.7rem}
-.card .tit{font-family:'Archivo Black';font-size:1.05rem;text-transform:uppercase;letter-spacing:.4px}
-.card .desc{color:var(--mut);font-size:.86rem;margin-top:3px;line-height:1.35}
+.card:hover{transform:translateY(-3px);border-color:var(--amarelo)}
+.card .ic{flex:0 0 52px;height:52px;border-radius:13px;background:#101010;border:1px solid var(--line);display:grid;place-items:center;font-size:1.5rem}
+.card .tit{font-family:'Archivo Black';font-size:.95rem;text-transform:uppercase;letter-spacing:.4px}
+.card .desc{color:var(--mut);font-size:.84rem;margin-top:3px;line-height:1.35}
 .card .go{margin-left:auto;flex:0 0 auto;font-family:'Archivo Black';color:var(--amarelo);font-size:1.2rem}
-.card .badge{position:absolute;top:10px;right:12px;background:var(--amarelo);color:var(--preto);font-weight:900;font-size:.6rem;letter-spacing:1px;padding:4px 9px;border-radius:30px;text-transform:uppercase}
-.card.destaque{border-color:var(--amarelo);background:linear-gradient(160deg,#1c1910,#161616)}
+
+/* ---------- vídeo ---------- */
+.yt{position:relative;max-width:720px;margin:22px auto 0;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;border:2px solid var(--amarelo)}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt .capa{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;cursor:pointer}
+.yt .play{position:absolute;inset:0;margin:auto;width:78px;height:78px;border-radius:50%;background:var(--amarelo);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.6);pointer-events:none}
+.yt .play::after{content:"";margin-left:6px;border-style:solid;border-width:15px 0 15px 25px;border-color:transparent transparent transparent var(--preto)}
+
+/* ---------- quem ---------- */
+.quem{display:grid;grid-template-columns:260px 1fr;gap:34px;align-items:center}
+.quem img{border-radius:16px;border:2px solid var(--amarelo);aspect-ratio:4/5;object-fit:cover;width:100%}
+.quem p{color:#dfe2e0;margin-bottom:12px}
+@media(max-width:760px){.quem{grid-template-columns:1fr}.quem img{max-width:220px}}
 
 /* ---------- sociais ---------- */
-.sociais{padding:34px 0 56px;text-align:center}
-.sociais h2{font-size:1.15rem;margin-bottom:16px;color:var(--mut)}
-.soc-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.soc-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px}
 .soc{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:40px;padding:11px 20px;font-weight:800;font-size:.9rem;transition:.2s}
 .soc:hover{border-color:var(--amarelo);color:var(--amarelo);transform:translateY(-2px)}
-
-/* ---------- footer ---------- */
 footer{background:#080808;padding:24px 0;color:var(--mut);font-size:.78rem;text-align:center}
+footer a{color:var(--amarelo)}
 </style>
 </head>
 <body>
@@ -106,106 +148,154 @@ footer{background:#080808;padding:24px 0;color:var(--mut);font-size:.78rem;text-
 
 <header class="hero">
   <div class="wrap">
-    <div class="mark">HT</div>
+    <img class="foto" src="img/henrique.webp" alt="Henrique Tabosa, perito criminal" width="124" height="124" fetchpriority="high">
     <span class="kick">🔎 PERÍCIA CRIMINAL REAL</span>
     <h1>Perito <em>Henrique Tabosa</em></h1>
-    <p>17 anos de cena de crime de verdade. Escolha para onde quer ir — tudo o que a comunidade CSI tem está aqui.</p>
+    <p>Perito criminal há 17 anos, com mais de 1.800 locais de crime atendidos. Aqui você joga, estuda e veste a perícia: o jogo Cena de Crime 360, o curso com 20 casos reais e a Loja CSI.</p>
     <div class="stats">
       <div><b>17 anos</b><span>de perícia real</span></div>
-      <div><b>+450</b><span>na comunidade</span></div>
-      <div><b>Toda quarta</b><span>live às 21h</span></div>
+      <div><b>1.800+</b><span>locais de crime</span></div>
+      <div><b>Toda quarta</b><span>live às 21h, grátis</span></div>
     </div>
+    <nav class="atalhos" aria-label="Atalhos">
+      <a href="#jogo">🎮 Jogo 360</a>
+      <a href="#curso">🎓 Curso</a>
+      <a href="#loja">🛒 Loja CSI</a>
+      <a href="#live">🔴 Live de quarta</a>
+    </nav>
   </div>
 </header>
 
-<!-- VÍDEO DE APRESENTAÇÃO: para trocar, mude só o código do YouTube em VIDEO_YT, no fim da página -->
-<section class="video" id="video-sec">
-  <div class="wrap">
-    <div class="yt" id="yt"></div>
-    <p class="yt-leg">▶ <b>Assista:</b> quem é o Perito Henrique Tabosa e o que você encontra aqui</p>
+<!-- ===================== JOGO ===================== -->
+<section id="jogo"><div class="wrap">
+  <span class="tag">// Jogue</span>
+  <h2>Cena de Crime <em>360</em></h2>
+  <p class="lead">O primeiro jogo de investigação em 360° feito por um perito criminal. Um apartamento real, um médico morto e você no papel do perito.</p>
+  <div class="prod jogo">
+    <a href="jogo-360?utm_source=portal" data-ev="Jogo 360 (imagem)"><img src="img/jogo-hero-800.webp" alt="Porta do apartamento 1806 entreaberta, cena do jogo Cena de Crime 360" width="800" height="450" loading="lazy"></a>
+    <div>
+      <span class="badge">Caso 01 · Apartamento 1806</span>
+      <p>Entre no apartamento, fotografe e colete os vestígios, veja as câmeras e os registros da fechadura, ouça o porteiro e o síndico, peça os exames e assine o laudo com o seu nome.</p>
+      <ul>
+        <li>Prévia grátis, sem cadastro, até a porta do 1806</li>
+        <li>De 30 a 50 minutos · celular ou computador, sem instalar nada</li>
+        <li>Laudo em PDF no fim · acesso por 1 ano</li>
+      </ul>
+      <div class="preco">R$ 49,90<small>pagamento único · no Pix libera na hora</small></div>
+      <div class="ctas">
+        <a class="btn" href="https://jogo.peritohenriquetabosa.com.br/?utm_source=portal" data-ev="Jogo 360 (prévia)">▶ Jogar a prévia grátis</a>
+        <a class="btn ghost" href="jogo-360?utm_source=portal" data-ev="Jogo 360 (página)">Ver o jogo e comprar</a>
+      </div>
+    </div>
   </div>
-</section>
+</div></section>
 
-<main class="destinos">
-  <div class="wrap">
-    <div class="grid" id="grid"></div>
+<!-- ===================== CURSO ===================== -->
+<section class="alt" id="curso"><div class="wrap">
+  <span class="tag">// Estude</span>
+  <h2>Perícia Forense com Tabosa — <em>Investigação Criminal 2026.2</em></h2>
+  <p class="lead">Aprenda perícia criminal pelos casos que o Brasil inteiro acompanhou. Em cada aula, primeiro o caso; depois, a técnica que a perícia usou na cena.</p>
+  <div class="prod">
+    <a href="curso?utm_source=portal" data-ev="Curso (imagem)"><img src="img/curso/capa-curso-2026-2.webp" alt="Capa do curso Perícia Forense com Tabosa — Investigação Criminal 2026.2" width="1280" height="720" loading="lazy"></a>
+    <div>
+      <span class="badge">20 aulas · 20 casos reais</span>
+      <p>Isabella Nardoni, Boate Kiss, Elize Matsunaga, Marielle, Richthofen, Maníaco do Parque e mais: isolamento de local, manchas de sangue, luminol, impressões digitais, medicina legal, exumação.</p>
+      <ul>
+        <li>Aulas completas gravadas + slides, resumos, quizzes e e-books em PDF</li>
+        <li>Certificado de 4 horas por aula (até 80h de atividades complementares)</li>
+        <li>O jogo Cena de Crime 360 incluído · garantia de 7 dias</li>
+      </ul>
+      <div class="preco">R$ 297<small>por 12 meses · ou 12x de R$ 30,72 no cartão</small></div>
+      <div class="ctas">
+        <a class="btn" href="curso?utm_source=portal" data-ev="Curso">Conhecer o curso</a>
+        <a class="btn ghost" href="https://lives.peritohenriquetabosa.com.br/#aulas" data-ev="Aulas avulsas">Aulas avulsas por R$ 29,90</a>
+      </div>
+    </div>
   </div>
-</main>
+</div></section>
 
-<section class="sociais">
-  <div class="wrap">
-    <h2>// SIGA A INVESTIGAÇÃO</h2>
-    <div class="soc-row" id="soc-row"></div>
+<!-- ===================== LOJA ===================== -->
+<section id="loja"><div class="wrap">
+  <span class="tag">// Vista a perícia</span>
+  <h2>Loja <em>CSI</em></h2>
+  <p class="lead">Camisas, calça, acessórios e os dois romances forenses do Henrique. Pix, cartão em até 12x ou boleto, com envio para todo o Brasil.</p>
+  <div class="prod">
+    <a href="https://loja.peritohenriquetabosa.com.br/?utm_source=portal" data-ev="Loja (imagem)"><img src="img/loja-camisa-pericia.webp" alt="Camisa Perícia da Loja CSI" width="800" height="800" loading="lazy" style="aspect-ratio:1/1"></a>
+    <div>
+      <span class="badge">Produtos oficiais</span>
+      <p>11 estampas de camisa (normal e babylook, 100% algodão), calça CSI, brincos, carteiras, cordão, estojo de evidências, bottons e os livros <em>O Caso do Marchante Suicida</em> e <em>Os Canibais de Pernambuco</em>.</p>
+      <ul>
+        <li>Camisas a partir de R$ 59,90 · Kit Leitor (2 livros) R$ 99,90</li>
+        <li>Checkout seguro pela Hotmart, na própria página</li>
+        <li>Tabela de medidas e fotos de cada estampa</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn" href="https://loja.peritohenriquetabosa.com.br/?utm_source=portal" data-ev="Loja">Entrar na loja</a>
+      </div>
+    </div>
   </div>
-</section>
+</div></section>
+
+<!-- ===================== LIVE E COMUNIDADE ===================== -->
+<section class="alt" id="live"><div class="wrap">
+  <span class="tag">// Toda quarta, 21h</span>
+  <h2>Live semanal <em>da perícia</em></h2>
+  <p class="lead">Um caso real brasileiro e a técnica pericial por trás dele, ao vivo no YouTube, no Instagram e no TikTok. Quem participa emite o certificado de 2 horas de graça na noite da live.</p>
+  <div class="grid">
+    <a class="card" href="https://lives.peritohenriquetabosa.com.br/?utm_source=portal" data-ev="Lives"><span class="ic">🔴</span><span><span class="tit">Lives e calendário</span><div class="desc">Próximos casos, horários e as aulas gravadas.</div></span><span class="go">→</span></a>
+    <a class="card" href="https://certificados.peritohenriquetabosa.com.br/?utm_source=portal" data-ev="Certificados"><span class="ic">📜</span><span><span class="tit">Certificado da live</span><div class="desc">Na noite da live (22h à meia-noite), com a palavra-chave.</div></span><span class="go">→</span></a>
+    <a class="card" href="https://crachas.peritohenriquetabosa.com.br/?utm_source=portal" data-ev="Crachá"><span class="ic">🪪</span><span><span class="tit">Crachá EU VOU!</span><div class="desc">Seu crachá de presença da semana, de segunda a quarta.</div></span><span class="go">→</span></a>
+  </div>
+  <div class="yt" id="yt"></div>
+</div></section>
+
+<!-- ===================== QUEM ===================== -->
+<section id="quem"><div class="wrap quem">
+  <img src="img/henrique.webp" alt="Henrique Tabosa" loading="lazy" width="800" height="1000">
+  <div>
+    <span class="tag">// Quem é</span>
+    <h2>Henrique <em>Tabosa</em></h2>
+    <p>Sou perito criminal há 17 anos. Nesse tempo atendi mais de 1.800 locais de crime: mortes violentas, incêndios, acidentes, locais de furto e roubo, exames em veículos e muito laudo escrito de madrugada.</p>
+    <p>Sempre me perguntaram como é chegar numa cena e saber por onde começar. Foi dessa pergunta que nasceu tudo o que está neste site: a live de quarta, em que pego um caso real brasileiro e mostro o que a perícia fez e o que deveria ter feito; o curso, que junta as 20 aulas com os materiais; o jogo Cena de Crime 360, em que você entra num apartamento de verdade e assina o laudo; e a Loja CSI, para quem gosta de vestir a perícia.</p>
+    <p>Também escrevi dois romances forenses, <em>O Caso do Marchante Suicida</em> e <em>Os Canibais de Pernambuco</em>, com a técnica de verdade por trás de cada capítulo. Os cursos e a live são para estudantes, quem vai prestar concurso na área policial, profissionais de saúde, direito e segurança, e para quem gosta de casos reais e quer entender como a perícia trabalha no dia a dia.</p>
+    <p class="lead" style="font-size:.9rem">Aviso: as aulas são cursos livres e não dão habilitação profissional. O jogo é uma obra de ficção feita com técnica real.</p>
+  </div>
+</div></section>
+
+<section class="alt" style="text-align:center"><div class="wrap">
+  <h2 style="font-size:1.15rem;color:var(--mut)">// SIGA A INVESTIGAÇÃO</h2>
+  <div class="soc-row" id="soc-row"></div>
+</div></section>
 
 <div class="hazard-bar" aria-hidden="true"></div>
 <footer>
-  <div class="wrap">© <span id="yr"></span> Perito Henrique Tabosa · CNPJ 30.605.812/0001-21 · Todos os direitos reservados.</div>
+  <div class="wrap">© <span id="yr"></span> Perito Henrique Tabosa · CNPJ 30.605.812/0001-21 · <a href="https://loja.peritohenriquetabosa.com.br/politicas.html">Privacidade e políticas</a> · <a href="https://wa.me/5581991016004">WhatsApp 81 99101-6004</a></div>
 </footer>
 
 <script>
-/* ===================================================================
-   DESTINOS DO PORTAL — para adicionar/editar um site, mexa só aqui.
-   Cartão com url vazia ("") NÃO aparece na página (fica pronto para
-   quando o site existir). destaque:true realça o cartão.
-   =================================================================== */
-const DESTINOS = [
-  {emoji:"🛒", titulo:"Loja CSI", desc:"Camisas, livros e acessórios oficiais de perícia criminal. Pix ou 12x.",
-   url:"https://loja.peritohenriquetabosa.com.br", badge:"NOVA", destaque:true},
-  {emoji:"🔴", titulo:"Lives da Perícia", desc:"Toda quarta, 21h: um caso real brasileiro + a técnica pericial, ao vivo.",
-   url:"https://lives.peritohenriquetabosa.com.br", badge:"TODA QUARTA"},
-  {emoji:"🎓", titulo:"Curso Perícia Forense", desc:"Perícia Forense com Tabosa — Investigação Criminal 2026.2: as 20 aulas + certificados, num plano só.",
-   url:"https://peritohenriquetabosa.com.br/curso?utm_source=portal", badge:""},
-  /* Cena de Crime: escondido do portal em 06/10/2026 (site desatualizado). O projeto continua na Vercel:
-     https://cena-de-crime-site.vercel.app — para voltar, é só colar esse endereço na url abaixo. */
-  {emoji:"🕵️", titulo:"Cena de Crime", desc:"O universo de investigação: casos, mural e o jogo com casos reais.",
-   url:"", badge:""},
-  {emoji:"📜", titulo:"Certificados", desc:"Participou da live? Emita seu certificado na noite da live (22h à meia-noite), com a palavra-chave.",
-   url:"https://certificados.peritohenriquetabosa.com.br", badge:"NOITE DA LIVE"},
-  {emoji:"🪪", titulo:"Crachá EU VOU!", desc:"Gere seu crachá de presença da semana — de segunda (meio-dia) até quarta às 22h.",
-   url:"https://crachas.peritohenriquetabosa.com.br", badge:"SEG → QUA"}
-];
 const SOCIAIS = [
   {emoji:"📸", nome:"@peritocriminalhenriquetabosa", url:"https://www.instagram.com/peritocriminalhenriquetabosa"},
+  {emoji:"▶️", nome:"YouTube", url:"https://www.youtube.com/channel/UCnHD29lXGln8aWOQCxb_aJQ"},
   {emoji:"🛍️", nome:"@loja_csi", url:"https://www.instagram.com/loja_csi"},
   {emoji:"💬", nome:"WhatsApp", url:"https://wa.me/5581991016004"}
 ];
-
-document.getElementById('grid').innerHTML = DESTINOS.filter(d=>d.url).map(d=>`
-  <a class="card${d.destaque?' destaque':''}" href="${d.url}" ${d.url.startsWith('http')?'':''} rel="noopener"
-     onclick="fbq&&fbq('trackCustom','PortalClick',{destino:'${d.titulo}'})">
-    ${d.badge?`<span class="badge">${d.badge}</span>`:''}
-    <span class="ic">${d.emoji}</span>
-    <span><span class="tit">${d.titulo}</span><div class="desc">${d.desc}</div></span>
-    <span class="go">→</span>
-  </a>`).join('');
-document.getElementById('soc-row').innerHTML = SOCIAIS.map(s=>`
-  <a class="soc" href="${s.url}" target="_blank" rel="noopener">${s.emoji} ${s.nome}</a>`).join('');
+document.getElementById('soc-row').innerHTML = SOCIAIS.map(s=>`<a class="soc" href="${s.url}" target="_blank" rel="noopener">${s.emoji} ${s.nome}</a>`).join('');
 document.getElementById('yr').textContent = new Date().getFullYear();
+document.querySelectorAll('a[data-ev]').forEach(a => a.addEventListener('click', () => { try{ fbq('trackCustom','PortalClick',{destino:a.dataset.ev}); }catch(e){} }));
 
-/* ---------- VÍDEO (portal) — igual às páginas de venda ----------
-   Ao abrir a página o vídeo começa sozinho, SEM SOM, com o aviso
-   "Seu vídeo já começou — clique para ouvir". O clique liga o som e
-   volta para o começo. Para trocar: cole o link do YouTube em VIDEO_YT. */
+/* ---------- VÍDEO DE APRESENTAÇÃO: só carrega o YouTube quando a pessoa toca (página abre leve) ----------
+   Para trocar o vídeo, cole o link do YouTube em VIDEO_YT. */
 const VIDEO_YT = "https://youtu.be/VyCLT7G7zBc";
 (function(){
   const box = document.getElementById('yt');
   const m = String(VIDEO_YT).match(/(?:youtu\.be\/|[?&]v=|shorts\/|embed\/)([\w-]{11})/);
   const yt = m ? m[1] : (/^[\w-]{11}$/.test(VIDEO_YT) ? VIDEO_YT : "");
-  if (!yt) { document.getElementById('video-sec').hidden = true; return; }
-  const src = `https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&mute=1&playsinline=1&loop=1&playlist=${yt}&controls=1&rel=0&modestbranding=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
-  box.classList.add('sem-som');
-  box.innerHTML = `<iframe id="pvyt" src="${src}" title="Perito Henrique Tabosa" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>` +
-    `<button type="button" class="som" id="som" aria-label="Ligar o som e assistir do começo"><span><b>🔊 Seu vídeo já começou</b><small>Clique para ouvir</small></span></button>`;
-  const f = document.getElementById('pvyt'), b = document.getElementById('som');
-  const cmd = (func, args=[]) => { try{ f.contentWindow.postMessage(JSON.stringify({event:'command', func, args}), '*'); }catch(e){} };
-  f.addEventListener('load', () => { try{ f.contentWindow.postMessage(JSON.stringify({event:'listening'}), '*'); }catch(e){} });
-  b.addEventListener('click', () => {
-    cmd('unMute'); cmd('setVolume',[100]); cmd('seekTo',[0,true]); cmd('setLoop',[false]); cmd('playVideo');
-    b.remove(); box.classList.remove('sem-som');
-    try{ fbq && fbq('trackCustom','VideoSom',{pagina:'portal'}); }catch(e){}
-  });
+  if (!yt) { box.hidden = true; return; }
+  box.innerHTML = `<img class="capa" src="https://i.ytimg.com/vi/${yt}/hqdefault.jpg" alt="Assista: quem é o Perito Henrique Tabosa" loading="lazy" width="480" height="360"><span class="play" aria-hidden="true"></span>`;
+  box.addEventListener('click', () => {
+    box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="Perito Henrique Tabosa" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    try{ fbq('trackCustom','VideoSom',{pagina:'portal'}); }catch(e){}
+  }, {once:true});
 })();
 </script>
 </body>

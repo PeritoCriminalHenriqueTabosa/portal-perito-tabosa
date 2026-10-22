@@ -15,6 +15,12 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <link rel="canonical" href="https://peritohenriquetabosa.com.br/jogo-360">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"Cena de Crime 360 — Caso 01: Apartamento 1806","description":"Jogo de investigação em 360° criado por um perito criminal. Entre num apartamento real, examine a cena, peça os exames e assine o laudo. Prévia grátis no navegador.","image":"https://peritohenriquetabosa.com.br/img/jogo-compartilhar.jpg","url":"https://peritohenriquetabosa.com.br/jogo-360","brand":{"@type":"Brand","name":"Cena de Crime 360"},"category":"Jogo de investigação criminal","offers":{"@type":"Offer","url":"https://pay.hotmart.com/H107914485I","priceCurrency":"BRL","price":"49.90","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition"},"author":{"@type":"Person","name":"Henrique Tabosa","jobTitle":"Perito criminal","url":"https://peritohenriquetabosa.com.br/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"Cena de Crime 360 — Caso 01: Apartamento 1806","url":"https://peritohenriquetabosa.com.br/jogo-360","image":"https://peritohenriquetabosa.com.br/img/jogo-compartilhar.jpg","inLanguage":"pt-BR","gamePlatform":["Web browser","Android","iOS","Windows"],"genre":["Investigação criminal","Mistério","Educativo"],"playMode":"SinglePlayer","numberOfPlayers":{"@type":"QuantitativeValue","minValue":1},"author":{"@type":"Person","name":"Henrique Tabosa"},"offers":{"@type":"Offer","priceCurrency":"BRL","price":"49.90","url":"https://pay.hotmart.com/H107914485I"}}
+</script>
 
 <!-- Meta Pixel: "Pixel de Loja Perito 2021" (portfólio Loja Perito 2021, ligado à Conta Loja Perito 2021) -->
 <script>
@@ -79,8 +85,13 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-f
 .btn.ghost:hover{border-color:var(--amarelo);color:var(--amarelo);box-shadow:none}
 .btn.sm{padding:9px 18px;font-size:.85rem}
 .btn.big{padding:17px 30px;font-size:1.08rem}
-/* compra em destaque; prévia como link discreto */
-.cta-col{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:26px}
+/* prévia grátis em destaque (quem chega do Instagram testa primeiro); compra logo abaixo */
+.cta-col{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:22px}
+.btn.previa{background:var(--amarelo);color:var(--preto);border-color:var(--amarelo)}
+.btn.previa:hover{box-shadow:0 10px 26px -10px rgba(255,212,0,.7)}
+.btn.compra2{background:transparent;color:#fff;border-color:var(--verm)}
+.btn.compra2:hover{background:var(--verm)}
+.cta-col .quase{color:var(--mut);font-size:.82rem;margin-top:-4px}
 .previa-link{color:var(--mut);font-weight:700;font-size:.92rem;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#565b5e;padding:4px 0}
 .previa-link:hover{color:var(--amarelo);text-decoration-color:var(--amarelo)}
 .oferta{font-size:.92rem;color:var(--amarelo);font-weight:700;line-height:1.35}
@@ -97,7 +108,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.94);backdrop-f
 .hero p.sub{color:#e3e6e4;font-size:1.08rem;max-width:560px}
 .mini{color:var(--mut);font-size:.85rem;margin-top:14px}
 .media-leg{text-align:center;color:var(--mut);font-size:.85rem;margin-top:10px}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero{padding:40px 0 46px}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero{padding:26px 0 40px}}
 
 /* vídeo */
 .media{position:relative;border-radius:var(--rad);overflow:hidden;border:2px solid var(--verm);background:#000;aspect-ratio:16/9;box-shadow:0 24px 60px -30px rgba(255,59,48,.6)}
@@ -185,7 +196,9 @@ footer a{color:var(--amarelo)}
 .barra{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(10,10,10,.97);border-top:2px solid var(--verm);padding:10px 14px;display:none;align-items:center;gap:12px}
 .barra b{font-family:'Archivo Black';font-size:1.05rem;line-height:1.1}
 .barra small{display:block;color:var(--mut);font-size:.72rem;font-family:'Inter';font-weight:600}
-.barra .btn{margin-left:auto;padding:11px 18px;font-size:.9rem}
+.barra .btn{margin-left:auto;padding:11px 16px;font-size:.88rem;white-space:nowrap}
+.barra .btn.previa{margin-left:0}
+.barra .btn+.btn{margin-left:0}
 @media(max-width:760px){.barra{display:flex}}
 
 /* ===== celular: página mais curta ===== */
@@ -197,6 +210,12 @@ footer a{color:var(--amarelo)}
   .cta-col{align-items:stretch}.cta-col .previa-link{text-align:center}
   .oferta{text-align:center}
   .so-desk{display:none}
+  .hero .tag{font-size:.64rem;letter-spacing:2px}
+  .hero h1{margin-top:8px}
+  .hero p.sub{font-size:1rem}
+  .barra div{display:none}
+  .barra{justify-content:stretch;gap:8px}
+  .barra .btn{flex:1;margin:0}
   .lanc{font-size:.84rem;padding:8px 12px}
 }
 @media(max-width:520px){
@@ -225,23 +244,24 @@ footer a{color:var(--amarelo)}
   <a class="link" href="#caso">O caso</a>
   <a class="link" href="#como">Como se joga</a>
   <a class="link" href="#duvidas">Dúvidas</a>
-  <a class="link" data-previa href="https://jogo.peritohenriquetabosa.com.br">Prévia grátis</a>
-  <a class="btn sm" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar</a>
+  <a class="link" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar</a>
+  <a class="btn sm previa" data-previa href="https://jogo.peritohenriquetabosa.com.br">Jogar grátis</a>
 </div></header>
 
 <!-- ===================== TOPO ===================== -->
 <section class="hero" id="topo"><div class="wrap hero-grid vsl">
   <div>
-    <span class="tag">// O primeiro jogo de investigação em 360° criado por um perito criminal de verdade</span>
+    <span class="tag">// Jogo de investigação em 360° · feito por um perito criminal de verdade</span>
     <h1>Cena de Crime <em>360</em></h1>
     <p class="caso">Caso 01 — Apartamento 1806</p>
-    <p class="sub">Um médico é encontrado morto dentro de casa. A cena parece contar uma história. Você é o perito: entre no apartamento, examine cada canto e assine o laudo dizendo o que aconteceu ali.</p>
+    <p class="sub">Um médico é encontrado morto dentro de casa. A cena parece contar uma história. Você é o perito: entre, examine cada canto e assine o laudo.</p>
     <div class="cta-col">
-      <a class="btn big" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo — <span data-preco>R$ 49,90</span></a>
+      <a class="btn big previa" data-previa href="https://jogo.peritohenriquetabosa.com.br">▶ Jogar a prévia grátis agora</a>
+      <p class="quase">2 minutos, sem cadastro, direto no navegador. Vai até a porta do 1806.</p>
+      <a class="btn big compra2" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo — <span data-preco>R$ 49,90</span></a>
       <p class="oferta" data-de hidden><s>R$ 49,90</s> · cupom de lançamento aplicado · <span data-prazo></span></p>
-      <a class="previa-link" data-previa href="https://jogo.peritohenriquetabosa.com.br">ou jogue a prévia grátis, até a porta do 1806 →</a>
     </div>
-    <p class="mini">No Pix libera na hora · joga no celular ou no computador, sem instalar nada · não há gore</p>
+    <p class="mini">No Pix libera na hora · celular ou computador, sem instalar nada · não há gore</p>
   </div>
   <div>
     <!-- VÍDEO DO PERITO: ver TEASER_MP4 / VIDEO_YT / VIDEO_MP4 no fim desta página.
@@ -380,9 +400,9 @@ footer a{color:var(--amarelo)}
   <h2>O porteiro e o síndico <em>estão te esperando</em></h2>
   <p class="lead">Entre no apartamento, examine a cena e assine o laudo com o seu nome.</p>
   <div class="cta-col">
-    <a class="btn big" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo — <span data-preco>R$ 49,90</span></a>
+    <a class="btn big previa" data-previa href="https://jogo.peritohenriquetabosa.com.br">▶ Jogar a prévia grátis</a>
+    <a class="btn big compra2" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar o caso completo — <span data-preco>R$ 49,90</span></a>
     <p class="oferta" data-de hidden><s>R$ 49,90</s> · cupom de lançamento aplicado · <span data-prazo></span></p>
-    <a class="previa-link" data-previa href="https://jogo.peritohenriquetabosa.com.br">ou jogue a prévia grátis →</a>
   </div>
 </div></section>
 
@@ -391,7 +411,7 @@ footer a{color:var(--amarelo)}
   <p style="margin-top:8px"><a href="https://peritohenriquetabosa.com.br">Site</a> · <a href="curso">Curso</a> · <a href="https://loja.peritohenriquetabosa.com.br">Loja</a> · <a href="https://wa.me/5581991016004?text=Preciso%20de%20ajuda%20com%20o%20jogo%20Cena%20de%20Crime%20360">Ajuda pelo WhatsApp</a></p>
 </div></footer>
 
-<div class="barra"><div><b data-preco>R$ 49,90</b><small data-barra>caso completo · no Pix libera na hora</small></div><a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar</a></div>
+<div class="barra"><div><b data-preco>R$ 49,90</b><small data-barra>caso completo · no Pix libera na hora</small></div><a class="btn previa" data-previa href="https://jogo.peritohenriquetabosa.com.br">▶ Prévia grátis</a><a class="btn" data-comprar href="https://jogo.peritohenriquetabosa.com.br">Comprar <span data-preco>R$ 49,90</span></a></div>
 
 <script>
 /* =====================================================================
@@ -492,7 +512,7 @@ document.querySelectorAll('a[data-comprar]').forEach(a => {
 });
 document.querySelectorAll('a[data-previa]').forEach(a => {
   a.href = linkPrevia;
-  a.addEventListener('click', () => ev('PreviaJogo'));
+  a.addEventListener('click', () => ev('PreviaJogo', {onde: a.closest('.hero') ? 'topo' : a.closest('.barra') ? 'barra' : a.closest('header') ? 'menu' : 'fim'}));
 });
 
 /* ---------- eventos da página ---------- */
