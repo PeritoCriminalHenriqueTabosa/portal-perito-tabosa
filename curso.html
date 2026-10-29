@@ -132,6 +132,7 @@ h1 b{font-weight:400;color:var(--amarelo)}
 .bloco.cinza .cartao-aula{background:#0e0e0e}
 .cartao-aula img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#ddd}
 .cartao-aula div{padding:12px 14px 15px}
+.cartao-aula .ler-caso{display:inline-block;margin-top:8px;color:var(--amarelo);font-weight:700;font-size:.85rem;text-decoration:none}
 .cartao-aula small{font-family:'Anton',sans-serif;text-transform:uppercase;color:var(--amarelo);letter-spacing:.05em;font-size:.86rem}
 .cartao-aula b{display:block;line-height:1.3;margin-top:2px}
 .cartao-aula span{display:block;color:var(--suave);font-size:.9rem;line-height:1.35;margin-top:3px}
@@ -581,8 +582,9 @@ const d2 = n => String(n).padStart(2,'0');
 const inicio = a => Date.UTC(2026, a[4]-1, a[3]+1, 0, 0, 0);
 const FIM_AULA = 90*60*1000;
 
+const CASO_PAG = {"01":"wallace-souza","02":"arturo-gatti","03":"isabella-nardoni","04":"serial-killer-de-curitiba","05":"eliza-samudio","06":"boate-kiss","07":"galdino-pataxo","08":"enfermeiro-da-morte","09":"elize-matsunaga","10":"marielle-franco"};
 document.getElementById('gravadas').innerHTML = AULAS_A.map((a,i) =>
-  `<article class="cartao-aula"><img src="img/curso/${a[3]}.webp" alt="Capa da Aula ${a[0]}: ${a[1]}" width="960" height="540" ${i>1?'loading="lazy"':''} decoding="async"><div><small>Aula ${a[0]}</small><b>${a[1]}</b><span>${a[2]}</span></div></article>`
+  `<article class="cartao-aula"><img src="img/curso/${a[3]}.webp" alt="Capa da Aula ${a[0]}: ${a[1]}" width="960" height="540" ${i>1?'loading="lazy"':''} decoding="async"><div><small>Aula ${a[0]}</small><b>${a[1]}</b><span>${a[2]}</span>${CASO_PAG[a[0]]?`<a class="ler-caso" href="/casos/${CASO_PAG[a[0]]}">Ler o caso →</a>`:''}</div></article>`
 ).join('');
 
 /* TRECHOS DAS AULAS: [arquivo, aula, título]. Vídeo em video/curso/ARQUIVO.mp4 e capa em img/curso/ARQUIVO.webp */
