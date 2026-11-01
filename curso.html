@@ -421,7 +421,7 @@ footer p+p{margin-top:8px}
   </div>
   <div class="conta-acao">
     <a class="botao largo hotmart-fb hotmart__button-checkout" data-plano="Anual" data-valor="297" data-onde="conta"
-       href="https://pay.hotmart.com/G106657014T?off=ve0ehw8j&amp;src=pv-curso&amp;checkoutMode=2">Quero entrar por R$ 297</a>
+       href="https://pay.hotmart.com/G106657014T?off=ve0ehw8j&amp;src=pv-curso&amp;sck=pv-curso&amp;checkoutMode=2">Quero entrar por R$ 297</a>
     <p class="sob-botao">Pix, boleto ou cartão em até 12x · 7 dias de garantia</p>
   </div>
 </div></section>
@@ -495,7 +495,7 @@ footer p+p{margin-top:8px}
         <li>Equipe para te ajudar pelo WhatsApp</li>
       </ul>
       <a class="botao largo hotmart-fb hotmart__button-checkout" data-plano="Anual" data-valor="297" data-onde="oferta"
-         href="https://pay.hotmart.com/G106657014T?off=ve0ehw8j&amp;src=pv-curso&amp;checkoutMode=2">Quero entrar no curso</a>
+         href="https://pay.hotmart.com/G106657014T?off=ve0ehw8j&amp;src=pv-curso&amp;sck=pv-curso&amp;checkoutMode=2">Quero entrar no curso</a>
       <div class="pagamentos"><span>Pix</span><span>Cartão até 12x</span><span>Boleto</span><span>Compra segura Hotmart</span></div>
     </div>
   </div>
@@ -709,7 +709,7 @@ if (PARCELA_12X) document.getElementById('equiv').innerHTML = `ou <b>12x de R$ $
     if(!fonte) return;
     const limpa = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
     const src = (limpa(fonte) + (anuncio ? '-' + limpa(anuncio) : '')).slice(0,40) || 'pv-curso';
-    document.querySelectorAll('a[data-plano]').forEach(a => { const u = new URL(a.href); u.searchParams.set('src', src); a.href = u.toString(); });
+    document.querySelectorAll('a[data-plano]').forEach(a => { const u = new URL(a.href); u.searchParams.set('src', src); u.searchParams.set('sck', src); a.href = u.toString(); });
   }catch(e){}
 })();
 
