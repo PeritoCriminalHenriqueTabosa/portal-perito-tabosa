@@ -493,7 +493,7 @@ const linkCompra = (function(){
   if(!CHECKOUT) return '';
   const u = new URL(CHECKOUT);
   u.searchParams.set('src', origem ? origem + '-jogo' : 'pv-jogo');   // de onde veio a venda (aparece na Hotmart)
-  if(campanha) u.searchParams.set('sck', campanha);
+  u.searchParams.set('sck', campanha || origem || 'pv-jogo');
   if(comCupom && cupomHotmart()) u.searchParams.set('offDiscount', cupomHotmart());
   return u.toString();
 })();
